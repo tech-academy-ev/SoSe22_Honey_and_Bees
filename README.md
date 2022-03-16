@@ -1,4 +1,4 @@
-![logo](https://github.com/tech-academy-ev/SoSe22_Honey_and_Bees/tree/main/logos/Goethe_Bee.png?raw=true)
+![logo](https://github.com/tech-academy-ev/SoSe22_Honey_and_Bees/blob/main/logos/Goethe_Bee.png?raw=true)
 
 # Summer Semester 2022: Honey and Bees
 
