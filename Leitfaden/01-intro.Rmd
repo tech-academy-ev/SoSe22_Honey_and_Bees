@@ -1,0 +1,23 @@
+---
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+\newpage
+
+# Introduction to Your Project
+
+## Purpose of the Project Guide
+
+
+## What is this Project About?
+
+
+
+## Exploratory Data Analysis -- Getting to Know the Data Set
+
+
+
+## Prediction -- Apply Statistical Methods
+

@@ -1,0 +1,6 @@
+\newpage
+
+# Prediction -- Application of Statistical Methods
+
+## Machine Learning Algorithms
+

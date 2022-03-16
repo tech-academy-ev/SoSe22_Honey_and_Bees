@@ -1,0 +1,11 @@
+\newpage
+
+# Exercise Checklist
+
+This checklist should help you keep track of your exercises. Remember that you have to hand in satisfactory solutions to at least two-thirds of the exercises. If you're part of the beginner track, this refers to two-thirds of part A (EDA) only. If you're part of the advanced track, you have to hand in at least two-thirds of both individual parts A and B. Hence, you cannot hand in 100 percent of the first part and only 50 percent of the second one. You'll need more than 66% in each one for a certificate. After all, you're not that advanced if you only did half of it, right?
+
+**Part 1: Exploratory Data Analysis (Beginner + Advanced Tracks)**
+
+
+
+**Part 2: Prediction Using Statistical Methods (motivated Beginner + Advanced Tracks)**
