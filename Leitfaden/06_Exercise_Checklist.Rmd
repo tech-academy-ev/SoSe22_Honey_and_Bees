@@ -1,3 +1,9 @@
+---
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
 \newpage
 
 # Exercise Checklist
@@ -7,5 +13,5 @@ This checklist should help you keep track of your exercises. Remember that you h
 **Part 1: Exploratory Data Analysis (Beginner + Advanced Tracks)**
 
 
-
 **Part 2: Prediction Using Statistical Methods (motivated Beginner + Advanced Tracks)**
+

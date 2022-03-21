@@ -1,0 +1,41 @@
+---
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+```{r, include=FALSE}
+# Preliminaries
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(maps)
+# library(countrycode)
+library(leaflet)
+#library(geojsonio)
+library(viridis)
+library(magick) # for including a .png in plots
+TA_logo <- image_read("plot/TA_logo.png")
+# library(gghighlight)
+library(GGally)
+library(ggrepel)
+```
+
+\newpage
+
+# Exploratory Data Analysis
+
+
+::: {.tips .r data-latex="r"}
+In your workspace on [RStudio Cloud](https://rstudio.cloud/projects)
+:::
+
+::: {.tipsp .python data-latex="p"}
+We recommend using [Google Colab](https://colab.research.google.com) for this project since it requires no particular setup, stores its notebooks to your Google Drive, and makes it easy for you to share them with your team members.
+
+As an alternative to Google Colab, you might want to install Jupyter Notebook locally using the Anaconda distribution.
+We will give you a more detailed step-by-step demo during the first coding meetup.
+<!--#  -->
+:::
+

@@ -1,3 +1,9 @@
+---
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
 \newpage
 
 # Prediction -- Application of Statistical Methods
