@@ -73,7 +73,7 @@ The groups consist of four team members. You can choose your teammates independe
 Every semester, the Product Development Team at TechAcademy thinks hard about a new project that is suited for you to learn data science.
 This semester we decided to analyse a simple yet important part of our lives: honey and bees. While honey might not be the reason why we still exist on this planet, bees very well are, hence why honey production may also be. However, with climate change and increasing globalisation, bee colonies are threatened daily. Though none of us are experts on bees and climate, we still believe that together we can all learn a lot from this case study.
 
-This case study and the associated project guide was developed and written entirely from scratch by TechAcademy’s Data Science team. [Inga Lasys](https://www.linkedin.com/in/inga-l-544713180/) and [Isabel Schnorr](https://www.linkedin.com/in/isabel-schnorr/) developed the project in `R`, while [Thilo Leitzbach](https://www.linkedin.com/in/thilo-leitzbach/) developed it in `Python`. 
+This case study and the associated project guide was developed and written entirely from scratch by TechAcademy’s Data Science team. [Inga Lasys](https://www.linkedin.com/in/inga-l-544713180/) and Isabel Schnorr developed the project in `R`, while [Thilo Leitzbach](https://www.linkedin.com/in/thilo-leitzbach/) developed it in `Python`. 
 
 # What's Data Science and How Do I Do It?
 
