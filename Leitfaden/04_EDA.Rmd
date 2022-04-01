@@ -146,7 +146,7 @@ Wir implizieren hier, dass die Staaten sich reduzieren, den Teilnehmern am beste
 The participants can decide for themselves here whether they want to use the mean for all years or plot the graphs for just one year
 Plotted here for 2020, not the prettist version, but will make it prettier once approved
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
-knitr::include_graphics("../Python/figs/Starting Colonies in January 2021.jpg")
+knitr::include_graphics("plot/Starting Colonies in January 2021.jpg")
 ```
 
 
