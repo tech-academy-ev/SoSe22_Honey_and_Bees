@@ -6,6 +6,7 @@ library(lubridate)
 library(readr)
 library(dplyr)
 library(ggplot2)
+library(leaflet)
 
 ###############################################################################
 ### Task 0: Import Data (ungraded, does not earn points b/c obviously)
@@ -163,11 +164,12 @@ HB$Group3 <- c(rep(1,80), rep(2, 80), rep(3,80)) # split if the group has just 3
 
 ## This is not really a solution, we need to add the groups to the weather data too so that the 
 ## participants can analyse the data without any additional task, I am modifying the weather data set here
-#weather <- weather %>% rename("State_code" = "name")
-#merger4 <- HB %>% select(State_code, Group4)
-#weather <- left_join(weather, merger4, by="State_code")
-#merger3 <- HB %>% select(State_code, Group3)
-#weather <- left_join(weather, merger3, by="State_code")
+weather <- weather %>% rename("State_code" = "name")
+
+merger4 <- HB %>% filter(Year==2015) %>% select(State_code, Group4)
+weather <- left_join(weather, merger4, by="State_code")
+merger3 <- HB %>% filter(Year==2015) %>% select(State_code, Group3)
+weather <- left_join(weather, merger3, by="State_code")
 
 write_csv(weather, gzfile('weather.csv.gz'))
 
@@ -207,15 +209,47 @@ HB %>%
   theme_minimal()
 
 # Precipitation, example group 3
-test <- weather %>%
-  filter(Group4 == 3) %>%
-  select(datetime, State_code, precip) %>%
-  group_by(State_code) %>% 
+
+weather %>%
   mutate(Year = year(datetime)) %>%
-  select(-datetime, -Year, -precip) %>%
-  mutate(yearly_state_mean = mean(precip))
+  filter(Group4 == 3) %>%
+  group_by(State_code, Year) %>%
+  select(precip) %>%
+  summarise(precip_mean = round(mean(precip, na.rm = TRUE), 2)) %>%
+  ggplot(aes(x=Year, y=precip_mean, group=Year)) +
+  geom_boxplot(fill="#946500", alpha=.7) +
+  geom_jitter(col="black", size=.4) +
+  labs(title = "Precpitation in 10 US-States", 
+       x= "Year", 
+       y="Mean Precipitation  per Year in cm",
+       caption = "States considered: MT, NC, ND, NE, NJ, NY, OH, OR, PA, SC") +
+  theme_minimal()
 
 #heatMAP
+
+
+# dynmaic map: still needs some work
+HB_map <- HB %>%
+          mutate(honey_prod_1kkg = production_kg/1000) %>%
+          select(Latitude, Longitude, State_code, honey_prod_1kkg, Year)
+  
+  
+leaflet(options = leafletOptions(preferCanvas = TRUE)) # faster html viewing
+dynamic_map <- leaflet()
+dynamic_map <- addTiles(dynamic_map)
+
+dynamic_map <- addMarkers(dynamic_map, 
+              lat = HB_map$Latitude, 
+              lng = HB_map$Longitude,
+              popup = paste0("State: ", HB_map$State_code, 
+                              "<br>",
+                              "Date: ", HB_map$Year,
+                              "<br>",
+                              "Honey 1k kg: ", HB_map$honey_prod_1kkg),
+                          clusterOptions = markerClusterOptions()) # faster html viewing
+dynamic_map
+
+
 
 
 Bar Plot mit 51 Staaten : Bienenpopulation (starting colonies) ; sorted by lowest to highest, + Strich representing mean. Welches Bundesstaat hat die höchste Population? (Farbschema: gelb, orange, honigfarben, schwarz)
