@@ -26,9 +26,14 @@ ytick.color: 555555
 ytick.direction: out
 ytick.labelsize : 14
 
-axes.prop_cycle: cycler('color', ['3C4EE0', 'E24A33', '988ED5', '777777', 'FBC15E', '8EBA42', 'FFB5B8'])
-                   # 3C4EE0 : TA-Blue
-                   # E24A33 : red
+axes.prop_cycle: cycler('color', ['3C4EE0', 'E09A00', '946500', '196AFF', '003494', '004EE0', 'E24A33', '988ED5', '777777', 'FBC15E', '8EBA42', 'FFB5B8'])
+		   # 3C4EE0 : OldTA-Blue	
+		   # 196AFF : LightBlue
+		   # 003494 : DarkBlue
+		   # E09A00 : Honey
+		   # 946500 : Sand	
+		   # 004EE0 : NewTA-Blue               
+		   # E24A33 : red
                    # 348ABD : blue
                    # 988ED5 : purple
                    # 777777 : gray
