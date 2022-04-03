@@ -153,7 +153,16 @@ knitr::include_graphics("plot/Starting Colonies in January 2021.jpg")
 ### Task 12: Split a subset for data between the X different Team members (we have 40 States) (ungraded)
 
 ### Task 13: Boxplot aggregated for year: Honey Production, Parasite: Varroa Mite, Precipitation , Bee Colonies (6 boxen)
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
+knitr::include_graphics("plot/Log Honey Production.jpg")
+```
+
+
 
 ### Task 14: Heatmap of Bee Populations
 
 ### Task 15: Map with state popups
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
+knitr::include_graphics("plot/States_map_bee_starting_pop.gif")
+```
+
