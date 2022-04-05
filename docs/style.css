@@ -46,3 +46,45 @@ pre code {
   position: relative;
   z-index: 1;
 }
+
+/*---------------Hero Image------------------*/
+
+/* next 3 rules are for setting large image at top of each page and pushing down the book content to appear beneath the image */
+
+.hero-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 390px;
+  /*background-image: url("images/books.jpg");*/
+  background-color: #3fb5bd;
+}
+
+.hero-image {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+}
+
+.page-inner {
+  padding-top: 440px !important;
+}
+
+
+/*--- LOGO ---*/
+
+.toc-logo {
+  width: 200px !important;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.toc-logo img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.summary > li:first-child {
+  height: auto !important; 
+}

@@ -1,4 +1,5 @@
 book_filename: "honey_and_bees"
+repo: "https://github.com/tech-academy-ev/SoSe22_Honey_and_Bees"
 delete_merged_file: true
 output_dir: "../docs"
 language:
