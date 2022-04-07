@@ -216,4 +216,20 @@ Further Explanations:
 
 ## Your Data Science Project
 
-### Coding Meetups and Requirements
+Participant's Section:
+
+-   <https://www.tech-academy.io/teilnehmerbereich>
+
+### Prelude 
+
+- Kick-Off Workshop (27.04.2022)
+- `R` / `Python` Coding Introduction (04.05.2022)
+
+### Coding Meetups
+
+- **18.05.2022**, Coding MeetUp 1 
+- **01.06.2022**, Coding MeetUp 2 
+- **15.06.2022**, Coding MeetUp 3
+- **29.06.2022**, Coding MeetUp 4
+
+
