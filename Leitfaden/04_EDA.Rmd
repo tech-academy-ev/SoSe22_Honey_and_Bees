@@ -93,21 +93,18 @@ Lets stick with the honey data. Since you have already got a feeling by now, it 
 ## Data Cleaning and Useful Transformations
 
 The exercises in this and the next section are about the bees data set.
+On a later stage of the project we would like to merge it with the honey data set. To this end, we will now spend some time preparing the bees data.
 
 ### Date Formatting
 
-Since we want to merge honey and the bees data set, we will now spend some time cleaning the bees data set.
-if it helps you, look at the bees data set using the appropriate commands (please do now show us in the markdown)
-Difference: year format in quarters!, therefore we need to work on the data before merging
-might have learned that in datacamp: check whether the var is in a date format with the command class():
-if you the var is not in date format yet, you can use the lubridate package to transform "years" into a date format. You will need this later!
+Remember, one of the differences is the frequency of the data. The date (format) of the bees set is quarterly whereas we have yearly honey data. 
+Recall also that dates, even just years, can be formatted differently than just as a string or integer. Maybe you have checked it before, but now is definitely the moment to translate the `Date` column to a fitting date format. 
 
 ::: {.tips .r data-latex="r"}
-Add tip
 :::
 
 ::: {.tipsp .python data-latex="p"}
-Add tip
+`pd.to_datetime()`
 :::
 
 
