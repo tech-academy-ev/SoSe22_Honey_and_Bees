@@ -208,10 +208,9 @@ Add tip
 Bar Plot for all States (starting bee colonies = number of bee poplation, sorted)
 
 The participants can decide for themselves here whether they want to use the mean for all years or plot the graphs for just one year
-Plotted here for 2020, not the prettist version, but will make it prettier once approved
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
-knitr::include_graphics("plot/Starting Colonies in January 2021.jpg")
+knitr::include_graphics("plot/Starting Colonies in 2020.jpg")
 ```
 
 ::: {.tips .r data-latex="r"}
@@ -229,10 +228,18 @@ Split a subset for data between the X different Team members (we have 40 States)
 
 ## Yearly Boxplots
 
-Boxplot aggregated for year: Honey Production, Parasite: Varroa Mite, Precipitation , Bee Colonies (6 boxen)
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
+Boxplot aggregated for year: Honey Production, Parasite: Varroa Mite, Precipitation , Bee Colonies (6 boxen).
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.show="hold", out.width="50%"}
 knitr::include_graphics("plot/Log Honey Production.jpg")
+knitr::include_graphics("plot/Varroa Mites.jpg")
 ```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.show="hold", out.width="50%"}
+knitr::include_graphics("plot/Bee Colonies.jpg")
+knitr::include_graphics("plot/Average Precipitation.jpg")
+```
+
 
 ::: {.tips .r data-latex="r"}
 Add tip
