@@ -1,0 +1,15 @@
+---
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+\newpage
+
+# Seasonality and Geographic Differences -- Application of Statistical Methods
+
+## Correlations
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
+knitr::include_graphics("plot/Correlations using Pearson Method.jpg")
+```
