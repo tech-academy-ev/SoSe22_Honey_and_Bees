@@ -101,6 +101,7 @@ Remember, one of the differences is the frequency of the data. The date (format)
 Recall also that dates, even just years, can be formatted differently than just as a string or integer. Maybe you have checked it before, but now is definitely the moment to translate the `Date` column to a fitting date format. 
 
 ::: {.tips .r data-latex="r"}
+Add tip
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -162,9 +163,22 @@ Calculate the percentage of lost colonies (it is as simple as it reads).
 
 ### Group Means
 
-mean of all the quarters of one year 't'
+We want to merge the honey and bees data set to analyze them jointly. To do so we need to reduce the frequency of the bees data frame (quarterly) to yearly.
+Accordingly, you would like to group by state and quarter and replace the observations by an aggregate.
+You decide to replace with the mean (over the four quarters). Please mind how you are rounding, print the table of your aggregated data frame, and answer the following two questions
 
-As you can see now, quarterly date has disappeared and we only have years left. Please mind how you are rounding your means, give us a short reasoning why you are rounding the way you are rounding and a short data table so we can check whether your data is correct
+* What are potential hazards of reducing data like this? 
+* What other measures could you use?
+
+You may refer to the following graph.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
+knitr::include_graphics("plot/Lost Colonies in Wyoming over time.jpg")
+```
+
+There is no absolute answer to these questions since your approach most likely depends on what you are analyzing / trying to show or understand.
+
+
 
 ::: {.tips .r data-latex="r"}
 Add tip
@@ -234,7 +248,6 @@ Boxplot aggregated for year: Honey Production, Parasite: Varroa Mite, Precipitat
 knitr::include_graphics("plot/Log Honey Production.jpg")
 knitr::include_graphics("plot/Varroa Mites.jpg")
 ```
-
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.show="hold", out.width="50%"}
 knitr::include_graphics("plot/Bee Colonies.jpg")
 knitr::include_graphics("plot/Average Precipitation.jpg")
@@ -274,5 +287,5 @@ Add tip
 :::
 
 
-**Congratulations** -- based on your work with fundamental data transformations and many visualizations, you now have a solid understanding of the honey and bees data sets!
+**Congratulations**! Based on your work with fundamental data transformations and many visualizations, you now have a solid understanding of the honey and bees data sets!
 With this, you have completed the *EDA* part of the project!
