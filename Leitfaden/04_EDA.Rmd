@@ -27,7 +27,7 @@ library(ggrepel)
 # Exploratory Data Analysis
 
 Before you can dive into the data, set up your programming environment.
-This will be the place where the magic happens - all your coding will take place there.
+This will be the place where the magic happens - all your coding takes place there.
 
 ::: {.tips .r data-latex="r"}
 In your workspace on [RStudio Cloud](https://rstudio.cloud/projects), we have already uploaded an "assignment" for you (Template HoneyAndBees).
@@ -46,9 +46,8 @@ As an alternative to Google Colab, you might want to install Jupyter Notebook lo
 We will give you a more detailed step-by-step demo during the first coding meetup.
 :::
 
-Next up is importing the data sets. It's best to this *once* on the top
-level of your notebook / script. You can always make copies and work on slices
-afterwards.
+Next up is importing the data sets. It's best to this **once** on the top
+level of your notebook / script. You can always copy to new variables and work on slices of the data frames afterwards.
 
 * [Honey](https://drive.google.com/uc?export=download&id=1bQtWQluwwGUIgZuDOsJOE-4Om7x4HOxP)
 * [Bees](https://drive.google.com/uc?export=download&id=1lop3qnrSve5A13jNcL6wCehGpDaCrGRO)
@@ -59,31 +58,33 @@ afterwards.
 ## Exploring Honey and Bees Data
 
 ### Discovering Formats, Frequencies, and Fuck-ups
-Let's start by looking at the bee & honey data. To start viewing the data you have just imported 
-Have a look at the frequency of the data (is there a difference?)
-Do you see any missing values or data entries that are different from the other entries?
-What are the data formats? Look at the unit of every variable, can you make sense of the units?
-Write down in a couple of sentences which errors you first notice and what could be an issue later in the project.
+Let's start by looking at the bee & honey data sets. 
+
+* Have a look at the frequency of the records (is there a difference across sets?)
+* Do you see any missing values or data entries that are different from the other entries?
+* What are the data formats (e.g. data types like strings or floats but also date formats such as yearly)? 
+* Look at the unit of every variable, can you make sense of the units?
+
+Write down a couple of sentences to these questions. Also, comment on any errors / difficulties which you notice and that could be an issue later on in the project.
 No worries, there is no right or wrong.
 
 ::: {.tips .r data-latex="r"}
-You can import the data directly from your working directory. Use `head()`, `str()`,
-or `class()` to get an overview.
+You can import the data directly from your working directory. Use `head()`, `str()`, or `class()` to get an overview.
 :::
 
 ::: {.tipsp .python data-latex="p"}
 You can feed the links to the respective data files above to a method of the 
-pandas package (you might want to specify the index column).
+[pandas package](https://pandas.pydata.org/pandas-docs/stable/reference/io.html) (you might want to specify the index column).
 Check out the resulting `pd.DataFrame` instance with the `head()` method and 
 the `dtpyes` attribute. You can also dig into a specific column with `describe()`.
+Here's an additional [pandas cheat sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) for you to reference 
 :::
 
 
 ### Give some overall statements 
 
-Müssen wir vlt vorher die Daten Typen umwandeln lassen.
+Lets stick with the honey data. Since you have already got a feeling by now, it would be interesting to indicate some outstanding features of the set: 
 
-Lets stick with the honey data. Since you have already gotten a feeling by now, it would be interesting to indicate some outstanding features: 
 * Which state had the most producing colonies ever and in which year? Anything special about that state?
 * What state had the lowest price for honey. How low was it?
 * What is the total Honey production for 2016?
@@ -91,13 +92,12 @@ Lets stick with the honey data. Since you have already gotten a feeling by now, 
 
 ## Data Cleaning and Useful Transformations
 
+The exercises in this and the next section are about the bees data set.
 
 ### Date Formatting
 
-Bees data set: year into date format, 
-
-since we want to merge honey and the bees data set, we will now spend some time cleaning the bees data set.
-if it helps you,look at the bees data set using the appropriate commands (please do now show us in the markdown)
+Since we want to merge honey and the bees data set, we will now spend some time cleaning the bees data set.
+if it helps you, look at the bees data set using the appropriate commands (please do now show us in the markdown)
 Difference: year format in quarters!, therefore we need to work on the data before merging
 might have learned that in datacamp: check whether the var is in a date format with the command class():
 if you the var is not in date format yet, you can use the lubridate package to transform "years" into a date format. You will need this later!
@@ -111,70 +111,56 @@ Add tip
 :::
 
 
-### Data Types - Strings, Ints, and Floats
+### More Data Types - Strings, Ints, and Floats
 
-So far you converted Years into an appropiate date format. But look at the other colums: They are numbers but are they also numeric? Check on all colums so you dont miss out on one!
+So far you converted years into a more appropriate date format for further investigation. 
+Now, look at the other columns of the bees data set: Some appear to contain numbers but are they also of a numeric data type? Check out all columns so you don't miss out on one!
 
-For further calculations numbers need to be converted into a numeric factor. Can you do so?
-Tipp: also here a loop is the best approach. 
+For further calculations, it is safer to convert these columns to such a numeric data type.
+While there are vectorized methods that can convert data types at once, we would like you to write a simple (really) 'for' loop to conduct the conversions.
 
 ::: {.tips .r data-latex="r"}
 Add tip
 :::
 
 ::: {.tipsp .python data-latex="p"}
-Add tip
+You need an iterable to loop over, the semicolon after the keyword, and the indentation of the subsequent lines!
+Here is a [cheat sheet](https://drive.google.com/file/d/15DwPt5r_vySfuWdOAvci71bDSnD7533P/view?usp=sharing) in case you have forgotten.
 :::
 
 ### Converting Units
 
 From the column names you can see that the honey data set is in pounds as we are dealing with an U.S. data set. 
 However, we are devoted followers of the metric system and do not understand pounds. Consequently, we would like to translate them to kilogram [kg].
-While you are at it, you might want to give your new variables in kg a shorter name with less spaces in it ...
-
-::: {.tips .r data-latex="r"}
-Add tip
-:::
-
-::: {.tipsp .python data-latex="p"}
-Add tip
-:::
+While you are at it, you might want to give your new columns in kg a shorter name with less spaces in it ...
 
 
 ### Rounding
 
-Have a look at your column values. Some columns now have irrelevant long decimal numbers. To simplify your data frame, round up to the decimal place you prefer (explain what decimal place you chose!). 
+Have a look at your column values. Some columns have long decimal numbers. To simplify your data frame, round up to the decimal place you prefer.
+Please write one or two sentences why you think rounding is O.K. and why you chose the decimal place *X* or even a conversion to ints.
 
-::: {.tips .r data-latex="r"}
-Add tip
-:::
-
-::: {.tipsp .python data-latex="p"}
-Add tip
-:::
 
 ## Simple Metrics
 
-### Lost Colonies
-
-Calculate the percentage of lost colonies & round, why id you decide to round the way you have to?
-
-
-
 ### Missing Values
-Look at the bees set and missing values, decide on how you want to treat them and give us a detailed explanation why you have decided to treat the missing values
+Look at the bees set and its missing values. Decide on how you want to treat them and give us a detailed explanation why you have decided to treat the missing values the way you did. Keep in mind that these transformations affect all your subsequent work on the data and may bias your findings. 
+Sometimes you are lucky and can also identify a pattern that will ease your pain of treating the values and deciding for a strategy.
 
-Let the participants freely describe what they see and how they decide, link to the DataCamp course dealing with missing values
-they should do that for the following task, keeping in mind that we want to summarize means!
-find patters for missing values and decide how you want to treat NAs
+There are many possibilities: From excluding the rows to forward / backward fills or even inserting an average / median. 
 
 ::: {.tips .r data-latex="r"}
-Add tip
+We highly recommend the [Datacamp course on missing values in R](https://www.datacamp.com/courses/dealing-with-missing-data-in-r) for this exercise.
 :::
 
 ::: {.tipsp .python data-latex="p"}
-Add tip
+We highly recommend the [Datacamp course on missing values in Python](https://www.datacamp.com/courses/dealing-with-missing-data-in-python) for this exercise.
 :::
+
+
+### Lost Colonies
+
+Calculate the percentage of lost colonies (it is as simple as it reads). 
 
 
 ### Group Means
@@ -282,3 +268,7 @@ Add tip
 ::: {.tipsp .python data-latex="p"}
 Add tip
 :::
+
+
+**Congratulations** -- based on your work with fundamental data transformations and many visualizations, you now have a solid understanding of the honey and bees data sets!
+With this, you have completed the *EDA* part of the project!
