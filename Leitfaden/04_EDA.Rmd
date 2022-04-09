@@ -179,7 +179,6 @@ knitr::include_graphics("plot/Lost Colonies in Wyoming over time.jpg")
 There is no absolute answer to these questions since your approach most likely depends on what you are analyzing / trying to show or understand.
 
 
-
 ::: {.tips .r data-latex="r"}
 Add tip
 :::
@@ -191,24 +190,24 @@ Add tip
 
 ## Merging Data Sets
 
-prepare to merge honey and bees into one data frame
-to merge give your "bees" data columns appropriate names (we recommend names where empty spaces are replaced with an underscore "_"), if you have not done so for the honey data set please do the same
+When preparing to data sets, it is wise to check the naming of columns again.
+Please give your "bees" data columns appropriate names (we recommend names where empty spaces are replaced with an underscore "_"), if you have not done so for the honey data set please do the same.
 
 ::: {.tips .r data-latex="r"}
 Add tip
 :::
 
 ::: {.tipsp .python data-latex="p"}
-Add tip
+Column names can be replaced very neatly by passing a dictionary `{"x": "y", }` to a certain pandas method.
 :::
 
 ### Joint Honey and Bees Set 
 
-merge honey and bee dataset and explain us the process of how the way you have decided to merge your data works and what you needed to do
+Do an inner merge of the two sets by exploiting the index / State names and the respective date columns. 
+Closely compare the sizes of the individual data frames and of the aggregate one. 
 
-in order to merge the data sets (hint: by what are you merging?)
-Wir implizieren hier, dass die Staaten sich reduzieren, den Teilnehmern am besten in die guide schreiben
-
+* Do they match (*hint: they do not*)?
+* Why not and what states are missing from which individual data frame?
 
 ::: {.tips .r data-latex="r"}
 Add tip
@@ -219,9 +218,10 @@ Add tip
 :::
 
 ## States Bar Plot
-Bar Plot for all States (starting bee colonies = number of bee poplation, sorted)
+Use the aggregate (yearly) set and create a bar plot with all states plotting starting bee colonies from the lowest to the highest value.
+Please also include the average and the median of the observations. 
 
-The participants can decide for themselves here whether they want to use the mean for all years or plot the graphs for just one year
+You can decide for yourself whether you want to aggregate over all years or over a single year of your choice.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
 knitr::include_graphics("plot/Starting Colonies in 2020.jpg")
@@ -274,6 +274,9 @@ Add tip
 
 
 ## Map with State Popups
+
+
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
 knitr::include_graphics("plot/States_map_bee_starting_pop.gif")
 ```
