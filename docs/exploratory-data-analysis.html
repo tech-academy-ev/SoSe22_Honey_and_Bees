@@ -232,7 +232,7 @@ On a later stage of the project we would like to merge it with the honey data se
 <p>Remember, one of the differences is the frequency of the data. The date (format) of the bees set is quarterly whereas we have yearly honey data.
 Recall also that dates, even just years, can be formatted differently than just as a string or integer. Maybe you have checked it before, but now is definitely the moment to translate the <code>Date</code> column to a fitting date format.</p>
 <div class="tips r">
-
+<p>Add tip</p>
 </div>
 <div class="tipsp python">
 <p><code>pd.to_datetime()</code></p>
@@ -284,8 +284,16 @@ Sometimes you are lucky and can also identify a pattern that will ease your pain
 </div>
 <div id="group-means" class="section level3 hasAnchor" number="4.3.3">
 <h3><span class="header-section-number">4.3.3</span> Group Means<a href="exploratory-data-analysis.html#group-means" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>mean of all the quarters of one year ‘t’</p>
-<p>As you can see now, quarterly date has disappeared and we only have years left. Please mind how you are rounding your means, give us a short reasoning why you are rounding the way you are rounding and a short data table so we can check whether your data is correct</p>
+<p>We want to merge the honey and bees data set to analyze them jointly. To do so we need to reduce the frequency of the bees data frame (quarterly) to yearly.
+Accordingly, you would like to group by state and quarter and replace the observations by an aggregate.
+You decide to replace with the mean (over the four quarters). Please mind how you are rounding, print the table of your aggregated data frame, and answer the following two questions</p>
+<ul>
+<li>What are potential hazards of reducing data like this?</li>
+<li>What other measures could you use?</li>
+</ul>
+<p>You may refer to the following graph.</p>
+<p><img src="plot/Lost%20Colonies%20in%20Wyoming%20over%20time.jpg" width="100%" style="display: block; margin: auto;" /></p>
+<p>There is no absolute answer to these questions since your approach most likely depends on what you are analyzing / trying to show or understand.</p>
 <div class="tips r">
 <p>Add tip</p>
 </div>
@@ -296,19 +304,22 @@ Sometimes you are lucky and can also identify a pattern that will ease your pain
 </div>
 <div id="merging-data-sets" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Merging Data Sets<a href="exploratory-data-analysis.html#merging-data-sets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>prepare to merge honey and bees into one data frame
-to merge give your “bees” data columns appropriate names (we recommend names where empty spaces are replaced with an underscore “_“), if you have not done so for the honey data set please do the same</p>
+<p>When preparing to data sets, it is wise to check the naming of columns again.
+Please give your “bees” data columns appropriate names (we recommend names where empty spaces are replaced with an underscore “_“), if you have not done so for the honey data set please do the same.</p>
 <div class="tips r">
 <p>Add tip</p>
 </div>
 <div class="tipsp python">
-<p>Add tip</p>
+<p>Column names can be replaced very neatly by passing a dictionary <code>{"x": "y", }</code> to a certain pandas method.</p>
 </div>
 <div id="joint-honey-and-bees-set" class="section level3 hasAnchor" number="4.4.1">
 <h3><span class="header-section-number">4.4.1</span> Joint Honey and Bees Set<a href="exploratory-data-analysis.html#joint-honey-and-bees-set" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>merge honey and bee dataset and explain us the process of how the way you have decided to merge your data works and what you needed to do</p>
-<p>in order to merge the data sets (hint: by what are you merging?)
-Wir implizieren hier, dass die Staaten sich reduzieren, den Teilnehmern am besten in die guide schreiben</p>
+<p>Do an inner merge of the two sets by exploiting the index / State names and the respective date columns.
+Closely compare the sizes of the individual data frames and of the aggregate one.</p>
+<ul>
+<li>Do they match (<em>hint: they do not</em>)?</li>
+<li>Why not and what states are missing from which individual data frame?</li>
+</ul>
 <div class="tips r">
 <p>Add tip</p>
 </div>
@@ -319,8 +330,9 @@ Wir implizieren hier, dass die Staaten sich reduzieren, den Teilnehmern am beste
 </div>
 <div id="states-bar-plot" class="section level2 hasAnchor" number="4.5">
 <h2><span class="header-section-number">4.5</span> States Bar Plot<a href="exploratory-data-analysis.html#states-bar-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Bar Plot for all States (starting bee colonies = number of bee poplation, sorted)</p>
-<p>The participants can decide for themselves here whether they want to use the mean for all years or plot the graphs for just one year</p>
+<p>Use the aggregate (yearly) set and create a bar plot with all states plotting starting bee colonies from the lowest to the highest value.
+Please also include the average and the median of the observations.</p>
+<p>You can decide for yourself whether you want to aggregate over all years or over a single year of your choice.</p>
 <p><img src="plot/Starting%20Colonies%20in%202020.jpg" width="100%" style="display: block; margin: auto;" /></p>
 <div class="tips r">
 <p>Add tip</p>
@@ -336,8 +348,8 @@ Wir implizieren hier, dass die Staaten sich reduzieren, den Teilnehmern am beste
 <div id="yearly-boxplots" class="section level2 hasAnchor" number="4.6">
 <h2><span class="header-section-number">4.6</span> Yearly Boxplots<a href="exploratory-data-analysis.html#yearly-boxplots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Boxplot aggregated for year: Honey Production, Parasite: Varroa Mite, Precipitation , Bee Colonies (6 boxen).</p>
-<p><img src="plot/Log%20Honey%20Production.jpg" width="50%" /><img src="plot/Varroa%20Mites.jpg" width="50%" /></p>
-<p><img src="plot/Bee%20Colonies.jpg" width="50%" /><img src="plot/Average%20Precipitation.jpg" width="50%" /></p>
+<p><img src="plot/Log%20Honey%20Production.jpg" width="50%" /><img src="plot/Varroa%20Mites.jpg" width="50%" />
+<img src="plot/Bee%20Colonies.jpg" width="50%" /><img src="plot/Average%20Precipitation.jpg" width="50%" /></p>
 <div class="tips r">
 <p>Add tip</p>
 </div>
@@ -363,7 +375,7 @@ Wir implizieren hier, dass die Staaten sich reduzieren, den Teilnehmern am beste
 <div class="tipsp python">
 <p>Add tip</p>
 </div>
-<p><strong>Congratulations</strong> – based on your work with fundamental data transformations and many visualizations, you now have a solid understanding of the honey and bees data sets!
+<p><strong>Congratulations</strong>! Based on your work with fundamental data transformations and many visualizations, you now have a solid understanding of the honey and bees data sets!
 With this, you have completed the <em>EDA</em> part of the project!</p>
 
 <div style="page-break-after: always;"></div>
