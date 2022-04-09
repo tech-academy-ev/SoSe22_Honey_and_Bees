@@ -22,12 +22,12 @@ discovering-formats-frequencies-and-fuck-ups
 give-some-overall-statements
 data-cleaning-and-useful-transformations
 date-formatting
-data-types---strings-ints-and-floats
+more-data-types---strings-ints-and-floats
 converting-units
 rounding
 simple-metrics
-lost-colonies
 missing-values
+lost-colonies
 group-means
 merging-data-sets
 joint-honey-and-bees-set
@@ -36,8 +36,8 @@ splitting-the-data-set
 yearly-boxplots
 heatmap-of-bee-populations
 map-with-state-popups
-prediction-application-of-statistical-methods
-machine-learning-algorithms
+seasonality-and-geographic-differences-application-of-statistical-methods
+correlations
 exercise-checklist
 whats-next-in-your-data-science-career
 data-science-in-general
