@@ -8,8 +8,45 @@ editor_options:
 
 # Seasonality and Geographic Differences -- Application of Statistical Methods
 
+## Merging Bees and Weather
+
+We want to investigate how diseases and different climates affect our beloved bee populations. To that end, merge the two data sets.
+Be careful to aggregate the weather data set wisely to quarterly data. It might not be clever to replace period-specific max / min values with a mean.
+
 ## Correlations
+
+### Naive Approach
+
+Do a simple correlations plot between variables of interest like lost colonies and different parasites and weather indicators. You could also create your own indication such as a temperature differential or interaction effects.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
 knitr::include_graphics("plot/Correlations using Pearson Method.jpg")
 ```
+
+* Why is a naive correlation matrix across states a terrible idea?
+
+Think for example about omitted variables and how information is lost when you aggregate fundamentally different groups. 
+
+::: {.tips .r data-latex="r"}
+Add tip
+:::
+
+::: {.tipsp .python data-latex="p"}
+Add tip
+:::
+
+### Statewise Correlations
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
+knitr::include_graphics("plot/State Correlations sorted by Latitude - Lost Colonies and Temperature ex Hawaii.jpg")
+```
+
+::: {.tips .r data-latex="r"}
+Add tip
+:::
+
+::: {.tipsp .python data-latex="p"}
+Add tip
+:::
+

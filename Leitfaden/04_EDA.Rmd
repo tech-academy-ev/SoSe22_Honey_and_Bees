@@ -268,7 +268,7 @@ Last but not least we want to do a more appealing visualization.
 The idea is to combine the geographic information on the states with the numeric data to provide a rich visual that reflects the two combinations.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
-knitr::include_graphics("plot/States_map_bee_starting_pop_popups_no_anim.gif")
+knitr::include_graphics("plot/States_map_bee_starting_pop_popups.gif")
 ```
 
 
