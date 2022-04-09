@@ -50,3 +50,10 @@ Add tip
 Add tip
 :::
 
+
+## Simple Linear Models for State Panel Data
+
+## Exploiting Geographic Differences
+
+
+## Seasonality 
