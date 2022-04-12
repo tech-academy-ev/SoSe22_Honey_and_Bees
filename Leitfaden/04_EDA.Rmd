@@ -101,7 +101,7 @@ Remember, one of the differences is the frequency of the data. The date (format)
 Recall also that dates, even just years, can be formatted differently than just as a string or integer. Maybe you have checked it before, but now is definitely the moment to translate the `Date` column to a fitting date format. 
 
 ::: {.tips .r data-latex="r"}
-Add tip
+You can use the lubridate package to transform "years" into a date format.
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -115,10 +115,10 @@ So far you converted years into a more appropriate date format for further inves
 Now, look at the other columns of the bees data set: Some appear to contain numbers but are they also of a numeric data type? Check out all columns so you don't miss out on one!
 
 For further calculations, it is safer to convert these columns to such a numeric data type.
-While there are vectorized methods that can convert data types at once, we would like you to write a simple (really) 'for' loop to conduct the conversions.
+While there are vectorized methods that can convert data types at once, we would like you to write a (really) simple 'for' loop to conduct the conversions.
 
 ::: {.tips .r data-latex="r"}
-Add tip
+Have you heard of "sapply"? This might help you.
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -239,6 +239,15 @@ Add tip
 ### Splitting the Data Set
 
 Split a subset for data between the X different Team members (we have 40 States) (ungraded)
+
+::: {.tips .r data-latex="r"}
+the code: dataset$Group <- c(rep(1,60),rep(2,60), rep(3,60), rep(4, 60)) could help if you are 4 Team members. if not, this code might be easy to adjust.
+
+:::
+
+::: {.tipsp .python data-latex="p"}
+Add tip
+:::
 
 ## Yearly Boxplots
 
