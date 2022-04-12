@@ -228,7 +228,7 @@ knitr::include_graphics("plot/Starting Colonies in 2020.jpg")
 ```
 
 ::: {.tips .r data-latex="r"}
-Add tip
+The key commands that you can use for this within ggplot() are geom_bar() and coord_flip(). Check back on the ggplot2 cheat sheet if you are feeling unsure! 
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -288,7 +288,19 @@ knitr::include_graphics("plot/States_map_bee_starting_pop.gif")
 ```
 
 ::: {.tips .r data-latex="r"}
-Add tip
+This time, we created the plot using the leaflet package. Why don’t you try to find information on the package online?
+
+You can create a basic map with leaflet and add additional layers by following these simple steps:
+
+m <- leaflet() %>%
+  addTiles() %>% 
+  addMarkers(lng= , 
+             lat= , 
+             popup= )
+           
+Do lng and lat look familiar to you from a previous plot?
+
+The popup is where the magic happens! Can you make the map show you honey production, number of bee colonies, and three more variables that you find important for such a plot?
 :::
 
 ::: {.tipsp .python data-latex="p"}
