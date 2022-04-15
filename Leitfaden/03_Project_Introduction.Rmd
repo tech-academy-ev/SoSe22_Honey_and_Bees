@@ -15,11 +15,16 @@ At the end of the project guide you will find an overview of all tasks that have
 
 
 ## What is this Project About?
-
+As mentioned in the beginning and as per our project title, our data deals with honey production and bee colonies, specifically in the United States. This data was collected by the USDA National Agricultural Statistics Service, and compiled on [kaggle](https://www.kaggle.com/datasets/kyleahmurphy/nass-honey-bee-20152021?select=NASS_Bee-Stressors_2015-2021.csv). If you have any doubts about the meaning of the variables, you can have a look at the data documentation provided on kaggle. In addition, we have included weather data since both bee colonies and honey production are closely related to climate conditions.
+In the analogy of the typical data science workflow, we have split this project into two parts. First, you are going to learn how to perform an Exploratory Data Analysis (EDA). You will have a closer look at the data, transform it and then get to know the different variables and how they look in various visualisations.
+Beginners will complete the project after this first part. Still, it would be beneficial for beginners to try and work on the second part too. In the next part of the project, advanced programmers 
 
 
 ## Exploratory Data Analysis -- Getting to Know the Data Set
-
+As a first step, you will get to know the data set. This step means you will describe the data and answer questions like: What variables does the data set contain? How are these variables related? For this purpose, you often use graphical tools like box plots or histograms, don’t forget that you can also use tables to look at your data and show your readers what you have been doing.
+We structured the first part of the project to let you know the data thoroughly by completing the given tasks one after the other. As a beginner, you can stop after this part because you will have fulfilled the necessary coding requirements for your TechAcademy certificate. However, if this first part inspires you to step up your analytic skills or your coding language has you in a spell, we encourage you to work on the second part!
+Since data science concepts are independent of specific programming languages, we will describe the general approach in this part of the text. Having understood the bigger picture and starting with the tasks, you will find language-specific tips and tricks in visually separated boxes.
+If you participate in our `R` -Track, you will need to look at the boxes with the blue border. Likewise, you look at the yellow-bordered boxes if you code in `Python`. From time to time, it might be interesting to check out the other language – though you can code the exact solutions in both, they sometimes have a different approach to an identical problem. It makes sense that you complete the first few beginner chapters mentioned in [Section 2](https://tech-academy-ev.github.io/SoSe22_Honey_and_Bees/whats-data-science-and-how-do-i-do-it.html). We recommend that you finish the courses at least until – and including – *Exploratory Data Analysis in [your programming language of choice]*.
 
 
 ## Prediction -- Apply Statistical Methods
