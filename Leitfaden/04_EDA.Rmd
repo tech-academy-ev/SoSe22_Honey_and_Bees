@@ -105,7 +105,7 @@ You can use the lubridate package to transform "years" into a date format.
 :::
 
 ::: {.tipsp .python data-latex="p"}
-`pd.to_datetime()`
+`pd.to_datetime()` is what I would look at for example.
 :::
 
 
@@ -184,7 +184,8 @@ Add tip
 :::
 
 ::: {.tipsp .python data-latex="p"}
-Add tip
+With two-dimensional (panel) data your `.groupby´ statement on the data frame should consider both index values and the time dimension.
+The resulting `GroupBy` object supports various aggregation methods out-of-the-box.
 :::
 
 
@@ -214,7 +215,8 @@ Add tip
 :::
 
 ::: {.tipsp .python data-latex="p"}
-Add tip
+Check out the pandas [merge function](https://pandas.pydata.org/docs/reference/api/pandas.merge.html) documentation.
+If it helps you, visualize what the identifiers in each table are and how they relate to each other. 
 :::
 
 ## States Bar Plot
@@ -232,7 +234,15 @@ The key commands that you can use for this within ggplot() are geom_bar() and co
 :::
 
 ::: {.tipsp .python data-latex="p"}
-Add tip
+In case you want to filter a certain year check out [`.loc` indexing](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html).
+Afterwards you are looking for [matplotlib's horizontal bar plot](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.barh.html). Should you get stuck adding the lines to the plot, you can look at the following [stackoverflow question](https://stackoverflow.com/questions/33382619/plot-a-horizontal-line-using-matplotlib).
+Oftentimes, when you want to create plots that are a little bit more elaborate, you will find an initial statement like this:
+
+    # import statement on top, of course
+    from matplotlib import pyplot as plt
+    fig, ax = plt.subplots()
+
+The trick is to add to the generated `Figure` and `Axes` object subsequently.
 :::
 
 
@@ -268,7 +278,7 @@ Add tip
 :::
 
 ::: {.tipsp .python data-latex="p"}
-Add tip
+Surprise, you are looking for the `.boxplot(...)` function!
 :::
 
 
