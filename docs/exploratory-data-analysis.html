@@ -244,7 +244,7 @@ Recall also that dates, even just years, can be formatted differently than just 
 <p>You can use the lubridate package to transform “years” into a date format.</p>
 </div>
 <div class="tipsp python">
-<p><code>pd.to_datetime()</code></p>
+<p><code>pd.to_datetime()</code> is what I would look at for example.</p>
 </div>
 </div>
 <div id="more-data-types---strings-ints-and-floats" class="section level3 hasAnchor" number="4.2.2">
@@ -307,7 +307,7 @@ You decide to replace with the mean (over the four quarters). Please mind how yo
 <p>Add tip</p>
 </div>
 <div class="tipsp python">
-<p>Add tip</p>
+<p>With two-dimensional (panel) data your <code>.groupby´ statement on the data frame should consider both index values and the time dimension. The resulting</code>GroupBy` object supports various aggregation methods out-of-the-box.</p>
 </div>
 </div>
 </div>
@@ -333,7 +333,8 @@ Closely compare the sizes of the individual data frames and of the aggregate one
 <p>Add tip</p>
 </div>
 <div class="tipsp python">
-<p>Add tip</p>
+<p>Check out the pandas <a href="https://pandas.pydata.org/docs/reference/api/pandas.merge.html">merge function</a> documentation.
+If it helps you, visualize what the identifiers in each table are and how they relate to each other.</p>
 </div>
 </div>
 </div>
@@ -347,7 +348,13 @@ Please also include the average and the median of the observations.</p>
 <p>The key commands that you can use for this within ggplot() are geom_bar() and coord_flip(). Check back on the ggplot2 cheat sheet if you are feeling unsure!</p>
 </div>
 <div class="tipsp python">
-<p>Add tip</p>
+<p>In case you want to filter a certain year check out <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html"><code>.loc</code> indexing</a>.
+Afterwards you are looking for <a href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.barh.html">matplotlib’s horizontal bar plot</a>. Should you get stuck adding the lines to the plot, you can look at the following <a href="https://stackoverflow.com/questions/33382619/plot-a-horizontal-line-using-matplotlib">stackoverflow question</a>.
+Oftentimes, when you want to create plots that are a little bit more elaborate, you will find an initial statement like this:</p>
+<pre><code># import statement on top, of course
+from matplotlib import pyplot as plt
+fig, ax = plt.subplots()</code></pre>
+<p>The trick is to add to the generated <code>Figure</code> and <code>Axes</code> object subsequently.</p>
 </div>
 <div id="splitting-the-data-set" class="section level3 hasAnchor" number="4.5.1">
 <h3><span class="header-section-number">4.5.1</span> Splitting the Data Set<a href="exploratory-data-analysis.html#splitting-the-data-set" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -369,7 +376,7 @@ Please also include the average and the median of the observations.</p>
 <p>Add tip</p>
 </div>
 <div class="tipsp python">
-<p>Add tip</p>
+<p>Surprise, you are looking for the <code>.boxplot(...)</code> function!</p>
 </div>
 </div>
 <div id="map-with-state-popups" class="section level2 hasAnchor" number="4.7">
