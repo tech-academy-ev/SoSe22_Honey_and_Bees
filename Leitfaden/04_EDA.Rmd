@@ -261,7 +261,7 @@ Add tip
 
 ## Yearly Boxplots
 
-Next, let's visualize the data with beautful Boxplots. Within your Team generate 4 Boxplot  aggregated for each year. Therefore, each Team member will present one boxplot, Choose from: Honey Production, Parasite: Varroa Mite, Precipitation, Bee Colonies. Tip: It will be 6 boxes since we look at 6 years.
+Next, let's visualize the data with beautful Boxplots. Within your Team generate 4 Boxplot aggregated for each year. Therefore, each Team member will present one boxplot, Choose from: Honey Production, Parasite: Varroa Mite, Precipitation, Bee Colonies. Tip: It will be 6 boxes since we look at 6 years.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.show="hold", out.width="50%"}
 knitr::include_graphics("plot/Log Honey Production.jpg")
