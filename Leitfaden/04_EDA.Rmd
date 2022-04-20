@@ -65,11 +65,14 @@ Let's start by looking at the bee & honey data sets.
 * What are the data formats (e.g. data types like strings or floats but also date formats such as yearly)? 
 * Look at the unit of every variable, can you make sense of the units?
 
-Write down a couple of sentences to these questions. Also, comment on any errors / difficulties which you notice and that could be an issue later on in the project.
-No worries, there is no right or wrong.
+Write down a couple of sentences to these questions, the goal is to show your readers what you are seeing. Also, comment on any errors or irregularities which you notice and that could be an issue later on in the project. What irregularities you ask? Look at the missing values, logical expressions, numbers, variables types, etc.
+But do not worry, there is no right or wrong here!
 
 ::: {.tips .r data-latex="r"}
-You can import the data directly from your working directory. Use `head()`, `str()`, or `class()` to get an overview.
+You can import all data files directly from your working directory by, for examples, using the command `bees <- read_csv("bees.csv")`. 
+Use `head()`, `str()`, or `class()` to get an overview.
+
+If you need some additional, more general information on how to import data and different data types, check out this [cheat sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf).
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -83,7 +86,7 @@ Here's an additional [pandas cheat sheet](https://pandas.pydata.org/Pandas_Cheat
 
 ### Give some overall statements 
 
-Lets stick with the honey data. Since you have already got a feeling by now, it would be interesting to indicate some outstanding features of the set: 
+Now that you have imported all data sets, lets get into the details of the **honey data**. Since you have already got a feeling by now, it would be interesting to indicate some outstanding features of the set: 
 
 * Which state had the most producing colonies ever and in which year? Anything special about that state?
 * What state had the lowest price for honey. How low was it?
@@ -92,16 +95,17 @@ Lets stick with the honey data. Since you have already got a feeling by now, it 
 
 ## Data Cleaning and Useful Transformations
 
-The exercises in this and the next section are about the bees data set.
-On a later stage of the project we would like to merge it with the honey data set. To this end, we will now spend some time preparing the bees data.
+The exercises in this and the next section are about the **bees data** set.
+In the later stages of the project, we would like to merge the bee data set with the honey data set. To this end, we will now spend some time preparing the bees data set.
 
 ### Date Formatting
 
-Remember, one of the differences is the frequency of the data. The date (format) of the bees set is quarterly whereas we have yearly honey data. 
+From exploring the data in the previous tasks you might have notice the differences in frequency of the data. The date (format) of the bees set is quarterly, whereas we have yearly honey data. 
 Recall also that dates, even just years, can be formatted differently than just as a string or integer. Maybe you have checked it before, but now is definitely the moment to translate the `Date` column to a fitting date format. 
 
 ::: {.tips .r data-latex="r"}
-You can use the lubridate package to transform "years" into a date format.
+You can use the lubridate package to transform "years" into a date format. To things easier, check out the [lubridate package cheat sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf).
+If you would like to read up on some general information on date formats with R in your spare time, have a look [here](https://www.r-bloggers.com/2013/08/date-formats-in-r/)
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -112,13 +116,13 @@ You can use the lubridate package to transform "years" into a date format.
 ### More Data Types - Strings, Ints, and Floats
 
 So far you converted years into a more appropriate date format for further investigation. 
-Now, look at the other columns of the bees data set: Some appear to contain numbers but are they also of a numeric data type? Check out all columns so you don't miss out on one!
+Have a look at the other columns of the bees data set: Some appear to contain numbers, but are they also of a numeric data type? Check out all columns so you don't miss out on one!
 
-For further calculations, it is safer to convert these columns to such a numeric data type.
+For further calculations, it is safer to convert these columns to a numeric data type.
 While there are vectorized methods that can convert data types at once, we would like you to write a (really) simple 'for' loop to conduct the conversions.
 
 ::: {.tips .r data-latex="r"}
-Have you heard of "sapply"? This might help you.
+Have you heard of "sapply"? This might help you. We recommend you to check out the documentation, which you can access by typing `help("sapply")` into the console, or by browsing the web. Remember, you want to convert multiple columns into the numeric format, so be careful to select all the columns!
 :::
 
 ::: {.tipsp .python data-latex="p"}
