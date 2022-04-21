@@ -37,7 +37,7 @@ Add tip
 
 ### Statewise Correlations
 
-Referring the the correlation matrix and aggregating fundamentally different groups, it seems reasonable to look at statewise correlations. Choose a state and plot a  correlation, which you expect to have a reasonable correlation coefficient. 
+Referring the the correlation matrix and aggregating fundamentally different states, it seems reasonable to look at statewise correlations. Choose a state and plot a  correlation, which you expect to have a reasonable correlation coefficient. Does your plot look like you expected it to be?
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
