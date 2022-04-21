@@ -65,35 +65,49 @@ After completing the curriculum and the project's (minimal) requirements, you wi
 
 1.  [Introduction to R (4h)](https://www.datacamp.com/courses/free-introduction-to-r)
 2.  [Intermediate R (6h)](https://www.datacamp.com/courses/intermediate-r)
-3.  [Introduction to Importing Data in R (3h)](https://www.datacamp.com/courses/importing-data-in-r-part-1)
-4.  [Cleaning Data in R (4h)](https://www.datacamp.com/courses/cleaning-data-in-r)
-5.  [Data Manipulation with dplyr (4h)](https://www.datacamp.com/courses/data-manipulation-with-dplyr-in-r)
-6.  [Data Visualization with ggplot2 (Part1) (5h)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1)
-7.  [Exploratory Data Analysis in R (4h)](https://www.datacamp.com/courses/exploratory-data-analysis)
-8.  [Correlation and Regression in R (4h)](https://www.datacamp.com/courses/correlation-and-regression)
-9.  [Multiple and Logistic Regression in R (4h)](https://www.datacamp.com/courses/multiple-and-logistic-regression)
+3.  +. [Introduction to the Tidyverse](https://app.datacamp.com/learn/courses/introduction-to-the-tidyverse)
+4.  [Data Manipulation with dplyr (4h)](https://www.datacamp.com/courses/data-manipulation-with-dplyr-in-r)
+5.  [Introduction to Data Visualization with ggplot2 (4h)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1)
+6.  [Introduction to Importing Data in R (3h)](https://www.datacamp.com/courses/importing-data-in-r-part-1)
+7.  [Cleaning Data in R (4h)](https://www.datacamp.com/courses/cleaning-data-in-r)
+8.  +. [Working with Dates and Times in R](https://app.datacamp.com/learn/courses/working-with-dates-and-times-in-r)
+9.  [Exploratory Data Analysis in R (4h)](https://www.datacamp.com/courses/exploratory-data-analysis)
+
+-8.  [Correlation and Regression in R (4h)](https://www.datacamp.com/courses/correlation-and-regression)
+-9.  [Multiple and Logistic Regression in R (4h)](https://www.datacamp.com/courses/multiple-and-logistic-regression)
+
++ [Introduction to the Tidyverse](https://app.datacamp.com/learn/courses/introduction-to-the-tidyverse)
++. [Reporting with R Markdown](https://app.datacamp.com/learn/courses/reporting-with-rmarkdown)
++. [Introduction to Statistics in R](https://app.datacamp.com/learn/courses/introduction-to-statistics-in-r)
++ [Working with Dates and Times in R](https://app.datacamp.com/learn/courses/working-with-dates-and-times-in-r)
 
 **Machine Learning Fundamentals in R (Advanced Track)**
 
 1.  [Intermediate R (6h)](https://www.datacamp.com/courses/intermediate-r)
-2.  [Introduction to Importing Data in R (3h)](https://www.datacamp.com/courses/importing-data-in-r-part-1)
+-2.  [Introduction to Importing Data in R (3h)](https://www.datacamp.com/courses/importing-data-in-r-part-1)
 3.  [Cleaning Data in R (4h)](https://www.datacamp.com/courses/cleaning-data-in-r)
-4.  [Importing & Cleaning Data in R: Case Studies (4h)](https://www.datacamp.com/courses/importing-cleaning-data-in-r-case-studies)
-5.  [Data Visualization with ggplot2 (Part1) (5h)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1)
-6.  [Supervised Learning in R: Classification (4h)](https://www.datacamp.com/courses/supervised-learning-in-r-classification)
-7.  [Supervised learning in R: Regression (4h)](https://www.datacamp.com/courses/supervised-learning-in-r-regression)
-8.  [Unsupervised Learning in R (4h)](https://www.datacamp.com/courses/unsupervised-learning-in-r)
-9.  [Machine Learning with caret in R (4h)](https://www.datacamp.com/courses/machine-learning-toolbox)
+4.  [Introduction to Data Visualization with ggplot2 (4h)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1)
+5.  [Supervised Learning in R: Classification (4h)](https://www.datacamp.com/courses/supervised-learning-in-r-classification)
+6.  [Supervised learning in R: Regression (4h)](https://www.datacamp.com/courses/supervised-learning-in-r-regression)
+7.  [Unsupervised Learning in R (4h)](https://www.datacamp.com/courses/unsupervised-learning-in-r)
+8.  [Machine Learning with caret in R (4h)](https://www.datacamp.com/courses/machine-learning-toolbox)
 
 **Data Science R (Advanced Track) -- Exchange Pool**
 
--   [Data Visualization with ggplot2 (Part 2) (5h)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-2)
+-   [Intermediate Data Visualization with ggplot2 (4h)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-2)
 -   [Interactive Maps with leaflet in R (4h)](https://www.datacamp.com/courses/interactive-maps-with-leaflet-in-r)
 -   [Machine Learning in Tidyverse (5h)](https://www.datacamp.com/courses/machine-learning-in-the-tidyverse)
--   [Writing Efficient R Code (4h)](https://www.datacamp.com/courses/writing-efficient-r-code)
 -   [Support Vector Machines in R (4h)](https://www.datacamp.com/courses/support-vector-machines-in-r)
--   [Supervised Learning in R: Case Studies (4h)](https://www.datacamp.com/courses/supervised-learning-in-r-case-studies)
+-   [Supervised Learning in R: Classification(4h)](https://www.datacamp.com/courses/supervised-learning-in-r-case-studies)
+-   [Writing Efficient R Code (4h)](https://www.datacamp.com/courses/writing-efficient-r-code)
 -   [Optimizing R Code with Rcpp (4h)](https://www.datacamp.com/courses/optimizing-r-code-with-rcpp)
+
+-.  [Correlation and Regression in R (4h)](https://www.datacamp.com/courses/correlation-and-regression)
+-.  [Multiple and Logistic Regression in R (4h)](https://www.datacamp.com/courses/multiple-and-logistic-regression)
+- [Intermediate Regression in R](https://app.datacamp.com/learn/courses/intermediate-regression-in-r)
+-  [Introduction to Writing Functions in R](https://app.datacamp.com/learn/courses/introduction-to-writing-functions-in-r)
+-  9.  [Case Study: Exploratory Data Analysis in R](https://app.datacamp.com/learn/courses/case-study-exploratory-data-analysis-in-r)
+
 :::
 
 ### Helpful Links
@@ -168,9 +182,9 @@ After completing the curriculum and the project's (minimal) requirements, you wi
 4.  [Introduction to Data Visualization with Matplotlib (4h)](https://www.datacamp.com/courses/introduction-to-matplotlib)
 5.  [Data Manipulation with pandas (4h)](https://www.datacamp.com/courses/data-manipulation-with-pandas)
 6.  [Joining Data with pandas (4h)](https://www.datacamp.com/courses/joining-data-with-pandas)
-7.  [Exploratory Data Analysis in Phyton (4h)](https://www.datacamp.com/courses/exploratory-data-analysis-in-python)
-8.  [Introduction to DataCamp Projects (2h)](https://www.datacamp.com/projects/33)
-9.  [Introduction to Linear Modeling in Python (4h)](https://www.datacamp.com/courses/introduction-to-linear-modeling-in-python)
+7.  [Exploratory Data Analysis in Python (4h)](https://www.datacamp.com/courses/exploratory-data-analysis-in-python)
+-8.  [Introduction to DataCamp Projects (2h)](https://www.datacamp.com/projects/33)
+-9.  [Introduction to Linear Modeling in Python (4h)](https://www.datacamp.com/courses/introduction-to-linear-modeling-in-python)
 
 **Data Science with Python (Advanced Track)**
 
@@ -178,15 +192,15 @@ After completing the curriculum and the project's (minimal) requirements, you wi
 2.  [Python Data Science Toolbox (Part 1) (3h)](https://www.datacamp.com/courses/python-data-science-toolbox-part-1)
 3.  [Python Data Science Toolbox (Part 2) (4h)](https://www.datacamp.com/courses/python-data-science-toolbox-part-2)
 4.  [Cleaning Data in Python (4h)](https://www.datacamp.com/courses/cleaning-data-in-python)
-5.  [Exploring the Bitcoin Cryptocurrency Market (3h)](https://www.datacamp.com/projects/82)
+-5.  [Exploring the Bitcoin Cryptocurrency Market (3h)](https://www.datacamp.com/projects/82)
 6.  [Exploratory Data Analysis in Phyton (4h)](https://www.datacamp.com/courses/exploratory-data-analysis-in-python)
 7.  [Introduction to Linear Modeling in Python (4h)](https://www.datacamp.com/courses/introduction-to-linear-modeling-in-python)
-8.  [Supervised Learning with Scikit-Learn (4h)](https://www.datacamp.com/courses/supervised-learning-with-scikit-learn)
+8.  [Supervised Learning with scikit-learn (4h)](https://www.datacamp.com/courses/supervised-learning-with-scikit-learn)
 9.  [Linear Classifiers in Python (4h)](https://www.datacamp.com/courses/linear-classifiers-in-python)
 
 **Data Science with Python (Advanced Track) - Exchange Pool**
 
--   [TV, Halftime Shows and the Big Game (4h)](https://www.datacamp.com/projects/684)
+-  -[TV, Halftime Shows and the Big Game (4h)](https://www.datacamp.com/projects/684)
 -   [Interactive Data Visualization with Bokeh (4h)](https://www.datacamp.com/courses/interactive-data-visualization-with-bokeh)
 -   [Time Series Analysis (4h)](https://www.datacamp.com/courses/introduction-to-time-series-analysis-in-python)
 -   [Machine Learning for Time Series Data in Python (4h)](https://www.datacamp.com/courses/machine-learning-for-time-series-data-in-python)
