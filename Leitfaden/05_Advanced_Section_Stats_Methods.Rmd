@@ -10,7 +10,8 @@ editor_options:
 
 ## Merging Bees and Weather
 
-We want to investigate how diseases and different climates affect our beloved bee populations. To that end, merge the two data sets.
+The first part was hopefully easy for the more advanced of you. 
+Let's continue with some more challanging exercises! We want to investigate how diseases and different climates affect our beloved bee populations. To that end, you now need to merge the two data sets "Bees" and "Weather".
 Be careful to aggregate the weather data set wisely to quarterly data. It might not be clever to replace period-specific max / min values with a mean.
 
 ## Correlations
@@ -23,9 +24,8 @@ Do a simple correlations plot between variables of interest like lost colonies a
 knitr::include_graphics("plot/Correlations using Pearson Method.jpg")
 ```
 
-* Why is a naive correlation matrix across states a terrible idea?
+* Why is a naive correlation matrix across states a terrible idea? Think for example about omitted variables and how information is lost when you aggregate fundamentally different groups. 
 
-Think for example about omitted variables and how information is lost when you aggregate fundamentally different groups. 
 
 ::: {.tips .r data-latex="r"}
 Add tip
