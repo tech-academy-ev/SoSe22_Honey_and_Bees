@@ -64,3 +64,8 @@ Please frame your findings in a decent conclusion.
 ### Seasonality
 
 Next, not only geographical data might influence weather and bees but also our seasons. Now it is getting a bit challenging. Look for the states that do have 4 seasons . A quick Google Search will help you. Select those and run linear regressions per Season with variables of your interest. Here you could either look at the same variables over all 4 season or select individual variables per season.
+
+## Predict 
+
+As a final task you are now free to give us some predications about the bees based on the weather data set. Best would be a predication per state.
+Disclaimer: the data dimention is be too little for proper predications.
