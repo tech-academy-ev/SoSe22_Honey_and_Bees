@@ -57,5 +57,10 @@ Add tip
 
 ### Exploiting Geographic Differences
 
+You don't have to be a geographical pro to conclude that the state location is propably influencing the weather and thus the bees. Subset your data to explore geographical differences. You could work with latitude and	longitude values here. Run a linear regression model with variables of your interest. Since you have muliple subsets which you aim to compare a loop would be great to use. Compare the beta-value and p-value of your output. What other values are important to look at? 
+Please frame your findings in a decent conclusion. 
 
-### Seasonality 
+
+### Seasonality
+
+Next, not only geographical data might influence weather and bees but also our seasons. Now it is getting a bit challenging. Look for the states that do have 4 seasons . A quick Google Search will help you. Select those and run linear regressions per Season with variables of your interest. Here you could either look at the same variables over all 4 season or select individual variables per season.
