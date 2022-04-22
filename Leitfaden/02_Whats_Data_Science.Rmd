@@ -173,43 +173,44 @@ After completing the curriculum and the project's (minimal) requirements, you wi
 ::: {.tipsp .python data-latex="p"}
 **Python Fundamentals (Beginner Track)**
 
-1.  [Introduction to Data Science in Python (4h)](https://www.datacamp.com/courses/introduction-to-data-science-in-python)
-2.  [Intermediate Python (4h)](https://www.datacamp.com/courses/intermediate-python-for-data-science)
-3.  [Python for Data Science Toolbox (Part 1) (3h)](https://www.datacamp.com/courses/python-data-science-toolbox-part-1)
-4.  [Introduction to Data Visualization with Matplotlib (4h)](https://www.datacamp.com/courses/introduction-to-matplotlib)
-5.  [Data Manipulation with pandas (4h)](https://www.datacamp.com/courses/data-manipulation-with-pandas)
-6.  [Joining Data with pandas (4h)](https://www.datacamp.com/courses/joining-data-with-pandas)
-7.  [Exploratory Data Analysis in Python (4h)](https://www.datacamp.com/courses/exploratory-data-analysis-in-python)
--8.  [Introduction to DataCamp Projects (2h)](https://www.datacamp.com/projects/33)
--9.  [Introduction to Linear Modeling in Python (4h)](https://www.datacamp.com/courses/introduction-to-linear-modeling-in-python)
+1.  [Introduction to Data Science in Python (4h)](https://app.datacamp.com/learn/courses/intro-to-python-for-data-science)
+2.  [Intermediate Python (4h)](https://app.datacamp.com/learn/courses/intermediate-python)
+3.  [Python for Data Science Toolbox (Part 1) (3h)](https://app.datacamp.com/learn/courses/python-data-science-toolbox-part-1)
+4.  [Introduction to Data Visualization with Matplotlib (4h)](https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-matplotlib)
+5.  [Data Manipulation with pandas (4h)](https://app.datacamp.com/learn/courses/data-manipulation-with-pandas)
+6.  [Joining Data with pandas (4h)](https://app.datacamp.com/learn/courses/joining-data-with-pandas)
+7.  [Exploratory Data Analysis in Python (4h)](https://app.datacamp.com/learn/courses/exploratory-data-analysis-in-python)
+8.  [Working with Dates and Times in Python (4h)](https://app.datacamp.com/learn/courses/working-with-dates-and-times-in-python)
+9.  [Introduction to Importing Data in Python (3h)](https://app.datacamp.com/learn/courses/introduction-to-importing-data-in-python)
 
 **Data Science with Python (Advanced Track)**
 
-1.  [Intermediate Python (4h)](https://www.datacamp.com/courses/intermediate-python-for-data-science)
-2.  [Python Data Science Toolbox (Part 1) (3h)](https://www.datacamp.com/courses/python-data-science-toolbox-part-1)
-3.  [Python Data Science Toolbox (Part 2) (4h)](https://www.datacamp.com/courses/python-data-science-toolbox-part-2)
-4.  [Cleaning Data in Python (4h)](https://www.datacamp.com/courses/cleaning-data-in-python)
--5.  [Exploring the Bitcoin Cryptocurrency Market (3h)](https://www.datacamp.com/projects/82)
-6.  [Exploratory Data Analysis in Phyton (4h)](https://www.datacamp.com/courses/exploratory-data-analysis-in-python)
-7.  [Introduction to Linear Modeling in Python (4h)](https://www.datacamp.com/courses/introduction-to-linear-modeling-in-python)
-8.  [Supervised Learning with scikit-learn (4h)](https://www.datacamp.com/courses/supervised-learning-with-scikit-learn)
-9.  [Linear Classifiers in Python (4h)](https://www.datacamp.com/courses/linear-classifiers-in-python)
+1.  [Intermediate Python (4h)](https://app.datacamp.com/learn/courses/intermediate-python)
+2.  [Python Data Science Toolbox (Part 1) (3h)](https://app.datacamp.com/learn/courses/python-data-science-toolbox-part-1)
+3.  [Python Data Science Toolbox (Part 2) (4h)](https://app.datacamp.com/learn/courses/python-data-science-toolbox-part-2)
+4.  [Cleaning Data in Python (4h)](https://app.datacamp.com/learn/courses/cleaning-data-in-python)
+5.  [Exploratory Data Analysis in Phyton (4h)](https://app.datacamp.com/learn/courses/exploratory-data-analysis-in-python)
+6.  [Introduction to Linear Modeling in Python (4h)](https://www.datacamp.com/courses/introduction-to-linear-modeling-in-python)
+7.  [Statistical Thinking in Python (Part 1) (3h)](https://app.datacamp.com/learn/courses/statistical-thinking-in-python-part-1)
+8.  [Time Series Analysis in Python (4h)](https://app.datacamp.com/learn/courses/time-series-analysis-in-python)
+9.  [Machine Learning for Time Series Data in Python (4h)](https://app.datacamp.com/learn/courses/machine-learning-for-time-series-data-in-python)
 
 **Data Science with Python (Advanced Track) - Exchange Pool**
 
--  -[TV, Halftime Shows and the Big Game (4h)](https://www.datacamp.com/projects/684)
--   [Interactive Data Visualization with Bokeh (4h)](https://www.datacamp.com/courses/interactive-data-visualization-with-bokeh)
--   [Time Series Analysis (4h)](https://www.datacamp.com/courses/introduction-to-time-series-analysis-in-python)
--   [Machine Learning for Time Series Data in Python (4h)](https://www.datacamp.com/courses/machine-learning-for-time-series-data-in-python)
--   [Advanced Deep Learning with Keras (4h)](https://www.datacamp.com/courses/advanced-deep-learning-with-keras-in-python)
--   [Data Visualization with Seaborn (4h)](https://www.datacamp.com/courses/data-visualization-with-seaborn)
--   [Web Scraping in Python (4h)](https://www.datacamp.com/courses/web-scraping-with-python)
--   [Writing Efficient Python Code (4h)](https://www.datacamp.com/courses/writing-efficient-python-code)
--   [Unsupervised Learning in Python (4h)](https://www.datacamp.com/courses/unsupervised-learning-in-python)
--   [Writing Efficient Code with pandas (4h)](https://www.datacamp.com/courses/optimizing-python-code-with-pandas)
--   [Introduction to Deep Learning in Python (4h)](https://www.datacamp.com/courses/deep-learning-in-python)
--   [ARIMA Models in Python (4h)](https://www.datacamp.com/courses/forecasting-using-arima-models-in-python)
+-   [Interactive Data Visualization with Bokeh (4h)](https://app.datacamp.com/learn/courses/interactive-data-visualization-with-bokeh)
+-   [Data Visualization with Seaborn (4h)](https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-seaborn)
+-   [Supervised Learning with scikit-learn (4h)](https://app.datacamp.com/learn/courses/supervised-learning-with-scikit-learn)
+-   [Linear Classifiers in Python (4h)](https://app.datacamp.com/learn/courses/linear-classifiers-in-python)
+-   [Unsupervised Learning in Python (4h)](https://app.datacamp.com/learn/courses/unsupervised-learning-in-python)
+-   [Introduction to Deep Learning in Python (4h)](https://app.datacamp.com/learn/courses/introduction-to-deep-learning-in-python)
+-   [ARIMA Models in Python (4h)](https://app.datacamp.com/learn/courses/arima-models-in-python)
+-   [Web Scraping in Python (4h)](https://app.datacamp.com/learn/courses/web-scraping-with-python)
+-   [Writing Efficient Python Code (4h)](https://app.datacamp.com/learn/courses/writing-efficient-python-code)
+-   [Writing Efficient Code with pandas (4h)](https://app.datacamp.com/learn/courses/writing-efficient-code-with-pandas)
 :::
+
+[//]: # https://app.datacamp.com/learn/courses/statistical-thinking-in-python-part-2
+[//]: # https://app.datacamp.com/learn/courses/machine-learning-with-tree-based-models-in-python
 
 ### Helpful Links
 
@@ -247,4 +248,6 @@ To give you a little overview on the dates of our Meetups, you can find all the 
 - **15.06.2022**, Coding MeetUp 3
 - **29.06.2022**, Coding MeetUp 4
 
+### Deadline 
+For both your DataCamp courses and the project files hand-in the deadline is **03.07.2022, 23:59** 
 
