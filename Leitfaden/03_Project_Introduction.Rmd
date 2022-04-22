@@ -27,5 +27,5 @@ Since data science concepts are independent of specific programming languages, w
 If you participate in our `R` -Track, you will need to look at the boxes with the blue border. Likewise, you look at the yellow-bordered boxes if you code in `Python`. From time to time, it might be interesting to check out the other language – though you can code the exact solutions in both, they sometimes have a different approach to an identical problem. It makes sense that you complete the first few beginner chapters mentioned in [Section 2](https://tech-academy-ev.github.io/SoSe22_Honey_and_Bees/whats-data-science-and-how-do-i-do-it.html). We recommend that you finish the courses at least until – and including – *Exploratory Data Analysis in [your programming language of choice]*.
 
 
-## Prediction -- Apply Statistical Methods
+## Seasonality and Geographic Differences – Application of Statistical Methods
 
