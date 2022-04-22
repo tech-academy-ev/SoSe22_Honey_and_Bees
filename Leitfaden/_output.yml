@@ -13,9 +13,9 @@ bookdown::gitbook:
     download: ["pdf"]
     sharing:
       github: yes
-      facebook: no
+      facebook: yes
       twitter: yes
-      all: no  
+      all: no
 bookdown::pdf_book:
   toc: no
   includes:
