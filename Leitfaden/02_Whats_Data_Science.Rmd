@@ -65,19 +65,16 @@ After completing the curriculum and the project's (minimal) requirements, you wi
 
 1.  [Introduction to R (4h)](https://www.datacamp.com/courses/free-introduction-to-r)
 2.  [Intermediate R (6h)](https://www.datacamp.com/courses/intermediate-r)
-3.  +. [Introduction to the Tidyverse](https://app.datacamp.com/learn/courses/introduction-to-the-tidyverse)
-4.  [Data Manipulation with dplyr (4h)](https://www.datacamp.com/courses/data-manipulation-with-dplyr-in-r)
-5.  [Introduction to Data Visualization with ggplot2 (4h)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1)
-6.  [Introduction to Importing Data in R (3h)](https://www.datacamp.com/courses/importing-data-in-r-part-1)
-7.  [Cleaning Data in R (4h)](https://www.datacamp.com/courses/cleaning-data-in-r)
-8.  +. [Working with Dates and Times in R](https://app.datacamp.com/learn/courses/working-with-dates-and-times-in-r)
-9.  [Exploratory Data Analysis in R (4h)](https://www.datacamp.com/courses/exploratory-data-analysis)
+3.  [Data Manipulation with dplyr (4h)](https://www.datacamp.com/courses/data-manipulation-with-dplyr-in-r)
+4.  [Introduction to Data Visualization with ggplot2 (4h)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1)
+5.  [Introduction to Importing Data in R (3h)](https://www.datacamp.com/courses/importing-data-in-r-part-1)
+6.  [Cleaning Data in R (4h)](https://www.datacamp.com/courses/cleaning-data-in-r)
+7.  +. [Working with Dates and Times in R](https://app.datacamp.com/learn/courses/working-with-dates-and-times-in-r)
+8.  [Exploratory Data Analysis in R (4h)](https://www.datacamp.com/courses/exploratory-data-analysis)
 
 -8.  [Correlation and Regression in R (4h)](https://www.datacamp.com/courses/correlation-and-regression)
 -9.  [Multiple and Logistic Regression in R (4h)](https://www.datacamp.com/courses/multiple-and-logistic-regression)
 
-+ [Introduction to the Tidyverse](https://app.datacamp.com/learn/courses/introduction-to-the-tidyverse)
-+. [Reporting with R Markdown](https://app.datacamp.com/learn/courses/reporting-with-rmarkdown)
 +. [Introduction to Statistics in R](https://app.datacamp.com/learn/courses/introduction-to-statistics-in-r)
 + [Working with Dates and Times in R](https://app.datacamp.com/learn/courses/working-with-dates-and-times-in-r)
 
@@ -102,8 +99,8 @@ After completing the curriculum and the project's (minimal) requirements, you wi
 -   [Writing Efficient R Code (4h)](https://www.datacamp.com/courses/writing-efficient-r-code)
 -   [Optimizing R Code with Rcpp (4h)](https://www.datacamp.com/courses/optimizing-r-code-with-rcpp)
 
--.  [Correlation and Regression in R (4h)](https://www.datacamp.com/courses/correlation-and-regression)
--.  [Multiple and Logistic Regression in R (4h)](https://www.datacamp.com/courses/multiple-and-logistic-regression)
+-. [Correlation and Regression in R (4h)](https://www.datacamp.com/courses/correlation-and-regression)
+-. [Multiple and Logistic Regression in R (4h)](https://www.datacamp.com/courses/multiple-and-logistic-regression)
 - [Intermediate Regression in R](https://app.datacamp.com/learn/courses/intermediate-regression-in-r)
 -  [Introduction to Writing Functions in R](https://app.datacamp.com/learn/courses/introduction-to-writing-functions-in-r)
 -  9.  [Case Study: Exploratory Data Analysis in R](https://app.datacamp.com/learn/courses/case-study-exploratory-data-analysis-in-r)
