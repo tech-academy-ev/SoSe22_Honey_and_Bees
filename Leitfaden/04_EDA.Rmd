@@ -57,7 +57,7 @@ level of your notebook / script. You can always copy to new variables and work o
 
 ## Exploring Honey and Bees Data
 
-### Discovering Formats, Frequencies, and Fuck-ups
+### Discovering the Data
 Let's start by looking at the bee & honey data sets. 
 
 * Have a look at the frequency of the records (is there a difference across sets?)
