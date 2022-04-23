@@ -31,11 +31,13 @@ missing-values
 lost-colonies
 group-means
 merging-data-sets
-joint-honey-and-bees-set
+Merging
 states-bar-plot
 splitting-the-data-set
 yearly-boxplots
-map-with-state-popups
+visualization-with-maps
+geographic-map-with-state-pop-ups
+animating-changes-over-time
 surprise-us
 seasonality-and-geographic-differences-application-of-statistical-methods-1
 merging-bees-and-weather

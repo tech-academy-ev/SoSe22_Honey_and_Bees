@@ -122,14 +122,18 @@
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#merging-data-sets"><i class="fa fa-check"></i><b>4.4</b> Merging Data Sets<span></span></a>
 <ul>
-<li class="chapter" data-level="4.4.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#joint-honey-and-bees-set"><i class="fa fa-check"></i><b>4.4.1</b> Joint Honey and Bees Set<span></span></a></li>
+<li class="chapter" data-level="4.4.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#Merging"><i class="fa fa-check"></i><b>4.4.1</b> Joint Honey and Bees Set<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#states-bar-plot"><i class="fa fa-check"></i><b>4.5</b> States Bar Plot<span></span></a></li>
 <li class="chapter" data-level="4.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#splitting-the-data-set"><i class="fa fa-check"></i><b>4.6</b> Splitting the Data Set<span></span></a>
 <ul>
 <li class="chapter" data-level="4.6.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#yearly-boxplots"><i class="fa fa-check"></i><b>4.6.1</b> Yearly Boxplots<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#map-with-state-popups"><i class="fa fa-check"></i><b>4.7</b> Map with State Popups<span></span></a></li>
+<li class="chapter" data-level="4.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualization-with-maps"><i class="fa fa-check"></i><b>4.7</b> Visualization with Maps<span></span></a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#geographic-map-with-state-pop-ups"><i class="fa fa-check"></i><b>4.7.1</b> Geographic Map with State Pop-ups<span></span></a></li>
+<li class="chapter" data-level="4.7.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#animating-changes-over-time"><i class="fa fa-check"></i><b>4.7.2</b> Animating Changes over Time<span></span></a></li>
+</ul></li>
 <li class="chapter" data-level="4.8" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#surprise-us"><i class="fa fa-check"></i><b>4.8</b> Surprise Us!<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="seasonality-and-geographic-differences-application-of-statistical-methods-1.html"><a href="seasonality-and-geographic-differences-application-of-statistical-methods-1.html"><i class="fa fa-check"></i><b>5</b> Seasonality and Geographic Differences – Application of Statistical Methods<span></span></a>
@@ -250,7 +254,9 @@ Recall also that dates, even just years, can be formatted differently than just 
 If you would like to read up on some general information on date formats with R in your spare time, have a look <a href="https://www.r-bloggers.com/2013/08/date-formats-in-r/">here</a></p>
 </div>
 <div class="tipsp python">
-<p><code>pd.to_datetime()</code> is what I would look at for example.</p>
+<p><code>pd.to_datetime()</code> is what I would look at for example.
+A corresponding DataCamp resource is section 4 in <a href="https://app.datacamp.com/learn/courses/working-with-dates-and-times-in-python">Working with dates and times in Python</a>.
+Also, the <a href="https://app.datacamp.com/learn/courses/data-manipulation-with-pandas">Data Manipulation with pandas</a> course is of great help for the following exercises.</p>
 </div>
 </div>
 <div id="more-data-types" class="section level3 hasAnchor" number="4.2.2">
@@ -299,7 +305,7 @@ Sometimes you are lucky and can also identify a pattern that will ease your pain
 </div>
 <div id="group-means" class="section level3 hasAnchor" number="4.3.3">
 <h3><span class="header-section-number">4.3.3</span> Group Means<a href="exploratory-data-analysis.html#group-means" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We want to merge the honey and bees data set to analyze them jointly. To do so we need to reduce the frequency of the bees data frame (quarterly) to yearly, so you only have data for 2015,2016,2017,2018,2019, and 2020 per state left.
+<p>We want to merge the honey and bees data set to analyze them jointly. To do so we need to reduce the frequency of the bees data frame (quarterly) to yearly, so you only have data for 2015, 2016, 2017, 2018, 2019, and 2020 per state left.
 Accordingly, you would like to group by state and quarter and replace the observations by an aggregate.
 You decide to replace with the mean (over the four quarters). Please mind how you are rounding, print the table of your aggregated data frame, and answer the following two questions</p>
 <ul>
@@ -310,10 +316,11 @@ You decide to replace with the mean (over the four quarters). Please mind how yo
 <p><img src="plot/Lost%20Colonies%20in%20Wyoming%20over%20time.jpg" width="100%" style="display: block; margin: auto;" /></p>
 <p>There is no absolute answer to these questions since your approach most likely depends on what you are analyzing / trying to show or understand.</p>
 <div class="tips r">
-<p>An approach with dyplr is the cleanest in this case. Use mutate, group_by, select and summarise. In the summerise call you can add multiple functions together.</p>
+<p>An approach with dyplr is the cleanest in this case. Use mutate, group_by, select and summarize. In the summarize call you can add multiple functions together.</p>
 </div>
 <div class="tipsp python">
-<p>With two-dimensional (panel) data your <code>.groupby´ statement on the data frame should consider both index values and the time dimension. The resulting</code>GroupBy` object supports various aggregation methods out-of-the-box.</p>
+<p>With two-dimensional (panel) data your <code>.groupby</code> statement on the data frame should consider both index values and the time dimension.
+The resulting <code>GroupBy</code> object supports various aggregation methods out-of-the-box.</p>
 </div>
 </div>
 </div>
@@ -327,8 +334,8 @@ Please give your “bees” data columns appropriate names (we recommend names w
 <div class="tipsp python">
 <p>Column names can be replaced very neatly by passing a dictionary <code>{"x": "y", }</code> to a certain pandas method.</p>
 </div>
-<div id="joint-honey-and-bees-set" class="section level3 hasAnchor" number="4.4.1">
-<h3><span class="header-section-number">4.4.1</span> Joint Honey and Bees Set<a href="exploratory-data-analysis.html#joint-honey-and-bees-set" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="Merging" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Joint Honey and Bees Set<a href="exploratory-data-analysis.html#Merging" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Do an inner merge of the two sets by exploiting the index / State names and the respective date columns.
 Closely compare the sizes of the individual data frames and of the aggregate one.</p>
 <ul>
@@ -340,7 +347,8 @@ Closely compare the sizes of the individual data frames and of the aggregate one
 </div>
 <div class="tipsp python">
 <p>Check out the pandas <a href="https://pandas.pydata.org/docs/reference/api/pandas.merge.html">merge function</a> documentation.
-If it helps you, visualize what the identifiers in each table are and how they relate to each other.</p>
+If it helps you, visualize what the identifiers in each table are and how they relate to each other.
+The DataCamp course <a href="https://app.datacamp.com/learn/courses/joining-data-with-pandas">Joining Data with pandas (4h)</a> might also get you started.</p>
 </div>
 </div>
 </div>
@@ -360,7 +368,8 @@ Oftentimes, when you want to create plots that are a little bit more elaborate, 
 <pre><code># import statement on top, of course
 from matplotlib import pyplot as plt
 fig, ax = plt.subplots()</code></pre>
-<p>The trick is to add to the generated <code>Figure</code> and <code>Axes</code> object subsequently.</p>
+<p>The trick is to add to the generated <code>Figure</code> and <code>Axes</code> object subsequently.
+For further resources the course <a href="https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-matplotlib">Introduction to Data Visualization with Matplotlib (4h)</a> is a good place to start!</p>
 </div>
 </div>
 <div id="splitting-the-data-set" class="section level2 hasAnchor" number="4.6">
@@ -374,8 +383,8 @@ fig, ax = plt.subplots()</code></pre>
 </div>
 <div id="yearly-boxplots" class="section level3 hasAnchor" number="4.6.1">
 <h3><span class="header-section-number">4.6.1</span> Yearly Boxplots<a href="exploratory-data-analysis.html#yearly-boxplots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Next, let’s visualize the splitted data with beautful Boxplots. Generate 4 Boxplot aggregated for each year. They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Bee Colonies. For really big numbers it is sometimes more convenient to use a log transformation.
-In the end you can compare your 4 Boxplots with the ones your team members created. Keep in mind to communiicate the same scaling, otherwise a visual comparison will not work out.
+<p>Next, let’s visualize the split data with beautiful Boxplots. Generate 4 Boxplot aggregated for each year. They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Bee Colonies. For really big numbers it is sometimes more convenient to use a log transformation.
+In the end you can compare your 4 Boxplots with the ones your team members created. Keep in mind to communicate the same scaling, otherwise a visual comparison will not work out.
 Tip: It will be 6 boxes for each Boxplot since we look at 6 years, as shown in the example.</p>
 <p><img src="plot/Log%20Honey%20Production.jpg" width="50%" /><img src="plot/Varroa%20Mites.jpg" width="50%" />
 <img src="plot/Bee%20Colonies.jpg" width="50%" /><img src="plot/Average%20Precipitation.jpg" width="50%" /></p>
@@ -387,13 +396,13 @@ Tip: It will be 6 boxes for each Boxplot since we look at 6 years, as shown in t
 </div>
 </div>
 </div>
-<div id="map-with-state-popups" class="section level2 hasAnchor" number="4.7">
-<h2><span class="header-section-number">4.7</span> Map with State Popups<a href="exploratory-data-analysis.html#map-with-state-popups" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="visualization-with-maps" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> Visualization with Maps<a href="exploratory-data-analysis.html#visualization-with-maps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Last but not least we want to do a more appealing visualization.
 The idea is to combine the geographic information on the states with the numeric data to provide a rich visual that reflects the two combinations.</p>
+<div id="geographic-map-with-state-pop-ups" class="section level3 hasAnchor" number="4.7.1">
+<h3><span class="header-section-number">4.7.1</span> Geographic Map with State Pop-ups<a href="exploratory-data-analysis.html#geographic-map-with-state-pop-ups" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="plot/Map_with_Popups.PNG" width="100%" style="display: block; margin: auto;" /></p>
-<p>As a bonus, you can also animate the transitions over time for each state creating a very dynamic plot.</p>
-<p><img src="plot/States_map_bee_starting_pop.gif" width="100%" style="display: block; margin: auto;" /></p>
 <div class="tips r">
 <p>This time, we created the plot using the leaflet package. Why don’t you try to find information on the package online?</p>
 <p>You can create a basic map with leaflet and add additional layers by following these simple steps:</p>
@@ -406,7 +415,36 @@ popup= )</p>
 <p>The popup is where the magic happens! Can you make the map show you honey production, number of bee colonies, and three more variables that you find important for such a plot?</p>
 </div>
 <div class="tipsp python">
+<p>We are going to use yet another library, this one is called <code>folium</code>.</p>
+<p>For this task you need to work with its documentation which you can find online.</p>
+<p>Use folium’s Circle (Marker) to draw a circle for each state at its centered coordinates (latitude, longitude). You will need to implement a for-loop to iterate over all states.</p>
+<pre><code>import folium
+# Initiate the map
+m = folium.Map(
+    location=[39, -101],  # Somewhat central U.S.A
+    zoom_start=3.5,
+    tiles=&#39;Stamen Terrain&#39;  # one of many Map Styles
+)
+
+# Use a for-loop to plot circles
+for idx, row in df.iterrows() :
+    # Your code here
+
+m  # Displays the map</code></pre>
+</div>
+</div>
+<div id="animating-changes-over-time" class="section level3 hasAnchor" number="4.7.2">
+<h3><span class="header-section-number">4.7.2</span> Animating Changes over Time<a href="exploratory-data-analysis.html#animating-changes-over-time" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As a bonus, you can also animate the transitions over time for each state creating a very dynamic plot.</p>
+<p><img src="plot/States_map_bee_starting_pop.gif" width="100%" style="display: block; margin: auto;" /></p>
+<div class="tips r">
 <p>Add tip</p>
+</div>
+<div class="tipsp python">
+<p>There is a really cool utility built-in to <a href="https://plotly.com/python/choropleth-maps/">plotly express</a> so you do not have to specify the tedious coordinates for your plots.
+In fact, the animation above is essentially one single function call.</p>
+<p>For animation, the <code>choropleth</code> function takes an <em>animation_frame</em> and <em>animation_group</em> argument which you need to specify explicitly besides your data frame.</p>
+</div>
 </div>
 </div>
 <div id="surprise-us" class="section level2 hasAnchor" number="4.8">
