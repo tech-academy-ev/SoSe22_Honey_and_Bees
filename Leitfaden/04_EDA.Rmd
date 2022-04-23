@@ -110,6 +110,8 @@ If you would like to read up on some general information on date formats with R 
 
 ::: {.tipsp .python data-latex="p"}
 `pd.to_datetime()` is what I would look at for example.
+A corresponding DataCamp resource is section 4 in [Working with dates and times in Python](https://app.datacamp.com/learn/courses/working-with-dates-and-times-in-python).
+Also, the [Data Manipulation with pandas](https://app.datacamp.com/learn/courses/data-manipulation-with-pandas) course is of great help for the following exercises.
 :::
 
 
@@ -167,7 +169,7 @@ Add a new column where you add the percentage of lost colonies in reference to t
 
 ### Group Means
 
-We want to merge the honey and bees data set to analyze them jointly. To do so we need to reduce the frequency of the bees data frame (quarterly) to yearly, so you only have data for 2015,2016,2017,2018,2019, and 2020 per state left.
+We want to merge the honey and bees data set to analyze them jointly. To do so we need to reduce the frequency of the bees data frame (quarterly) to yearly, so you only have data for 2015, 2016, 2017, 2018, 2019, and 2020 per state left.
 Accordingly, you would like to group by state and quarter and replace the observations by an aggregate.
 You decide to replace with the mean (over the four quarters). Please mind how you are rounding, print the table of your aggregated data frame, and answer the following two questions
 
@@ -184,11 +186,11 @@ There is no absolute answer to these questions since your approach most likely d
 
 
 ::: {.tips .r data-latex="r"}
-An approach with dyplr is the cleanest in this case. Use mutate, group_by, select and summarise. In the summerise call you can add multiple functions together. 
+An approach with dyplr is the cleanest in this case. Use mutate, group_by, select and summarize. In the summarize call you can add multiple functions together. 
 :::
 
 ::: {.tipsp .python data-latex="p"}
-With two-dimensional (panel) data your `.groupby´ statement on the data frame should consider both index values and the time dimension.
+With two-dimensional (panel) data your `.groupby` statement on the data frame should consider both index values and the time dimension.
 The resulting `GroupBy` object supports various aggregation methods out-of-the-box.
 :::
 
@@ -206,7 +208,7 @@ Column names can be adjusted with tidyselect's "rename" function.
 Column names can be replaced very neatly by passing a dictionary `{"x": "y", }` to a certain pandas method.
 :::
 
-### Joint Honey and Bees Set 
+### Joint Honey and Bees Set {#Merging}
 
 Do an inner merge of the two sets by exploiting the index / State names and the respective date columns. 
 Closely compare the sizes of the individual data frames and of the aggregate one. 
@@ -221,6 +223,7 @@ Check out the R base [merge function](https://www.rdocumentation.org/packages/ba
 ::: {.tipsp .python data-latex="p"}
 Check out the pandas [merge function](https://pandas.pydata.org/docs/reference/api/pandas.merge.html) documentation.
 If it helps you, visualize what the identifiers in each table are and how they relate to each other. 
+The DataCamp course [Joining Data with pandas (4h)](https://app.datacamp.com/learn/courses/joining-data-with-pandas) might also get you started.
 :::
 
 ## States Bar Plot
@@ -247,6 +250,7 @@ Oftentimes, when you want to create plots that are a little bit more elaborate, 
     fig, ax = plt.subplots()
 
 The trick is to add to the generated `Figure` and `Axes` object subsequently.
+For further resources the course [Introduction to Data Visualization with Matplotlib (4h)](https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-matplotlib) is a good place to start!
 :::
 
 
@@ -264,8 +268,8 @@ Add tip
 
 ### Yearly Boxplots
 
-Next, let's visualize the splitted data with beautful Boxplots. Generate 4 Boxplot aggregated for each year.  They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Bee Colonies. For really big numbers it is sometimes more convenient to use a log transformation. 
-In the end you can compare your 4 Boxplots with the ones your team members created. Keep in mind to communiicate the same scaling, otherwise a visual comparison will not work out.
+Next, let's visualize the split data with beautiful Boxplots. Generate 4 Boxplot aggregated for each year.  They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Bee Colonies. For really big numbers it is sometimes more convenient to use a log transformation. 
+In the end you can compare your 4 Boxplots with the ones your team members created. Keep in mind to communicate the same scaling, otherwise a visual comparison will not work out.
 Tip: It will be 6 boxes for each Boxplot since we look at 6 years, as shown in the example.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.show="hold", out.width="50%"}
@@ -287,19 +291,14 @@ Surprise, you are looking for the `.boxplot(...)` function!
 :::
 
 
-## Map with State Popups
+## Visualization with Maps
 Last but not least we want to do a more appealing visualization.
 The idea is to combine the geographic information on the states with the numeric data to provide a rich visual that reflects the two combinations.
 
+### Geographic Map with State Pop-ups 
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
 knitr::include_graphics("plot/Map_with_Popups.png")
-```
-
-
-As a bonus, you can also animate the transitions over time for each state creating a very dynamic plot.
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
-knitr::include_graphics("plot/States_map_bee_starting_pop.gif")
 ```
 
 ::: {.tips .r data-latex="r"}
@@ -319,7 +318,46 @@ The popup is where the magic happens! Can you make the map show you honey produc
 :::
 
 ::: {.tipsp .python data-latex="p"}
+We are going to use yet another library, this one is called `folium`.
+
+For this task you need to work with its documentation which you can find online.
+
+Use folium’s Circle (Marker) to draw a circle for each state at its centered coordinates (latitude, longitude). You will need to implement a for-loop to iterate over all states. 
+    
+    import folium
+    # Initiate the map
+    m = folium.Map(
+        location=[39, -101],  # Somewhat central U.S.A
+        zoom_start=3.5,
+        tiles='Stamen Terrain'  # one of many Map Styles
+    )
+    
+    # Use a for-loop to plot circles
+    for idx, row in df.iterrows() :
+        # Your code here
+    
+    m  # Displays the map
+
+
+:::
+
+### Animating Changes over Time
+
+As a bonus, you can also animate the transitions over time for each state creating a very dynamic plot.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
+knitr::include_graphics("plot/States_map_bee_starting_pop.gif")
+```
+
+::: {.tips .r data-latex="r"}
 Add tip
+:::
+
+::: {.tipsp .python data-latex="p"}
+There is a really cool utility built-in to [plotly express](https://plotly.com/python/choropleth-maps/) so you do not have to specify the tedious coordinates for your plots.
+In fact, the animation above is essentially one single function call.
+
+For animation, the `choropleth` function takes an *animation_frame* and *animation_group* argument which you need to specify explicitly besides your data frame. 
 :::
 
 ## Surprise Us! 
