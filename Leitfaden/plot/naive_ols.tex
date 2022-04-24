@@ -1,0 +1,38 @@
+\begin{center}
+\begin{tabular}{lclc}
+\toprule
+\textbf{Dep. Variable:}         & lost\_colonies\_percent & \textbf{  R-squared:         } &     0.065   \\
+\textbf{Model:}                 &           OLS           & \textbf{  Adj. R-squared:    } &     0.060   \\
+\textbf{Method:}                &      Least Squares      & \textbf{  F-statistic:       } &     11.63   \\
+\textbf{Date:}                  &     Sun, 24 Apr 2022    & \textbf{  Prob (F-statistic):} &  1.26e-12   \\
+\textbf{Time:}                  &         22:58:04        & \textbf{  Log-Likelihood:    } &   -3943.9   \\
+\textbf{No. Observations:}      &            1008         & \textbf{  AIC:               } &     7902.   \\
+\textbf{Df Residuals:}          &            1001         & \textbf{  BIC:               } &     7936.   \\
+\textbf{Df Model:}              &               6         & \textbf{                     } &             \\
+\textbf{Covariance Type:}       &        nonrobust        & \textbf{                     } &             \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lcccccc}
+                                & \textbf{coef} & \textbf{std err} & \textbf{t} & \textbf{P$> |$t$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
+\midrule
+\textbf{humidity}               &      -0.0903  &        0.042     &    -2.138  &         0.033        &       -0.173    &       -0.007     \\
+\textbf{cloudcover}             &       0.0082  &        0.033     &     0.247  &         0.805        &       -0.057    &        0.073     \\
+\textbf{precip}                 &      -0.0492  &        0.303     &    -0.162  &         0.871        &       -0.644    &        0.546     \\
+\textbf{Varroa Mites (Percent)} &       0.1101  &        0.022     &     5.055  &         0.000        &        0.067    &        0.153     \\
+\textbf{constant}               &      16.8590  &        2.610     &     6.459  &         0.000        &       11.737    &       21.981     \\
+\textbf{quarter\_1}             &       5.0299  &        0.993     &     5.063  &         0.000        &        3.081    &        6.979     \\
+\textbf{quarter\_3}             &      -3.1243  &        0.998     &    -3.131  &         0.002        &       -5.082    &       -1.166     \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lclc}
+\textbf{Omnibus:}       & 1117.924 & \textbf{  Durbin-Watson:     } &     2.030   \\
+\textbf{Prob(Omnibus):} &   0.000  & \textbf{  Jarque-Bera (JB):  } & 104856.224  \\
+\textbf{Skew:}          &   5.313  & \textbf{  Prob(JB):          } &      0.00   \\
+\textbf{Kurtosis:}      &  51.823  & \textbf{  Cond. No.          } &      571.   \\
+\bottomrule
+\end{tabular}
+%\caption{OLS Regression Results}
+\end{center}
+
+Notes: \newline
+ [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
