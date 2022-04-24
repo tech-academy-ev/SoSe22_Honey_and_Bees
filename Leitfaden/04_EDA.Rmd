@@ -164,13 +164,14 @@ We highly recommend the [Datacamp course on missing values in Python](https://ww
 
 ### Lost Colonies
 
-Add a new column where you add the percentage of lost colonies in reference to the starting colonies(it is as simple as it reads). 
+Add a new column where you add the percentage of lost colonies in reference to the starting colonies (it is as simple as it reads). 
 
 
 ### Group Means
 
 We want to merge the honey and bees data set to analyze them jointly. To do so we need to reduce the frequency of the bees data frame (quarterly) to yearly, so you only have data for 2015, 2016, 2017, 2018, 2019, and 2020 per state left.
 Accordingly, you would like to group by state and quarter and replace the observations by an aggregate.
+
 You decide to replace with the mean (over the four quarters). Please mind how you are rounding, print the table of your aggregated data frame, and answer the following two questions
 
 * What are potential hazards of reducing data like this? 
@@ -268,9 +269,14 @@ Add tip
 
 ### Yearly Boxplots
 
-Next, let's visualize the split data with beautiful Boxplots. Generate 4 Boxplot aggregated for each year.  They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Bee Colonies. For really big numbers it is sometimes more convenient to use a log transformation. 
+Next, let's visualize the split data with beautiful Boxplots. Generate 4 Boxplot aggregated for each year.  They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Bee Colonies. 
 In the end you can compare your 4 Boxplots with the ones your team members created. Keep in mind to communicate the same scaling, otherwise a visual comparison will not work out.
-Tip: It will be 6 boxes for each Boxplot since we look at 6 years, as shown in the example.
+**Tip:** It will be 6 boxes for each Boxplot since we look at 6 years, as shown in the example.
+
+Note that applying the logarithm to the colony values is a very useful thing to do. With this transformation you achieve a reasonable visualization without excluding a state since we have a strong outlier in California. To convince yourself, you can easily plot both Boxplots (with and without log) of maximum colonies for example.
+
+Also, applying the log "normalizes" the distribution of values (frequently seen in empirical statistics) assuming that the underlying values approximately follow a log-normal distribution.
+A very superficial take on this can be found [here (5 min read)](https://medium.com/@kyawsawhtoon/log-transformation-purpose-and-interpretation-9444b4b049c9).
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.show="hold", out.width="50%"}
 knitr::include_graphics("plot/Log Honey Production.jpg")
@@ -292,10 +298,13 @@ Surprise, you are looking for the `.boxplot(...)` function!
 
 
 ## Visualization with Maps
-Last but not least we want to do a more appealing visualization.
-The idea is to combine the geographic information on the states with the numeric data to provide a rich visual that reflects the two combinations.
+Last but not least, we want to do a more appealing visualization.
+The idea is to combine the geographic information on the states with the numeric data to provide a rich visual that reflects the two aspects.
 
 ### Geographic Map with State Pop-ups 
+We start by exploiting the coordinates provided with the data and our joint honey and bees set to obtain a responsive map of the U.S.A.
+
+The map should reflect information about some key variables like the maximum- and lost colonies as well as the honey production and stock price in a year of your choice.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
 knitr::include_graphics("plot/Map_with_Popups.png")
@@ -342,8 +351,10 @@ Use folium’s Circle (Marker) to draw a circle for each state at its centered c
 :::
 
 ### Animating Changes over Time
+Since we have looked at a single year in the plot before (with multiple variables), we would like to mix things up and look at transitions here.
+In this case we plot a heat map showing the transition of log starting colonies over time for each state creating a very dynamic plot.
 
-As a bonus, you can also animate the transitions over time for each state creating a very dynamic plot.
+Note again the log transformation for visualization purposes. 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
 knitr::include_graphics("plot/States_map_bee_starting_pop.gif")
