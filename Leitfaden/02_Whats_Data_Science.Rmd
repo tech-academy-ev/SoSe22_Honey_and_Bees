@@ -98,7 +98,6 @@ After completing the curriculum and the project's (minimal) requirements, you wi
 -   [Supervised Learning in R: Classification(4h)](https://www.datacamp.com/courses/supervised-learning-in-r-case-studies)
 -   [Writing Efficient R Code (4h)](https://www.datacamp.com/courses/writing-efficient-r-code)
 -   [Optimizing R Code with Rcpp (4h)](https://www.datacamp.com/courses/optimizing-r-code-with-rcpp)
-
 -. [Correlation and Regression in R (4h)](https://www.datacamp.com/courses/correlation-and-regression)
 -. [Multiple and Logistic Regression in R (4h)](https://www.datacamp.com/courses/multiple-and-logistic-regression)
 - [Intermediate Regression in R](https://app.datacamp.com/learn/courses/intermediate-regression-in-r)
