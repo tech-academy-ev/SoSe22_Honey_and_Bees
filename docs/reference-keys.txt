@@ -43,11 +43,12 @@ seasonality-and-geographic-differences-application-of-statistical-methods-1
 merging-bees-and-weather
 correlations
 naive-approach
-statewise-correlations
+statewise-correlations---seasonality-geography
 simple-linear-models-for-state-panel-data
-exploiting-geographic-differences
-seasonality
-predict
+naive-ols
+random-effects-and-pooled-panel-ols
+model-evaluation
+residuals-distribution-in-sample
 exercise-checklist
 whats-next-in-your-data-science-career
 data-science-in-general
