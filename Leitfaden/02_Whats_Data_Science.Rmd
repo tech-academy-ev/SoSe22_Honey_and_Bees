@@ -57,7 +57,8 @@ If you are convinced that the course does not add value to you, feel free to rep
 However, you should not pursue an exchange course until you finish all chapters from the advanced course: "Intermediate R."
 
 To receive the certificate, both beginners and advanced learners must complete at least two-thirds of the curriculum (6/9 courses).
-For the beginners, this means until -- and including -- the course "Data Visualization with ggplot2 (Part 1)" and for the advanced until --and including -- "Supervised Learning in `R`: Classification." In addition, you should complete at least two-thirds of the project tasks.
+For the beginners, this means until -- and including -- the course "Cleaning Data in R (4h)" and for the advanced until --and including -- "Supervised Learning in `R`: Classification." 
+In addition, you should complete at least *two-thirds* of the project tasks.
 After completing the curriculum and the project's (minimal) requirements, you will receive your TechAcademy certificate!
 
 ::: {.tips .r data-latex="r"}
@@ -166,7 +167,7 @@ If you are convinced that the course does not add value to you, feel free to rep
 However, you should not pursue an exchange course until you finish all chapters from the advanced course: "Intermediate Python."
 
 To receive the certificate, both beginners and advanced learners must complete at least two-thirds of the curriculum (6/9 courses).
-For the beginners, this means until -- and including -- the course "[Joining Data with pandas (4h)](https://www.datacamp.com/courses/joining-data-with-pandas)" and for the advanced until --and including -- "[Exploratory Data Analysis in Phyton (4h)](https://learn.datacamp.com/courses/exploratory-data-analysis-in-python)." In addition, you should complete at least two-thirds of the project tasks.
+For the beginners, this means until -- and including -- the course "[Joining Data with pandas (4h)](https://www.datacamp.com/courses/joining-data-with-pandas)" and for the advanced until --and including -- "[Introduction to Linear Modeling in Python (4h)](https://www.datacamp.com/courses/introduction-to-linear-modeling-in-python)." In addition, you should complete at least *two-thirds* of the project tasks.
 After completing the curriculum and the project's (minimal) requirements, you will receive your TechAcademy certificate!
 
 ::: {.tipsp .python data-latex="p"}
