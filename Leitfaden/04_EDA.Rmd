@@ -374,7 +374,7 @@ For animation, the `choropleth` function takes an *animation_frame* and *animati
 
 ## Surprise Us! 
 You discovered anything cool and / or want to experiment with a new visualization technique to the deliver the message?
-Here is the right place to put down anything you did and would like to do with the project that did not quite fit in the other exercise sections. If you want to get inspired by various visualization methods check out [this page](https://r-graph-gallery.com/).
+Here is the right place to put down anything you did and would like to do with the project that did not quite fit in the other exercise sections. If you are looking for some visualization inspiration, check out [this page](https://r-graph-gallery.com/).
 
 **Congratulations**! Based on your work with fundamental data transformations and many visualizations, you now have a solid understanding of the honey and bees data sets!
 With this, you have completed the *EDA* part of the project! 
