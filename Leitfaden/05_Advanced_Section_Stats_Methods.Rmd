@@ -58,7 +58,7 @@ Our cross-section of states is characterized by heterogeneous geography and clim
 Naturally, this also implies seasonality in our quarterly data set.
 However, Hawaii's seasons are less pronounced than they are in North Dakota (if you do not believe us, check the max temperature differential ...).
 
-To Visualize this, you want to compute correlations statewise for either "Lost Colonies", "log Lost Colonies" or "percent lost colonies" and sort them by latitude. 
+To Visualize this, you want to compute correlations statewise for either "Lost Colonies", "log Lost Colonies" or "Percent Lost Colonies" and sort them by latitude. 
 
 Below are some examples:
 
