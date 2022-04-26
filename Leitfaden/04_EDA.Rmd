@@ -378,4 +378,6 @@ Here is the right place to put down anything you did and would like to do with t
 
 **Congratulations**! Based on your work with fundamental data transformations and many visualizations, you now have a solid understanding of the honey and bees data sets!
 With this, you have completed the *EDA* part of the project! 
-For a TechAcademy certificate you should complete *two-thirds* of the above.
+For a TechAcademy certificate you should complete *two-thirds* of the above. Don’t forget to send your project results to our project submission email address before the deadline (**03.07.2022, 23:59**). Thanks for being a part of TechAcademy! 
+
+If you are advanced your coding journey goes on with the next section!
