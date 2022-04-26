@@ -12,6 +12,14 @@ This checklist should help you keep track of your exercises. Remember that you h
 
 **Part 1: Exploratory Data Analysis (Beginner + Advanced Tracks)**
 
+&check;  You completed at least 6 courses on Datacamp.
+&check;  You completed at least two-third of section 4.
+&check;  You checked that you included everything you coded in the right order and added explanatory comments.
+&check;  You have all your output in the desired format.
+&check;  You compared your output with your group. 
+&check;  Finally, you can hand in your final work in time *(Remeber: Each team member has to hand in their final work individually, in any case it can be the same within the group)*
 
-**Part 2: Prediction Using Statistical Methods (motivated Beginner + Advanced Tracks)**
+**Part 2: Seasonality and Geographic Differences – Application of Statistical Methods (motivated Beginner + Advanced Tracks)**
 
+&check;  Everything of the above
+&check;  In addition to you also completed at least two-third of section 5. 
