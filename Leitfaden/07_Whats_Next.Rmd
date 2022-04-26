@@ -16,7 +16,8 @@ editor_options:
 ### Advice for [Non-Traditional Data Scientists](https://blog.shotwell.ca/posts/learning_data_science/) {.unlisted .unnumbered}
 
 ### Learn from Great Data Scientists on [Kaggle](https://www.kaggle.com/) {.unlisted .unnumbered}
--> add towardsdatascience
+
+### Great insights and helpful tips on [towardsdatascience](https://towardsdatascience.com/) {.unlisted .unnumbered}
 
 
 
