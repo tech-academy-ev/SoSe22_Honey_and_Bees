@@ -135,21 +135,21 @@ Here is a [cheat sheet](https://drive.google.com/file/d/15DwPt5r_vySfuWdOAvci71b
 ### Converting Units
 
 From the column names you can see that the honey data set is in pounds as we are dealing with an U.S. data set. 
-However, we are devoted followers of the metric system and do not understand pounds. Consequently, we would like to translate them to kilogram [kg].
-While you are at it, you might want to give your new columns in kg a shorter name with less spaces in it. For example "Honey producing colonies (thousand) " could be named "producing_colonies_thousand".
+However, we are devoted followers of the metric system and do not easily understand pounds. Consequently, we would like to translate them to kilogram [kg].
+It is best practice to create a new variable from the old one that you are modifying. Therefore, while you are at it, you might want to give your new variables, now in kg, a shorter name no spaces in it. For example "Honey producing colonies (thousand) " could be named "producing_colonies_thousand".
 
 
 ### Rounding
 
 Have a look at your column values. Some columns have long decimal numbers. To simplify your data frame, round up to the decimal place you prefer.
-Please write one or two sentences why you think rounding is O.K. and why you chose the decimal place *X* or even a conversion to integer.
+Please write one or two sentences why you think rounding is O.K. and why you chose the decimal place *X* or even a conversion to integer. There is no right or wrong here, we want to encourage you to consider the option and find what is best for your analysis!
 
 
 ## Simple Metrics
 
 ### Missing Values
-Look at the bees set and its missing values. Decide on how you want to treat them and give us a detailed explanation why you have decided to treat the missing values the way you did. Keep in mind that these transformations affect all your subsequent work on the data and may bias your findings. 
-Sometimes you are lucky and can also identify a pattern that will ease your pain of treating the values and deciding for a strategy.
+We now want to look at the bees data set and its missing values. Have a look how the missing values are encoded. Decide on how you want to treat them and give us a detailed explanation why you have decided to treat the missing values the way you did. Keep in mind that these transformations affect all your subsequent work on the data and may bias your findings. We recommend you to brush up on your statistics knowledge and conduct some research on how to treat the missing values, as awlways, Google is a great place to start!
+Sometimes you are also lucky and can identify a pattern that will ease your pain of treating the values and deciding for a strategy.
 
 There are many possibilities: From excluding the rows to forward / backward fills or even inserting an average / median. 
 
@@ -164,15 +164,15 @@ We highly recommend the [Datacamp course on missing values in Python](https://ww
 
 ### Lost Colonies
 
-Add a new column where you add the percentage of lost colonies in reference to the maximum colonies (it is as simple as it reads). 
+Calculate a new column holding the information of the percentage of lost colonies, in reference to the maximum colonies each quarter (it is as simple as it reads). Give the new column an appropriate name and decide whether you would like to keep this column in decimal numbers or percentage points.
 
 
 ### Group Means
 
-We want to merge the honey and bees data set to analyze them jointly. To do so we need to reduce the frequency of the bees data frame (quarterly) to yearly, so data for 2015, 2016, 2017, 2018, 2019, and 2020 per state is left.
-Accordingly, you would like to group by state and quarter and replace the observations by an aggregate.
+To make things easier, we want to merge the honey and bees data set to analyze them jointly. As you probably have seen, both data sets have different frequencies. Therefore, we need to aggregate the quarterly bee data set to a yearly frequency. In the end, data for just the year from 2015-2020 for each state should be left.
+Accordingly, you should group by state and quarter and replace the observations by a yearly aggregate.
 
-You decide to replace with the mean (over the four quarters). Please mind how you are rounding, print the table of your aggregated data frame, and answer the following two questions
+We have decided that it is best to aggregate the data (over the four quarters) by using the mean. While you are at it reproducing our steps, pay attention to how you are rounding your results. After you are done, please print the table of your aggregated data frame, and answer the following two questions:
 
 * What are potential hazards of reducing data like this? 
 * What other measures could you use?
@@ -183,11 +183,11 @@ You may refer to the following graph.
 knitr::include_graphics("plot/Lost Colonies in Wyoming over time.jpg")
 ```
 
-There is no absolute answer to these questions since your approach most likely depends on what you are analyzing / trying to show or understand.
+Do not fret if you are unsure, there is no absolute answer to these questions since your approach most likely depends on what you are analyzing / trying to show or understand. We would still like you to give it a solid thought, which we want you to communicate to us, your readers!
 
 
 ::: {.tips .r data-latex="r"}
-An approach with `dyplr` is the cleanest in this case. Use `mutate`, `group_by`, `select` and `summarize`. In the `summarize` call you can add multiple functions together. 
+Following the tidyverse approach with `dyplr` is the cleanest in this case. Use `mutate`, `group_by`, `select` and `summarize`. In the `summarize` call you can add multiple functions together. If you are unsure, check back with the dplyr cheat-sheet.
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -198,7 +198,7 @@ The resulting `GroupBy` object supports various aggregation methods out-of-the-b
 
 ## Merging Data Sets
 
-When preparing to data sets, it is wise to check the naming of columns again.
+When preparing to merge data sets, it is wise to check the naming of columns again. You should avoid having columns with the same name to avoid confusion, except for variable that you are merging by. Keep in mind by which variables you want to merge by beforehand, if you are unsure have a peek at the next merging exercise to clarify what we mean!
 Please give your bees data columns appropriate names (we recommend names where empty spaces are replaced with an underscore "_"), if you have not done so for the honey data set please do the same.
 
 ::: {.tips .r data-latex="r"}
@@ -218,7 +218,7 @@ Closely compare the sizes of the individual data frames and of the aggregate one
 * Why not and what states are missing from which individual data frame?
 
 ::: {.tips .r data-latex="r"}
-Check out the R base [merge function](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/merge) documentation.
+As we would like you to follow tidyverse syntax, check out the dplyr [merge functions](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf) cheat sheet and join [documentation](https://www.rdocumentation.org/packages/dplyr/versions/0.7.8/topics/join).
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -228,17 +228,19 @@ The DataCamp course [Joining Data with pandas (4h)](https://app.datacamp.com/lea
 :::
 
 ## States Bar Plot
-Use the aggregate (yearly) set and create a bar plot with all states plotting starting bee colonies from the lowest to the highest value.
-Please also include the average and the median of the observations. 
 
-You can decide for yourself whether you want to aggregate over all years or over a single year of your choice.
+Now that you have merged the data sets into one big data set, we want to continue with the big data set (not big data yet! :D).
+Use the aggregated (yearly) data set and create a bar plot with all states plotting starting bee colonies from the lowest to the highest value.
+Please also include the average and the median of the observations. Do not forget to label your graphs in a meaningful way!
+
+You can decide for yourself whether you want to aggregate over all years or over a single year of your choice, but please make sure to let your audience know what you did and can observe.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
 knitr::include_graphics("plot/Starting Colonies in 2020.jpg")
 ```
 
 ::: {.tips .r data-latex="r"}
-The key commands that you can use for this within `ggplot()` are `geom_bar()` and `coord_flip()`. Check back on the [ggplot2 cheat sheet](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf) if you are feeling unsure! Also, you might want to store the median and mean  seperatly and refer to them in your ggplot call. 
+The key commands that you can use for this within `ggplot()` are `geom_bar()` and `coord_flip()`. Check back on the [ggplot2 cheat sheet](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf) if you are feeling unsure about the labeling of the plots! Also, you might want to store the median and mean  seperatly and refer to them in your ggplot call. 
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -257,10 +259,11 @@ For further resources the course [Introduction to Data Visualization with Matplo
 
 ## Splitting the Data Set
 
-Let's do some individual work, that can be compared wihtin in your group in the end. To do so, split a subset for data between the your team members. You should have 40 States in your merged dataset, so in a group with 4 team members, each of you would be looking at 10 states.
+Let's do some individual work! We ask you to please compare the compare to work wihtin in your group in the end. But first things first, your group needs to split a the data into subsets, one subset for each team member. You should have 40 States in your merged dataset. If you are working in groups of four team members, each of you would be looking at 10 states, neither of your states should be included in another team member's subset! If your team does not contain four members and you cannot come up with a way to split your data or are unsure about your current group dynamic, please consult your mentor.
 
 ::: {.tips .r data-latex="r"}
-the code: `dataset$Group <- c(rep(1,60),rep(2,60), rep(3,60), rep(4, 60))` could help if you are 4 team members. If not, this code might be easy to adjust.
+The code for your 4 team member split is: `dataset$Group <- c(rep(1,60),rep(2,60), rep(3,60), rep(4, 60))`.
+If your group does not contain 4 members, this code can be easily to adjusted. 
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -269,14 +272,14 @@ Make sure to sort your state index first, afterwards make use of `numpy's` `arra
 
 ### Yearly Boxplots
 
-Next, let's visualize the split data with beautiful Boxplots. Generate 4 Boxplot aggregated for each year.  They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Bee Colonies. 
-In the end you can compare your 4 Boxplots with the ones your team members created. Keep in mind to communicate the same scaling, otherwise a visual comparison will not work out.
+Great split! Next, let's visualize the split data with beautiful boxplots. Generate four Boxplot aggregated for each year. They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Bee Colonies for the subset of each team member. 
+In the end we ask you to compare your four boxplots with the ones your team members have created. Keep in mind to communicate the same scaling, otherwise a visual comparison will not work out.
 
-**Tip:** It will be 6 boxes for each Boxplot since we look at 6 years, as shown in the example.
+**Tip:** It will be six boxes for each boxplot since we look at six years, as shown in the example.
 
-Note that applying the logarithm to the colony values is a very useful thing to do. With this transformation you achieve a reasonable visualization without excluding a state since we have a strong outlier in California. To convince yourself, you can easily plot both Boxplots (with and without log) of maximum colonies for example.
+Note that applying the logarithm to the colony values can be a very useful thing to do. With this transformation you can achieve a reasonable visualization without excluding a state, and since California is a strong outlier in our data set we have decided to do so. To convince yourself, you can easily plot both boxplots (with and without log transformation) of maximum colonies. Can you see the difference? When applying logs, make sure to label your graphs accordingly!
 
-Also, applying the log "normalizes" the distribution of values (frequently seen in empirical statistics) assuming that the underlying values approximately follow a log-normal distribution.
+On a side note, applying the logarithm "normalizes" the distribution of values (frequently seen in empirical statistics) assuming that the underlying values approximately follow a log-normal distribution.
 A very superficial take on this can be found [here (5 min read)](https://medium.com/@kyawsawhtoon/log-transformation-purpose-and-interpretation-9444b4b049c9).
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.show="hold", out.width="50%"}
@@ -290,7 +293,7 @@ knitr::include_graphics("plot/Average Precipitation.jpg")
 
 
 ::: {.tips .r data-latex="r"}
-Again, `ggplot()` and this time `geom_boxplot()` will help you visualizing.
+Again, `ggplot()`, and this time `geom_boxplot()`, will be your best bet!
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -299,13 +302,15 @@ Surprise, you are looking for the `.boxplot(...)` function!
 
 
 ## Visualization with Maps
-Last but not least, we want to do a more appealing visualization.
+
+Last but not least, we want to plot a more appealing visualization.One that gets you excited!
 The idea is to combine the geographic information on the states with the numeric data to provide a rich visual that reflects the two aspects.
 
 ### Geographic Map with State Pop-ups 
-We start by exploiting the coordinates provided with the data and our joint honey and bees set to obtain a responsive map of the U.S.A.
 
-The map should reflect information about some key variables like the maximum- and lost colonies as well as the honey production and stock price in a year of your choice.
+We start by exploiting the coordinates provided with the data and our joint honey and bees set to obtain a dynamic map of the United States.
+
+The map should reflect information about some key variables like the maximum- and lost colonies, as well as the honey production and stock price in one year of your choice.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
 knitr::include_graphics("plot/Map_with_Popups.png")
@@ -316,15 +321,13 @@ This time, we created the plot using the leaflet package. Why don’t you try to
 
 You can create a basic map with leaflet and add additional layers by following these simple steps:
 
-`m <- leaflet() %>%
-  addTiles() %>% 
-  addMarkers(lng= , 
-             lat= , 
-             popup= )`
-           
-Do lng and lat look familiar to you from a previous plot?
+    m <- leaflet() %>%
+          addTiles() %>% 
+          addMarkers(lng= , 
+                     lat= , 
+                     popup= )             
 
-The popup is where the magic happens! Can you make the map show you honey production, number of bee colonies, and three more variables that you find important for such a plot?
+The popup is where the magic happens! Can you make the map show the mentioned four key variables, and one more variable that you find important for such a plot?
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -352,10 +355,11 @@ Use folium’s Circle (Marker) to draw a circle for each state at its centered c
 :::
 
 ### Animating Changes over Time
-Since we have looked at a single year in the plot before (with multiple variables), we would like to mix things up and look at transitions here.
-In this case we plot a heat map showing the transition of log starting colonies over time for each state creating a very dynamic plot.
 
-Note again the log transformation for visualization purposes. 
+Since we have looked at a single year but multiple variables in the previous plot, we would like to mix things up and look at transitions here.
+To do so, we want to plot a heat map showing the transition of log starting colonies over time for each state, creating a dynamic plot.
+
+Note again that we are using the log transformation for visualization purposes. 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
 knitr::include_graphics("plot/States_map_bee_starting_pop.gif")
