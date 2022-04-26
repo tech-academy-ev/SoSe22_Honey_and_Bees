@@ -22,4 +22,4 @@ This checklist should help you keep track of your exercises. Remember that you h
 **Part 2: Seasonality and Geographic Differences – Application of Statistical Methods (motivated Beginner + Advanced Tracks)**
 
 &check;  Everything of the above stated
-&check;  In addition to you also completed at least two-third of section 5.
+&check;  **In addition** you also completed at least two-third of section 5.
