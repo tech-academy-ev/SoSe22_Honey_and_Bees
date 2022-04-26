@@ -164,7 +164,7 @@ We highly recommend the [Datacamp course on missing values in Python](https://ww
 
 ### Lost Colonies
 
-Add a new column where you add the percentage of lost colonies in reference to the starting colonies (it is as simple as it reads). 
+Add a new column where you add the percentage of lost colonies in reference to the maximum colonies (it is as simple as it reads). 
 
 
 ### Group Means
@@ -264,12 +264,12 @@ the code: dataset$Group <- c(rep(1,60),rep(2,60), rep(3,60), rep(4, 60)) could h
 :::
 
 ::: {.tipsp .python data-latex="p"}
-Add tip
+Make sure to sort your state index first, afterwards make use of `numpy's` `array_split(df, x)` function (it never hurts to make a sanity check/print afterwards).
 :::
 
 ### Yearly Boxplots
 
-Next, let's visualize the split data with beautiful Boxplots. Generate 4 Boxplot aggregated for each year.  They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Bee Colonies. 
+Next, let's visualize the split data with beautiful Boxplots. Generate 4 Boxplot aggregated for each year.  They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Lost Bee Colonies. 
 In the end you can compare your 4 Boxplots with the ones your team members created. Keep in mind to communicate the same scaling, otherwise a visual comparison will not work out.
 **Tip:** It will be 6 boxes for each Boxplot since we look at 6 years, as shown in the example.
 
@@ -283,7 +283,7 @@ knitr::include_graphics("plot/Log Honey Production.jpg")
 knitr::include_graphics("plot/Varroa Mites.jpg")
 ```
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.show="hold", out.width="50%"}
-knitr::include_graphics("plot/Bee Colonies.jpg")
+knitr::include_graphics("plot/Log Lost Bee Colonies.jpg")
 knitr::include_graphics("plot/Average Precipitation.jpg")
 ```
 
