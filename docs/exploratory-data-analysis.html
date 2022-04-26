@@ -312,7 +312,7 @@ Sometimes you are lucky and can also identify a pattern that will ease your pain
 </div>
 <div id="group-means" class="section level3 hasAnchor" number="4.3.3">
 <h3><span class="header-section-number">4.3.3</span> Group Means<a href="exploratory-data-analysis.html#group-means" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We want to merge the honey and bees data set to analyze them jointly. To do so we need to reduce the frequency of the bees data frame (quarterly) to yearly, so you only have data for 2015, 2016, 2017, 2018, 2019, and 2020 per state left.
+<p>We want to merge the honey and bees data set to analyze them jointly. To do so we need to reduce the frequency of the bees data frame (quarterly) to yearly, so data for 2015, 2016, 2017, 2018, 2019, and 2020 per state is left.
 Accordingly, you would like to group by state and quarter and replace the observations by an aggregate.</p>
 <p>You decide to replace with the mean (over the four quarters). Please mind how you are rounding, print the table of your aggregated data frame, and answer the following two questions</p>
 <ul>
@@ -334,7 +334,7 @@ The resulting <code>GroupBy</code> object supports various aggregation methods o
 <div id="merging-data-sets" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Merging Data Sets<a href="exploratory-data-analysis.html#merging-data-sets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When preparing to data sets, it is wise to check the naming of columns again.
-Please give your “bees” data columns appropriate names (we recommend names where empty spaces are replaced with an underscore “_“), if you have not done so for the honey data set please do the same.</p>
+Please give your bees data columns appropriate names (we recommend names where empty spaces are replaced with an underscore “_“), if you have not done so for the honey data set please do the same.</p>
 <div class="tips r">
 <p>Column names can be adjusted with tidyselect’s “rename” function.</p>
 </div>
@@ -390,9 +390,9 @@ For further resources the course <a href="https://app.datacamp.com/learn/courses
 </div>
 <div id="yearly-boxplots" class="section level3 hasAnchor" number="4.6.1">
 <h3><span class="header-section-number">4.6.1</span> Yearly Boxplots<a href="exploratory-data-analysis.html#yearly-boxplots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Next, let’s visualize the split data with beautiful Boxplots. Generate 4 Boxplot aggregated for each year. They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Lost Bee Colonies.
-In the end you can compare your 4 Boxplots with the ones your team members created. Keep in mind to communicate the same scaling, otherwise a visual comparison will not work out.
-<strong>Tip:</strong> It will be 6 boxes for each Boxplot since we look at 6 years, as shown in the example.</p>
+<p>Next, let’s visualize the split data with beautiful Boxplots. Generate 4 Boxplot aggregated for each year. They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Bee Colonies.
+In the end you can compare your 4 Boxplots with the ones your team members created. Keep in mind to communicate the same scaling, otherwise a visual comparison will not work out.</p>
+<p><strong>Tip:</strong> It will be 6 boxes for each Boxplot since we look at 6 years, as shown in the example.</p>
 <p>Note that applying the logarithm to the colony values is a very useful thing to do. With this transformation you achieve a reasonable visualization without excluding a state since we have a strong outlier in California. To convince yourself, you can easily plot both Boxplots (with and without log) of maximum colonies for example.</p>
 <p>Also, applying the log “normalizes” the distribution of values (frequently seen in empirical statistics) assuming that the underlying values approximately follow a log-normal distribution.
 A very superficial take on this can be found <a href="https://medium.com/@kyawsawhtoon/log-transformation-purpose-and-interpretation-9444b4b049c9">here (5 min read)</a>.</p>
@@ -464,9 +464,10 @@ In fact, the animation above is essentially one single function call.</p>
 <div id="surprise-us" class="section level2 hasAnchor" number="4.8">
 <h2><span class="header-section-number">4.8</span> Surprise Us!<a href="exploratory-data-analysis.html#surprise-us" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You discovered anything cool and / or want to experiment with a new visualization technique to the deliver the message?
-Here is the right place to put down anything you did and would like to do with the project that did not quite fit in the other exercise sections.</p>
+Here is the right place to put down anything you did and would like to do with the project that did not quite fit in the other exercise sections. If you are looking for some visualization inspiration, check out <a href="https://r-graph-gallery.com/">this page</a>.</p>
 <p><strong>Congratulations</strong>! Based on your work with fundamental data transformations and many visualizations, you now have a solid understanding of the honey and bees data sets!
-With this, you have completed the <em>EDA</em> part of the project!</p>
+With this, you have completed the <em>EDA</em> part of the project!
+For a TechAcademy certificate as a beginner you should complete 2/3 of the above. If you are advanced all of the above should be included in your output.</p>
 
 <div style="page-break-after: always;"></div>
 </div>

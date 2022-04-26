@@ -169,7 +169,7 @@ Add a new column where you add the percentage of lost colonies in reference to t
 
 ### Group Means
 
-We want to merge the honey and bees data set to analyze them jointly. To do so we need to reduce the frequency of the bees data frame (quarterly) to yearly, so you only have data for 2015, 2016, 2017, 2018, 2019, and 2020 per state left.
+We want to merge the honey and bees data set to analyze them jointly. To do so we need to reduce the frequency of the bees data frame (quarterly) to yearly, so data for 2015, 2016, 2017, 2018, 2019, and 2020 per state is left.
 Accordingly, you would like to group by state and quarter and replace the observations by an aggregate.
 
 You decide to replace with the mean (over the four quarters). Please mind how you are rounding, print the table of your aggregated data frame, and answer the following two questions
@@ -199,7 +199,7 @@ The resulting `GroupBy` object supports various aggregation methods out-of-the-b
 ## Merging Data Sets
 
 When preparing to data sets, it is wise to check the naming of columns again.
-Please give your "bees" data columns appropriate names (we recommend names where empty spaces are replaced with an underscore "_"), if you have not done so for the honey data set please do the same.
+Please give your bees data columns appropriate names (we recommend names where empty spaces are replaced with an underscore "_"), if you have not done so for the honey data set please do the same.
 
 ::: {.tips .r data-latex="r"}
 Column names can be adjusted with tidyselect's "rename" function.
@@ -269,8 +269,9 @@ Make sure to sort your state index first, afterwards make use of `numpy's` `arra
 
 ### Yearly Boxplots
 
-Next, let's visualize the split data with beautiful Boxplots. Generate 4 Boxplot aggregated for each year.  They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Lost Bee Colonies. 
+Next, let's visualize the split data with beautiful Boxplots. Generate 4 Boxplot aggregated for each year.  They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Bee Colonies. 
 In the end you can compare your 4 Boxplots with the ones your team members created. Keep in mind to communicate the same scaling, otherwise a visual comparison will not work out.
+
 **Tip:** It will be 6 boxes for each Boxplot since we look at 6 years, as shown in the example.
 
 Note that applying the logarithm to the colony values is a very useful thing to do. With this transformation you achieve a reasonable visualization without excluding a state since we have a strong outlier in California. To convince yourself, you can easily plot both Boxplots (with and without log) of maximum colonies for example.
@@ -373,7 +374,8 @@ For animation, the `choropleth` function takes an *animation_frame* and *animati
 
 ## Surprise Us! 
 You discovered anything cool and / or want to experiment with a new visualization technique to the deliver the message?
-Here is the right place to put down anything you did and would like to do with the project that did not quite fit in the other exercise sections.
+Here is the right place to put down anything you did and would like to do with the project that did not quite fit in the other exercise sections. If you are looking for some visualization inspiration, check out [this page](https://r-graph-gallery.com/).
 
 **Congratulations**! Based on your work with fundamental data transformations and many visualizations, you now have a solid understanding of the honey and bees data sets!
-With this, you have completed the *EDA* part of the project!
+With this, you have completed the *EDA* part of the project! 
+For a TechAcademy certificate as a beginner you should complete 2/3 of the above. If you are advanced all of the above should be included in your output.
