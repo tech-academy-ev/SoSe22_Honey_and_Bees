@@ -53,11 +53,12 @@ Alternatively/Additionally, you may want to plot a heatmap with `sns.heatmap(...
 
 ### Statewise Correlations - Seasonality & Geography
 
-Our cross-section of states is characterized by heterogeneous geography and climate.
+Having checked a very simplistic correlation, we need to do some thinking. Our cross-section of states is characterized by heterogeneous geography and climate.
 Naturally, this also implies seasonality in our quarterly data set.
-However, Hawaii's seasons are less pronounced than they are in North Dakota (if you do not believe us, check the max temperature differential ...).
+However, due to the large szie of the United States, we must not forget that for some southern states, in our data Hawaii's, seasons are less pronounced than they are in North Dakota (if you do not believe us, check the max temperature differential ...).
 
-To Visualize this, you want to compute statewise correlations for either "Lost Colonies", "log Lost Colonies" or "percent Lost Colonies" and sort them by latitude. 
+To visualize this, you want to compute statewise correlations for either "Lost Colonies", "log Lost Colonies" or "percent Lost Colonies" and sort them by latitude. 
+As always, do not forget to label the graphs in a meaningful way, and please explain how the results of your plot can be interpreted to your audience!
 
 Below are some examples:
 
@@ -75,7 +76,9 @@ knitr::include_graphics("plot/Seasonal (temperature-related) Parasite Infestatio
 ```
 
 ::: {.tips .r data-latex="r"}
-Add tip
+We recommend you using the tidyverse approach. From previous exercises you should be well versed in using `dplyr`commands. 
+A combination of `group_by()`, `filter()`, `select()`,  and `arrange()` should do the job nicely!
+If you unsure, check back with the dplyr cheat sheet.
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -85,9 +88,9 @@ You should be fairly familiar with `groupby` statements by now. To sort by an un
 ### Demeaned Variables
 Create at least two own indications that you might want to use in the following regressions which can mitigate some of the issues:
 
-* One Measure that subtracts a quarter aggregate (median, mean ...) over ALL states but by quarter (4 values in total) from each observation with that respective quarter
+* One measure that subtracts a quarter aggregate (median, mean ...) over ALL states but by quarter (4 values in total) from each observation with that respective quarter
 
-* One Measure that subtracts a quarter aggregate by state AND quarter (values equal to the number of states * 4) from all observations with the respective state and quarter
+* One measure that subtracts a quarter aggregate by state AND quarter (values equal to the number of states * 4) from all observations with the respective state and quarter
 
 **Example for the 2nd**: You create a measure of "abnormal" temperature by subtracting the average temperature of a given state in each quarter from the state's quarter observation in all years (6 years in total) in the data set.
 
@@ -103,10 +106,10 @@ After aggregating, you can merge the values back as an additional column and sim
 :::
 
 ## Pooled OLS for State Panel Data
-As we investigated correlation patterns above, we saw that panel data is not straightforward to analyze. Especially since we are only equipped with quarterly data of mere 6 years - That's not a lot.
+As we investigated correlation patterns above, we saw that panel data is not straightforward to analyze. Especially since we are only equipped with quarterly data of mere 6 years - that's not a lot.
 But you have just added a few more "normalized" variables, so we can get started with our regressions in the hope to make some interesting findings.
 
-With panel data the basic extension of OLS (Ordinary Least Squares) regression is Pooled OLS.
+With panel data, the basic extension of OLS (Ordinary Least Squares) regression is Pooled OLS.
 A basic Pooled OLS regression equation could look like this (a simple extension of classic OLS with state effects $\alpha_i$ and error term $\epsilon_{i,t}$:
 
 $$
@@ -148,8 +151,8 @@ Model evaluation is always important, even more so when using different framewor
 At the end of the day, we are interested in the model that reflects our empirical observations best.
 
 ### Residuals Distribution (in-sample)
-When computing regression estimates the residuals as unexplained fraction of your model are the most important aspect to look at. Especially since each model assumes a certain distribution (normal most of the time). We must check whether these assumptions hold.
-Typical related questions are whether they are auto-correlated and whether the standard errors are computed robust (e.g. test for the presence of heteroscedasticity etc.). 
+When computing regression estimates the residuals as unexplained fraction of your model are the most important aspect to look at. Especially since each model assumes a certain distribution (most of the time we assume a normal distribution). Since we just assume a distribution, we must check whether these assumptions hold.
+Typical related questions are whether they are auto-correlated and whether the standard errors computer are robust (e.g. test for the presence of heteroscedasticity etc.). 
 
 Plot the residuals of one of your pooled OLS specifications and the ones of your alternative model. Do they differ fundamentally?
 
@@ -169,5 +172,5 @@ knitr::include_graphics("plot/Pooled OLS Aggregate Residuals.jpg")
 ### Model Selection
 As a wrap-up, by considering the different specifications as well as your alternative model, write a few sentences about which specification/model you believe to be best-suited for the underlying data.
 
-**Congratulations!** You’ve made it to the end of your TechAcademy Data Science project. After visualizing the data in the first part, you’ve also set up a statistical analysis in this section. If you stuck around until this part and managed to code the better part of the exercises, you’ve definitely earned your certificate! We hope you had fun learning Data Science with this combination of data sets and enjoyed it – at least the parts where you didn’t get stuck forever because of some unexplainable coding error. Don’t forget to send your project results to our project submission email address before the deadline (**03.07.2022, 23:59**).
-Thanks for being a part of TechAcademy!
+**Congratulations!** You’ve made it to the end of your TechAcademy Data Science project. After visualizing the data in the first part, you’ve also set up a statistical analysis in this section. If you stuck around until this part and managed to code the better part of the exercises, you have definitely earned your certificate! We hope you had fun learning Data Science with this combination of data sets and enjoyed it – at least the parts where you did not get stuck forever because of some unexplainable coding error. Do not forget to send your project results to our project submission email address before the deadline (**03.07.2022, 23:59**).
+Thank you for being a part of TechAcademy!
