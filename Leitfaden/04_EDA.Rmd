@@ -124,7 +124,7 @@ For further calculations, it is safer to convert these columns to a numeric data
 While there are vectorized methods that can convert data types at once, we would like you to write a (really) simple 'for' loop to conduct the conversions.
 
 ::: {.tips .r data-latex="r"}
-Have you heard of "sapply"? This might help you. We recommend you to check out the documentation, which you can access by typing `help("sapply")` into the console, or by browsing the web. Remember, you want to convert multiple columns into the numeric format, so be careful to select all the columns!
+Have you heard of "sapply" ? This might help you. We recommend you to check out the documentation, which you can access by typing `help("sapply")` into the console, or by browsing the web. Remember, you want to convert multiple columns into the numeric format, so be careful to select all the columns!
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -384,4 +384,4 @@ Here is the right place to put down anything you did and would like to do with t
 With this, you have completed the *EDA* part of the project! 
 For a TechAcademy certificate you should complete *two-thirds* of the above. Don’t forget to send your project results to our project submission email address before the deadline (**03.07.2022, 23:59**). Thanks for being a part of TechAcademy! 
 
-If you are advanced your coding journey goes on with the next section!
+If you are in the advanced track your coding journey goes on with the next section!
