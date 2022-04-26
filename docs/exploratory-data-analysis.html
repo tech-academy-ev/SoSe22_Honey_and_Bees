@@ -323,7 +323,7 @@ Accordingly, you would like to group by state and quarter and replace the observ
 <p><img src="plot/Lost%20Colonies%20in%20Wyoming%20over%20time.jpg" width="100%" style="display: block; margin: auto;" /></p>
 <p>There is no absolute answer to these questions since your approach most likely depends on what you are analyzing / trying to show or understand.</p>
 <div class="tips r">
-<p>An approach with dyplr is the cleanest in this case. Use mutate, group_by, select and summarize. In the summarize call you can add multiple functions together.</p>
+<p>An approach with <code>dyplr</code> is the cleanest in this case. Use <code>mutate</code>, <code>group_by</code>, <code>select</code> and <code>summarize</code>. In the <code>summarize</code> call you can add multiple functions together.</p>
 </div>
 <div class="tipsp python">
 <p>With two-dimensional (panel) data your <code>.groupby</code> statement on the data frame should consider both index values and the time dimension.
@@ -336,7 +336,7 @@ The resulting <code>GroupBy</code> object supports various aggregation methods o
 <p>When preparing to data sets, it is wise to check the naming of columns again.
 Please give your bees data columns appropriate names (we recommend names where empty spaces are replaced with an underscore “_“), if you have not done so for the honey data set please do the same.</p>
 <div class="tips r">
-<p>Column names can be adjusted with tidyselect’s “rename” function.</p>
+<p>Column names can be adjusted with tidyselect’s <code>rename</code> function.</p>
 </div>
 <div class="tipsp python">
 <p>Column names can be replaced very neatly by passing a dictionary <code>{"x": "y", }</code> to a certain pandas method.</p>
@@ -366,7 +366,7 @@ Please also include the average and the median of the observations.</p>
 <p>You can decide for yourself whether you want to aggregate over all years or over a single year of your choice.</p>
 <p><img src="plot/Starting%20Colonies%20in%202020.jpg" width="100%" style="display: block; margin: auto;" /></p>
 <div class="tips r">
-<p>The key commands that you can use for this within ggplot() are geom_bar() and coord_flip(). Check back on the <a href="https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf">ggplot2 cheat sheet</a> if you are feeling unsure! Also, you might want to store the median and mean seperatly and refer to them in your ggplot call.</p>
+<p>The key commands that you can use for this within <code>ggplot()</code> are <code>geom_bar()</code> and <code>coord_flip()</code>. Check back on the <a href="https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf">ggplot2 cheat sheet</a> if you are feeling unsure! Also, you might want to store the median and mean seperatly and refer to them in your ggplot call.</p>
 </div>
 <div class="tipsp python">
 <p>In case you want to filter a certain year check out <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html"><code>.loc</code> indexing</a>.
@@ -383,7 +383,7 @@ For further resources the course <a href="https://app.datacamp.com/learn/courses
 <h2><span class="header-section-number">4.6</span> Splitting the Data Set<a href="exploratory-data-analysis.html#splitting-the-data-set" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s do some individual work, that can be compared wihtin in your group in the end. To do so, split a subset for data between the your team members. You should have 40 States in your merged dataset, so in a group with 4 team members, each of you would be looking at 10 states.</p>
 <div class="tips r">
-<p>the code: dataset$Group &lt;- c(rep(1,60),rep(2,60), rep(3,60), rep(4, 60)) could help if you are 4 team members. If not, this code might be easy to adjust.</p>
+<p>the code: <code>dataset$Group &lt;- c(rep(1,60),rep(2,60), rep(3,60), rep(4, 60))</code> could help if you are 4 team members. If not, this code might be easy to adjust.</p>
 </div>
 <div class="tipsp python">
 <p>Make sure to sort your state index first, afterwards make use of <code>numpy's</code> <code>array_split(df, x)</code> function (it never hurts to make a sanity check/print afterwards).</p>
@@ -399,7 +399,7 @@ A very superficial take on this can be found <a href="https://medium.com/@kyawsa
 <p><img src="plot/Log%20Honey%20Production.jpg" width="50%" /><img src="plot/Varroa%20Mites.jpg" width="50%" />
 <img src="plot/Log%20Lost%20Bee%20Colonies.jpg" width="50%" /><img src="plot/Average%20Precipitation.jpg" width="50%" /></p>
 <div class="tips r">
-<p>Again, ggplot() and this time geom_boxplot() will help you visualizing.</p>
+<p>Again, <code>ggplot()</code> and this time <code>geom_boxplot()</code> will help you visualizing.</p>
 </div>
 <div class="tipsp python">
 <p>Surprise, you are looking for the <code>.boxplot(...)</code> function!</p>
@@ -418,11 +418,7 @@ The idea is to combine the geographic information on the states with the numeric
 <div class="tips r">
 <p>This time, we created the plot using the leaflet package. Why don’t you try to find information on the package online?</p>
 <p>You can create a basic map with leaflet and add additional layers by following these simple steps:</p>
-<p>m &lt;- leaflet() %&gt;%
-addTiles() %&gt;%
-addMarkers(lng= ,
-lat= ,
-popup= )</p>
+<p><code>m &lt;- leaflet() %&gt;%   addTiles() %&gt;%    addMarkers(lng= ,               lat= ,               popup= )</code></p>
 <p>Do lng and lat look familiar to you from a previous plot?</p>
 <p>The popup is where the magic happens! Can you make the map show you honey production, number of bee colonies, and three more variables that you find important for such a plot?</p>
 </div>
@@ -467,7 +463,8 @@ In fact, the animation above is essentially one single function call.</p>
 Here is the right place to put down anything you did and would like to do with the project that did not quite fit in the other exercise sections. If you are looking for some visualization inspiration, check out <a href="https://r-graph-gallery.com/">this page</a>.</p>
 <p><strong>Congratulations</strong>! Based on your work with fundamental data transformations and many visualizations, you now have a solid understanding of the honey and bees data sets!
 With this, you have completed the <em>EDA</em> part of the project!
-For a TechAcademy certificate as a beginner you should complete 2/3 of the above. If you are advanced all of the above should be included in your output.</p>
+For a TechAcademy certificate you should complete <em>two-thirds</em> of the above. Don’t forget to send your project results to our project submission email address before the deadline (<strong>03.07.2022, 23:59</strong>). Thanks for being a part of TechAcademy!</p>
+<p>If you are advanced your coding journey goes on with the next section!</p>
 
 <div style="page-break-after: always;"></div>
 </div>
