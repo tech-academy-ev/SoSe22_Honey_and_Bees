@@ -158,7 +158,11 @@
 <li class="chapter" data-level="5.5.2" data-path="seasonality-and-geographic-differences-application-of-statistical-methods-1.html"><a href="seasonality-and-geographic-differences-application-of-statistical-methods-1.html#model-selection"><i class="fa fa-check"></i><b>5.5.2</b> Model Selection<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="exercise-checklist.html"><a href="exercise-checklist.html"><i class="fa fa-check"></i><b>6</b> Exercise Checklist<span></span></a></li>
+<li class="chapter" data-level="6" data-path="exercise-checklist.html"><a href="exercise-checklist.html"><i class="fa fa-check"></i><b>6</b> Exercise Checklist<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="exercise-checklist.html"><a href="exercise-checklist.html#part-1-exploratory-data-analysis-beginner-advanced-tracks"><i class="fa fa-check"></i><b>6.1</b> <strong>Part 1: Exploratory Data Analysis (Beginner + Advanced Tracks)</strong><span></span></a></li>
+<li class="chapter" data-level="6.2" data-path="exercise-checklist.html"><a href="exercise-checklist.html#part-2-seasonality-and-geographic-differences-application-of-statistical-methods-motivated-beginner-advanced-tracks"><i class="fa fa-check"></i><b>6.2</b> <strong>Part 2: Seasonality and Geographic Differences – Application of Statistical Methods (motivated Beginner + Advanced Tracks)</strong><span></span></a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="whats-next-in-your-data-science-career.html"><a href="whats-next-in-your-data-science-career.html"><i class="fa fa-check"></i><b>7</b> What’s Next in Your Data Science Career?<span></span></a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="whats-next-in-your-data-science-career.html"><a href="whats-next-in-your-data-science-career.html#data-science-in-general"><i class="fa fa-check"></i><b>7.1</b> Data Science in General<span></span></a></li>
@@ -192,12 +196,10 @@
 <h1><span class="header-section-number">5</span> Seasonality and Geographic Differences – Application of Statistical Methods<a href="seasonality-and-geographic-differences-application-of-statistical-methods-1.html#seasonality-and-geographic-differences-application-of-statistical-methods-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="merging-bees-and-weather" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Merging Bees and Weather<a href="seasonality-and-geographic-differences-application-of-statistical-methods-1.html#merging-bees-and-weather" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The first part was hopefully easy for the more advanced of you.
-Let’s continue with some more challenging exercises!
-We want to investigate how diseases and different climates affect our beloved bee populations.
-To that end, you now need to merge the two data sets “Bees” and “Weather.”
-Be careful when aggregating the daily weather data set to quarterly data.
-It might not be clever to replace period-specific max/min values with a mean.</p>
+<p>Hopefully the first part was easy for the more advanced of you. Regardless, let’s continue with some more challenging exercises!</p>
+<p>We want to investigate how diseases and different climates affect our beloved bee populations.
+To that end, you now need to merge the two data sets “Bees” and “Weather,” and we will no longer be using the data that we have previously merged.
+As in the previous exercie, both data sets have different frequencies, can you spot the difference? To merge you will need to aggregate the daily weather data set to quarterly data. Be carefull when aggregating the data though, it might not be clever to replace period-specific max/min values with a mean!</p>
 <p>If you get lost, you might want to compare your approach to your solution of <a href="exploratory-data-analysis.html#Merging">4.4.1</a>.</p>
 <p>Please note that there is no weather data for <strong>Florida</strong> and <strong>New Mexico</strong>, you should exclude these states.</p>
 </div>
@@ -205,14 +207,15 @@ It might not be clever to replace period-specific max/min values with a mean.</p
 <h2><span class="header-section-number">5.2</span> Correlations<a href="seasonality-and-geographic-differences-application-of-statistical-methods-1.html#correlations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="naive-approach" class="section level3 hasAnchor" number="5.2.1">
 <h3><span class="header-section-number">5.2.1</span> Naive Approach<a href="seasonality-and-geographic-differences-application-of-statistical-methods-1.html#naive-approach" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Do a simple correlations plot between variables of your interest.
+<p>After merging the data sets into, let’s start with some analysis. To cover our basis, we would like to start off by plotting a simple correlations plot for the variables of interest. You can pick which variables you would like to plot!
 This could be lost colonies, different parasites, and weather indicators for example.</p>
 <p><img src="plot/Correlations%20using%20Pearson%20Method.jpg" width="100%" style="display: block; margin: auto;" /></p>
 <ul>
 <li>We have a question for you: Why is a naive correlation matrix across states likely a bad idea? Think for example about omitted variables and how information is lost when you aggregate fundamentally different groups.</li>
 </ul>
 <div class="tips r">
-<p>Add tip</p>
+<p>Use the cor() function from the <code>base</code> R to create a correlation matrix. Select all numerical variables in your data set with the help of sapply() or <code>dplyr</code>’s select() and create a correlation matrix.</p>
+<p>Alternatively, use the ggcorrplot() from the same-name <a href="https://cran.r-project.org/web/packages/ggcorrplot/index.html">{ggcorrplot}</a> package.</p>
 </div>
 <div class="tipsp python">
 <p>A handy library for plotting correlation matrices is the <a href="https://seaborn.pydata.org/">seaborn library</a>:</p>
@@ -224,17 +227,20 @@ This could be lost colonies, different parasites, and weather indicators for exa
 </div>
 <div id="statewise-correlations---seasonality-geography" class="section level3 hasAnchor" number="5.2.2">
 <h3><span class="header-section-number">5.2.2</span> Statewise Correlations - Seasonality &amp; Geography<a href="seasonality-and-geographic-differences-application-of-statistical-methods-1.html#statewise-correlations---seasonality-geography" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Our cross-section of states is characterized by heterogeneous geography and climate.
+<p>Having checked a very simplistic correlation, we need to do some thinking. Our cross-section of states is characterized by heterogeneous geography and climate.
 Naturally, this also implies seasonality in our quarterly data set.
-However, Hawaii’s seasons are less pronounced than they are in North Dakota (if you do not believe us, check the max temperature differential …).</p>
-<p>To Visualize this, you want to compute statewise correlations for either “Lost Colonies,” “log Lost Colonies” or “percent Lost Colonies” and sort them by latitude.</p>
+However, due to the large szie of the United States, we must not forget that for some southern states, in our data Hawaii’s, seasons are less pronounced than they are in North Dakota (if you do not believe us, check the max temperature differential …).</p>
+<p>To visualize this, you want to compute statewise correlations for either “Lost Colonies,” “log Lost Colonies” or “percent Lost Colonies” and sort them by latitude.
+As always, do not forget to label the graphs in a meaningful way, and please explain how the results of your plot can be interpreted to your audience!</p>
 <p>Below are some examples:</p>
 <p><img src="plot/State%20Correlations%20sorted%20by%20Latitude%20-%20Lost%20Colonies%20and%20Quarter%20Dummies%20ex%20Hawaii.jpg" width="100%" style="display: block; margin: auto;" /></p>
 <p><img src="plot/State%20Correlations%20sorted%20by%20Latitude%20-%20Lost%20Colonies%20Percent%20and%20Quarter%20Dummies%20ex%20Hawaii.jpg" width="100%" style="display: block; margin: auto;" />
 Note, that there might also be interaction effects, e.g. the season/climate influences the parasite population or the like.</p>
 <p><img src="plot/Seasonal%20(temperature-related)%20Parasite%20Infestation.jpg" width="100%" style="display: block; margin: auto;" /></p>
 <div class="tips r">
-<p>Add tip</p>
+<p>We recommend you using the tidyverse approach. From previous exercises you should be well versed in using <code>dplyr</code>commands.
+A combination of <code>group_by()</code>, <code>filter()</code>, <code>select()</code>, and <code>arrange()</code> should do the job nicely!
+If you unsure, check back with the dplyr cheat sheet.</p>
 </div>
 <div class="tipsp python">
 <p>You should be fairly familiar with <code>groupby</code> statements by now. To sort by an underlying property of the index values, it might be of help to calculate correlations in one data frame and get a list of ordered states from another using <code>.reset_index()</code>, <code>.drop_duplicates()</code>, and <code>.sort_values()</code>. Subsequently, you can easily use <code>.reindex()</code>.</p>
@@ -244,8 +250,8 @@ Note, that there might also be interaction effects, e.g. the season/climate inf
 <h3><span class="header-section-number">5.2.3</span> Demeaned Variables<a href="seasonality-and-geographic-differences-application-of-statistical-methods-1.html#demeaned-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Create at least two own indications that you might want to use in the following regressions which can mitigate some of the issues:</p>
 <ul>
-<li><p>One Measure that subtracts a quarter aggregate (median, mean …) over ALL states but by quarter (4 values in total) from each observation with that respective quarter</p></li>
-<li><p>One Measure that subtracts a quarter aggregate by state AND quarter (values equal to the number of states * 4) from all observations with the respective state and quarter</p></li>
+<li><p>One measure that subtracts a quarter aggregate (median, mean …) over ALL states but by quarter (4 values in total) from each observation with that respective quarter</p></li>
+<li><p>One measure that subtracts a quarter aggregate by state AND quarter (values equal to the number of states * 4) from all observations with the respective state and quarter</p></li>
 </ul>
 <p><strong>Example for the 2nd</strong>: You create a measure of “abnormal” temperature by subtracting the average temperature of a given state in each quarter from the state’s quarter observation in all years (6 years in total) in the data set.</p>
 <p>Additionally, add quarter dummies to your data frame.</p>
@@ -260,9 +266,9 @@ After aggregating, you can merge the values back as an additional column and sim
 </div>
 <div id="pooled-ols-for-state-panel-data" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Pooled OLS for State Panel Data<a href="seasonality-and-geographic-differences-application-of-statistical-methods-1.html#pooled-ols-for-state-panel-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>As we investigated correlation patterns above, we saw that panel data is not straightforward to analyze. Especially since we are only equipped with quarterly data of mere 6 years - That’s not a lot.
+<p>As we investigated correlation patterns above, we saw that panel data is not straightforward to analyze. Especially since we are only equipped with quarterly data of mere 6 years - that’s not a lot.
 But you have just added a few more “normalized” variables, so we can get started with our regressions in the hope to make some interesting findings.</p>
-<p>With panel data the basic extension of OLS (Ordinary Least Squares) regression is Pooled OLS.
+<p>With panel data, the basic extension of OLS (Ordinary Least Squares) regression is Pooled OLS.
 A basic Pooled OLS regression equation could look like this (a simple extension of classic OLS with state effects <span class="math inline">\(\alpha_i\)</span> and error term <span class="math inline">\(\epsilon_{i,t}\)</span>:</p>
 <p><span class="math display">\[
 percent\_lost\_colonies_{i, t} = \mu + \beta_{1,i} \cdot varroa\_mites_{i, t} + \beta_2 \cdot quarter_1 + \dots + \alpha_i + \epsilon_{i,t}
@@ -302,8 +308,8 @@ All you have to do is estimate an alternative model (so not pooled OLS again) wh
 At the end of the day, we are interested in the model that reflects our empirical observations best.</p>
 <div id="residuals-distribution-in-sample" class="section level3 hasAnchor" number="5.5.1">
 <h3><span class="header-section-number">5.5.1</span> Residuals Distribution (in-sample)<a href="seasonality-and-geographic-differences-application-of-statistical-methods-1.html#residuals-distribution-in-sample" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>When computing regression estimates the residuals as unexplained fraction of your model are the most important aspect to look at. Especially since each model assumes a certain distribution (normal most of the time). We must check whether these assumptions hold.
-Typical related questions are whether they are auto-correlated and whether the standard errors are computed robust (e.g. test for the presence of heteroscedasticity etc.).</p>
+<p>When computing regression estimates the residuals as unexplained fraction of your model are the most important aspect to look at. Especially since each model assumes a certain distribution (most of the time we assume a normal distribution). Since we just assume a distribution, we must check whether these assumptions hold.
+Typical related questions are whether they are auto-correlated and whether the standard errors computer are robust (e.g. test for the presence of heteroscedasticity etc.).</p>
 <p>Plot the residuals of one of your pooled OLS specifications and the ones of your alternative model. Do they differ fundamentally?</p>
 <div class="tips r">
 <p>Add tip</p>
@@ -317,8 +323,8 @@ Of course you could also use the regression estimates to compute both values you
 <div id="model-selection" class="section level3 hasAnchor" number="5.5.2">
 <h3><span class="header-section-number">5.5.2</span> Model Selection<a href="seasonality-and-geographic-differences-application-of-statistical-methods-1.html#model-selection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>As a wrap-up, by considering the different specifications as well as your alternative model, write a few sentences about which specification/model you believe to be best-suited for the underlying data.</p>
-<p><strong>Congratulations!</strong> You’ve made it to the end of your TechAcademy Data Science project. After visualizing the data in the first part, you’ve also set up a statistical analysis in this section. If you stuck around until this part and managed to code the better part of the exercises, you’ve definitely earned your certificate! We hope you had fun learning Data Science with this combination of data sets and enjoyed it – at least the parts where you didn’t get stuck forever because of some unexplainable coding error. Don’t forget to send your project results to our project submission email address before the deadline (<strong>03.07.2022, 23:59</strong>).
-Thanks for being a part of TechAcademy!</p>
+<p><strong>Congratulations!</strong> You’ve made it to the end of your TechAcademy Data Science project. After visualizing the data in the first part, you’ve also set up a statistical analysis in this section. If you stuck around until this part and managed to code the better part of the exercises, you have definitely earned your certificate! We hope you had fun learning Data Science with this combination of data sets and enjoyed it – at least the parts where you did not get stuck forever because of some unexplainable coding error. Do not forget to send your project results to our project submission email address before the deadline (<strong>03.07.2022, 23:59</strong>).
+Thank you for being a part of TechAcademy!</p>
 
 <div style="page-break-after: always;"></div>
 </div>

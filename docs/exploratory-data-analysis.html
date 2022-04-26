@@ -158,7 +158,11 @@
 <li class="chapter" data-level="5.5.2" data-path="seasonality-and-geographic-differences-application-of-statistical-methods-1.html"><a href="seasonality-and-geographic-differences-application-of-statistical-methods-1.html#model-selection"><i class="fa fa-check"></i><b>5.5.2</b> Model Selection<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="exercise-checklist.html"><a href="exercise-checklist.html"><i class="fa fa-check"></i><b>6</b> Exercise Checklist<span></span></a></li>
+<li class="chapter" data-level="6" data-path="exercise-checklist.html"><a href="exercise-checklist.html"><i class="fa fa-check"></i><b>6</b> Exercise Checklist<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="exercise-checklist.html"><a href="exercise-checklist.html#part-1-exploratory-data-analysis-beginner-advanced-tracks"><i class="fa fa-check"></i><b>6.1</b> <strong>Part 1: Exploratory Data Analysis (Beginner + Advanced Tracks)</strong><span></span></a></li>
+<li class="chapter" data-level="6.2" data-path="exercise-checklist.html"><a href="exercise-checklist.html#part-2-seasonality-and-geographic-differences-application-of-statistical-methods-motivated-beginner-advanced-tracks"><i class="fa fa-check"></i><b>6.2</b> <strong>Part 2: Seasonality and Geographic Differences – Application of Statistical Methods (motivated Beginner + Advanced Tracks)</strong><span></span></a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="whats-next-in-your-data-science-career.html"><a href="whats-next-in-your-data-science-career.html"><i class="fa fa-check"></i><b>7</b> What’s Next in Your Data Science Career?<span></span></a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="whats-next-in-your-data-science-career.html"><a href="whats-next-in-your-data-science-career.html#data-science-in-general"><i class="fa fa-check"></i><b>7.1</b> Data Science in General<span></span></a></li>
@@ -273,7 +277,7 @@ Have a look at the other columns of the bees data set: Some appear to contain nu
 <p>For further calculations, it is safer to convert these columns to a numeric data type.
 While there are vectorized methods that can convert data types at once, we would like you to write a (really) simple ‘for’ loop to conduct the conversions.</p>
 <div class="tips r">
-<p>Have you heard of “sapply?” This might help you. We recommend you to check out the documentation, which you can access by typing <code>help("sapply")</code> into the console, or by browsing the web. Remember, you want to convert multiple columns into the numeric format, so be careful to select all the columns!</p>
+<p>Have you heard of “sapply” ? This might help you. We recommend you to check out the documentation, which you can access by typing <code>help("sapply")</code> into the console, or by browsing the web. Remember, you want to convert multiple columns into the numeric format, so be careful to select all the columns!</p>
 </div>
 <div class="tipsp python">
 <p>You need an iterable to loop over, the semicolon after the keyword, and the indentation of the subsequent lines!
@@ -283,21 +287,21 @@ Here is a <a href="https://drive.google.com/file/d/15DwPt5r_vySfuWdOAvci71bDSnD7
 <div id="converting-units" class="section level3 hasAnchor" number="4.2.3">
 <h3><span class="header-section-number">4.2.3</span> Converting Units<a href="exploratory-data-analysis.html#converting-units" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>From the column names you can see that the honey data set is in pounds as we are dealing with an U.S. data set.
-However, we are devoted followers of the metric system and do not understand pounds. Consequently, we would like to translate them to kilogram [kg].
-While you are at it, you might want to give your new columns in kg a shorter name with less spaces in it. For example “Honey producing colonies (thousand)” could be named “producing_colonies_thousand.”</p>
+However, we are devoted followers of the metric system and do not easily understand pounds. Consequently, we would like to translate them to kilogram [kg].
+It is best practice to create a new variable from the old one that you are modifying. Therefore, while you are at it, you might want to give your new variables, now in kg, a shorter name no spaces in it. For example “Honey producing colonies (thousand)” could be named “producing_colonies_thousand.”</p>
 </div>
 <div id="rounding" class="section level3 hasAnchor" number="4.2.4">
 <h3><span class="header-section-number">4.2.4</span> Rounding<a href="exploratory-data-analysis.html#rounding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Have a look at your column values. Some columns have long decimal numbers. To simplify your data frame, round up to the decimal place you prefer.
-Please write one or two sentences why you think rounding is O.K. and why you chose the decimal place <em>X</em> or even a conversion to integer.</p>
+Please write one or two sentences why you think rounding is O.K. and why you chose the decimal place <em>X</em> or even a conversion to integer. There is no right or wrong here, we want to encourage you to consider the option and find what is best for your analysis!</p>
 </div>
 </div>
 <div id="simple-metrics" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Simple Metrics<a href="exploratory-data-analysis.html#simple-metrics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="missing-values" class="section level3 hasAnchor" number="4.3.1">
 <h3><span class="header-section-number">4.3.1</span> Missing Values<a href="exploratory-data-analysis.html#missing-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Look at the bees set and its missing values. Decide on how you want to treat them and give us a detailed explanation why you have decided to treat the missing values the way you did. Keep in mind that these transformations affect all your subsequent work on the data and may bias your findings.
-Sometimes you are lucky and can also identify a pattern that will ease your pain of treating the values and deciding for a strategy.</p>
+<p>We now want to look at the bees data set and its missing values. Have a look how the missing values are encoded. Decide on how you want to treat them and give us a detailed explanation why you have decided to treat the missing values the way you did. Keep in mind that these transformations affect all your subsequent work on the data and may bias your findings. We recommend you to brush up on your statistics knowledge and conduct some research on how to treat the missing values, as awlways, Google is a great place to start!
+Sometimes you are also lucky and can identify a pattern that will ease your pain of treating the values and deciding for a strategy.</p>
 <p>There are many possibilities: From excluding the rows to forward / backward fills or even inserting an average / median.</p>
 <div class="tips r">
 <p>We highly recommend the <a href="https://www.datacamp.com/courses/dealing-with-missing-data-in-r">Datacamp course on missing values in R</a> for this exercise.</p>
@@ -308,22 +312,22 @@ Sometimes you are lucky and can also identify a pattern that will ease your pain
 </div>
 <div id="lost-colonies" class="section level3 hasAnchor" number="4.3.2">
 <h3><span class="header-section-number">4.3.2</span> Lost Colonies<a href="exploratory-data-analysis.html#lost-colonies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Add a new column where you add the percentage of lost colonies in reference to the maximum colonies (it is as simple as it reads).</p>
+<p>Calculate a new column holding the information of the percentage of lost colonies, in reference to the maximum colonies each quarter (it is as simple as it reads). Give the new column an appropriate name and decide whether you would like to keep this column in decimal numbers or percentage points.</p>
 </div>
 <div id="group-means" class="section level3 hasAnchor" number="4.3.3">
 <h3><span class="header-section-number">4.3.3</span> Group Means<a href="exploratory-data-analysis.html#group-means" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We want to merge the honey and bees data set to analyze them jointly. To do so we need to reduce the frequency of the bees data frame (quarterly) to yearly, so data for 2015, 2016, 2017, 2018, 2019, and 2020 per state is left.
-Accordingly, you would like to group by state and quarter and replace the observations by an aggregate.</p>
-<p>You decide to replace with the mean (over the four quarters). Please mind how you are rounding, print the table of your aggregated data frame, and answer the following two questions</p>
+<p>To make things easier, we want to merge the honey and bees data set to analyze them jointly. As you probably have seen, both data sets have different frequencies. Therefore, we need to aggregate the quarterly bee data set to a yearly frequency. In the end, data for just the year from 2015-2020 for each state should be left.
+Accordingly, you should group by state and quarter and replace the observations by a yearly aggregate.</p>
+<p>We have decided that it is best to aggregate the data (over the four quarters) by using the mean. While you are at it reproducing our steps, pay attention to how you are rounding your results. After you are done, please print the table of your aggregated data frame, and answer the following two questions:</p>
 <ul>
 <li>What are potential hazards of reducing data like this?</li>
 <li>What other measures could you use?</li>
 </ul>
 <p>You may refer to the following graph.</p>
 <p><img src="plot/Lost%20Colonies%20in%20Wyoming%20over%20time.jpg" width="100%" style="display: block; margin: auto;" /></p>
-<p>There is no absolute answer to these questions since your approach most likely depends on what you are analyzing / trying to show or understand.</p>
+<p>Do not fret if you are unsure, there is no absolute answer to these questions since your approach most likely depends on what you are analyzing / trying to show or understand. We would still like you to give it a solid thought, which we want you to communicate to us, your readers!</p>
 <div class="tips r">
-<p>An approach with <code>dyplr</code> is the cleanest in this case. Use <code>mutate</code>, <code>group_by</code>, <code>select</code> and <code>summarize</code>. In the <code>summarize</code> call you can add multiple functions together.</p>
+<p>Following the tidyverse approach with <code>dyplr</code> is the cleanest in this case. Use <code>mutate</code>, <code>group_by</code>, <code>select</code> and <code>summarize</code>. In the <code>summarize</code> call you can add multiple functions together. If you are unsure, check back with the dplyr cheat-sheet.</p>
 </div>
 <div class="tipsp python">
 <p>With two-dimensional (panel) data your <code>.groupby</code> statement on the data frame should consider both index values and the time dimension.
@@ -333,7 +337,7 @@ The resulting <code>GroupBy</code> object supports various aggregation methods o
 </div>
 <div id="merging-data-sets" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Merging Data Sets<a href="exploratory-data-analysis.html#merging-data-sets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When preparing to data sets, it is wise to check the naming of columns again.
+<p>When preparing to merge data sets, it is wise to check the naming of columns again. You should avoid having columns with the same name to avoid confusion, except for variable that you are merging by. Keep in mind by which variables you want to merge by beforehand, if you are unsure have a peek at the next merging exercise to clarify what we mean!
 Please give your bees data columns appropriate names (we recommend names where empty spaces are replaced with an underscore “_“), if you have not done so for the honey data set please do the same.</p>
 <div class="tips r">
 <p>Column names can be adjusted with tidyselect’s <code>rename</code> function.</p>
@@ -350,7 +354,7 @@ Closely compare the sizes of the individual data frames and of the aggregate one
 <li>Why not and what states are missing from which individual data frame?</li>
 </ul>
 <div class="tips r">
-<p>Check out the R base <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/merge">merge function</a> documentation.</p>
+<p>As we would like you to follow tidyverse syntax, check out the dplyr <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf">merge functions</a> cheat sheet and join <a href="https://www.rdocumentation.org/packages/dplyr/versions/0.7.8/topics/join">documentation</a>.</p>
 </div>
 <div class="tipsp python">
 <p>Check out the pandas <a href="https://pandas.pydata.org/docs/reference/api/pandas.merge.html">merge function</a> documentation.
@@ -361,12 +365,13 @@ The DataCamp course <a href="https://app.datacamp.com/learn/courses/joining-data
 </div>
 <div id="states-bar-plot" class="section level2 hasAnchor" number="4.5">
 <h2><span class="header-section-number">4.5</span> States Bar Plot<a href="exploratory-data-analysis.html#states-bar-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Use the aggregate (yearly) set and create a bar plot with all states plotting starting bee colonies from the lowest to the highest value.
-Please also include the average and the median of the observations.</p>
-<p>You can decide for yourself whether you want to aggregate over all years or over a single year of your choice.</p>
+<p>Now that you have merged the data sets into one big data set, we want to continue with the big data set (not big data yet! :D).
+Use the aggregated (yearly) data set and create a bar plot with all states plotting starting bee colonies from the lowest to the highest value.
+Please also include the average and the median of the observations. Do not forget to label your graphs in a meaningful way!</p>
+<p>You can decide for yourself whether you want to aggregate over all years or over a single year of your choice, but please make sure to let your audience know what you did and can observe.</p>
 <p><img src="plot/Starting%20Colonies%20in%202020.jpg" width="100%" style="display: block; margin: auto;" /></p>
 <div class="tips r">
-<p>The key commands that you can use for this within <code>ggplot()</code> are <code>geom_bar()</code> and <code>coord_flip()</code>. Check back on the <a href="https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf">ggplot2 cheat sheet</a> if you are feeling unsure! Also, you might want to store the median and mean seperatly and refer to them in your ggplot call.</p>
+<p>The key commands that you can use for this within <code>ggplot()</code> are <code>geom_bar()</code> and <code>coord_flip()</code>. Check back on the <a href="https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf">ggplot2 cheat sheet</a> if you are feeling unsure about the labeling of the plots! Also, you might want to store the median and mean seperatly and refer to them in your ggplot call.</p>
 </div>
 <div class="tipsp python">
 <p>In case you want to filter a certain year check out <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html"><code>.loc</code> indexing</a>.
@@ -381,25 +386,26 @@ For further resources the course <a href="https://app.datacamp.com/learn/courses
 </div>
 <div id="splitting-the-data-set" class="section level2 hasAnchor" number="4.6">
 <h2><span class="header-section-number">4.6</span> Splitting the Data Set<a href="exploratory-data-analysis.html#splitting-the-data-set" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Let’s do some individual work, that can be compared wihtin in your group in the end. To do so, split a subset for data between the your team members. You should have 40 States in your merged dataset, so in a group with 4 team members, each of you would be looking at 10 states.</p>
+<p>Let’s do some individual work! We ask you to please compare the compare to work wihtin in your group in the end. But first things first, your group needs to split a the data into subsets, one subset for each team member. You should have 40 States in your merged dataset. If you are working in groups of four team members, each of you would be looking at 10 states, neither of your states should be included in another team member’s subset! If your team does not contain four members and you cannot come up with a way to split your data or are unsure about your current group dynamic, please consult your mentor.</p>
 <div class="tips r">
-<p>the code: <code>dataset$Group &lt;- c(rep(1,60),rep(2,60), rep(3,60), rep(4, 60))</code> could help if you are 4 team members. If not, this code might be easy to adjust.</p>
+<p>The code for your 4 team member split is: <code>dataset$Group &lt;- c(rep(1,60),rep(2,60), rep(3,60), rep(4, 60))</code>.
+If your group does not contain 4 members, this code can be easily to adjusted.</p>
 </div>
 <div class="tipsp python">
 <p>Make sure to sort your state index first, afterwards make use of <code>numpy's</code> <code>array_split(df, x)</code> function (it never hurts to make a sanity check/print afterwards).</p>
 </div>
 <div id="yearly-boxplots" class="section level3 hasAnchor" number="4.6.1">
 <h3><span class="header-section-number">4.6.1</span> Yearly Boxplots<a href="exploratory-data-analysis.html#yearly-boxplots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Next, let’s visualize the split data with beautiful Boxplots. Generate 4 Boxplot aggregated for each year. They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Bee Colonies.
-In the end you can compare your 4 Boxplots with the ones your team members created. Keep in mind to communicate the same scaling, otherwise a visual comparison will not work out.</p>
-<p><strong>Tip:</strong> It will be 6 boxes for each Boxplot since we look at 6 years, as shown in the example.</p>
-<p>Note that applying the logarithm to the colony values is a very useful thing to do. With this transformation you achieve a reasonable visualization without excluding a state since we have a strong outlier in California. To convince yourself, you can easily plot both Boxplots (with and without log) of maximum colonies for example.</p>
-<p>Also, applying the log “normalizes” the distribution of values (frequently seen in empirical statistics) assuming that the underlying values approximately follow a log-normal distribution.
+<p>Great split! Next, let’s visualize the split data with beautiful boxplots. Generate four Boxplot aggregated for each year. They should look at Honey Production, Parasite: Varroa Mite, Precipitation, and Bee Colonies for the subset of each team member.
+In the end we ask you to compare your four boxplots with the ones your team members have created. Keep in mind to communicate the same scaling, otherwise a visual comparison will not work out.</p>
+<p><strong>Tip:</strong> It will be six boxes for each boxplot since we look at six years, as shown in the example.</p>
+<p>Note that applying the logarithm to the colony values can be a very useful thing to do. With this transformation you can achieve a reasonable visualization without excluding a state, and since California is a strong outlier in our data set we have decided to do so. To convince yourself, you can easily plot both boxplots (with and without log transformation) of maximum colonies. Can you see the difference? When applying logs, make sure to label your graphs accordingly!</p>
+<p>On a side note, applying the logarithm “normalizes” the distribution of values (frequently seen in empirical statistics) assuming that the underlying values approximately follow a log-normal distribution.
 A very superficial take on this can be found <a href="https://medium.com/@kyawsawhtoon/log-transformation-purpose-and-interpretation-9444b4b049c9">here (5 min read)</a>.</p>
 <p><img src="plot/Log%20Honey%20Production.jpg" width="50%" /><img src="plot/Varroa%20Mites.jpg" width="50%" />
 <img src="plot/Log%20Lost%20Bee%20Colonies.jpg" width="50%" /><img src="plot/Average%20Precipitation.jpg" width="50%" /></p>
 <div class="tips r">
-<p>Again, <code>ggplot()</code> and this time <code>geom_boxplot()</code> will help you visualizing.</p>
+<p>Again, <code>ggplot()</code>, and this time <code>geom_boxplot()</code>, will be your best bet!</p>
 </div>
 <div class="tipsp python">
 <p>Surprise, you are looking for the <code>.boxplot(...)</code> function!</p>
@@ -408,19 +414,22 @@ A very superficial take on this can be found <a href="https://medium.com/@kyawsa
 </div>
 <div id="visualization-with-maps" class="section level2 hasAnchor" number="4.7">
 <h2><span class="header-section-number">4.7</span> Visualization with Maps<a href="exploratory-data-analysis.html#visualization-with-maps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Last but not least, we want to do a more appealing visualization.
+<p>Last but not least, we want to plot a more appealing visualization.One that gets you excited!
 The idea is to combine the geographic information on the states with the numeric data to provide a rich visual that reflects the two aspects.</p>
 <div id="geographic-map-with-state-pop-ups" class="section level3 hasAnchor" number="4.7.1">
 <h3><span class="header-section-number">4.7.1</span> Geographic Map with State Pop-ups<a href="exploratory-data-analysis.html#geographic-map-with-state-pop-ups" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We start by exploiting the coordinates provided with the data and our joint honey and bees set to obtain a responsive map of the U.S.A.</p>
-<p>The map should reflect information about some key variables like the maximum- and lost colonies as well as the honey production and stock price in a year of your choice.</p>
+<p>We start by exploiting the coordinates provided with the data and our joint honey and bees set to obtain a dynamic map of the United States.</p>
+<p>The map should reflect information about some key variables like the maximum- and lost colonies, as well as the honey production and stock price in one year of your choice.</p>
 <p><img src="plot/Map_with_Popups.PNG" width="100%" style="display: block; margin: auto;" /></p>
 <div class="tips r">
 <p>This time, we created the plot using the leaflet package. Why don’t you try to find information on the package online?</p>
 <p>You can create a basic map with leaflet and add additional layers by following these simple steps:</p>
-<p><code>m &lt;- leaflet() %&gt;%   addTiles() %&gt;%    addMarkers(lng= ,               lat= ,               popup= )</code></p>
-<p>Do lng and lat look familiar to you from a previous plot?</p>
-<p>The popup is where the magic happens! Can you make the map show you honey production, number of bee colonies, and three more variables that you find important for such a plot?</p>
+<pre><code>m &lt;- leaflet() %&gt;%
+      addTiles() %&gt;% 
+      addMarkers(lng= , 
+                 lat= , 
+                 popup= )             </code></pre>
+<p>The popup is where the magic happens! Can you make the map show the mentioned four key variables, and one more variable that you find important for such a plot?</p>
 </div>
 <div class="tipsp python">
 <p>We are going to use yet another library, this one is called <code>folium</code>.</p>
@@ -443,12 +452,13 @@ m  # Displays the map</code></pre>
 </div>
 <div id="animating-changes-over-time" class="section level3 hasAnchor" number="4.7.2">
 <h3><span class="header-section-number">4.7.2</span> Animating Changes over Time<a href="exploratory-data-analysis.html#animating-changes-over-time" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Since we have looked at a single year in the plot before (with multiple variables), we would like to mix things up and look at transitions here.
-In this case we plot a heat map showing the transition of log starting colonies over time for each state creating a very dynamic plot.</p>
-<p>Note again the log transformation for visualization purposes.</p>
+<p>Since we have looked at a single year but multiple variables in the previous plot, we would like to mix things up and look at transitions here.
+To do so, we want to plot a heat map showing the transition of log starting colonies over time for each state, creating a dynamic plot.</p>
+<p>Note again that we are using the log transformation for visualization purposes.</p>
 <p><img src="plot/States_map_bee_starting_pop.gif" width="100%" style="display: block; margin: auto;" /></p>
 <div class="tips r">
-<p>Add tip</p>
+<p>Now that you have familiarized yourself with the leaflet package, let’s switch things up! For this map we will be using the <code>plotly</code> package, specifically, a choropleth map. If you would like to have some further information, have a look <a href="https://plotly.com/r/choropleth-maps/">here</a>. However, be careful what kind of map we are asking you to plot!</p>
+<p>To add a dynamic slider representing years to your map, you would need to specify <code>add_trace(frame = )</code> correctly.</p>
 </div>
 <div class="tipsp python">
 <p>There is a really cool utility built-in to <a href="https://plotly.com/python/choropleth-maps/">plotly express</a> so you do not have to specify the tedious coordinates for your plots.
@@ -459,12 +469,12 @@ In fact, the animation above is essentially one single function call.</p>
 </div>
 <div id="surprise-us" class="section level2 hasAnchor" number="4.8">
 <h2><span class="header-section-number">4.8</span> Surprise Us!<a href="exploratory-data-analysis.html#surprise-us" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You discovered anything cool and / or want to experiment with a new visualization technique to the deliver the message?
+<p>You discovered anything cool and / or want to experiment with a new visualization technique to the deliver a message?
 Here is the right place to put down anything you did and would like to do with the project that did not quite fit in the other exercise sections. If you are looking for some visualization inspiration, check out <a href="https://r-graph-gallery.com/">this page</a>.</p>
 <p><strong>Congratulations</strong>! Based on your work with fundamental data transformations and many visualizations, you now have a solid understanding of the honey and bees data sets!
 With this, you have completed the <em>EDA</em> part of the project!
 For a TechAcademy certificate you should complete <em>two-thirds</em> of the above. Don’t forget to send your project results to our project submission email address before the deadline (<strong>03.07.2022, 23:59</strong>). Thanks for being a part of TechAcademy!</p>
-<p>If you are advanced your coding journey goes on with the next section!</p>
+<p>If you are in the advanced track your coding journey goes on with the next section!</p>
 
 <div style="page-break-after: always;"></div>
 </div>
