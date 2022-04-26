@@ -72,7 +72,7 @@ After completing the curriculum and the project's (minimal) requirements, you wi
 6.  [Cleaning Data in R (4h)](https://www.datacamp.com/courses/cleaning-data-in-r)
 7.  [Working with Dates and Times in R (4h)](https://app.datacamp.com/learn/courses/working-with-dates-and-times-in-r)
 8.  [Exploratory Data Analysis in R (4h)](https://www.datacamp.com/courses/exploratory-data-analysis)
-9.  [Introduction to Statistics in R](https://app.datacamp.com/learn/courses/introduction-to-statistics-in-r)
+9.  [Introduction to Statistics in R (4h)](https://app.datacamp.com/learn/courses/introduction-to-statistics-in-r)
 
 **Data Science in R (Advanced Track)**
 
