@@ -1,39 +1,39 @@
 \begin{center}
 \begin{tabular}{lclc}
 \toprule
-\textbf{Dep. Variable:}    & lost\_colonies\_percent & \textbf{  R-squared:         } &    0.065  \\
-\textbf{Model:}            &           OLS           & \textbf{  Adj. R-squared:    } &    0.060  \\
-\textbf{Method:}           &      Least Squares      & \textbf{  F-statistic:       } &    11.63  \\
-\textbf{Date:}             &     Sun, 24 Apr 2022    & \textbf{  Prob (F-statistic):} & 1.26e-12  \\
-\textbf{Time:}             &         22:58:04        & \textbf{  Log-Likelihood:    } &  -3943.9  \\
-\textbf{No. Observations:} &            1008         & \textbf{  AIC:               } &    7902.  \\
-\textbf{Df Residuals:}     &            1001         & \textbf{  BIC:               } &    7936.  \\
+\textbf{Dep. Variable:}    & lost\_colonies\_percent & \textbf{  R-squared:         } &    0.185  \\
+\textbf{Model:}            &           OLS           & \textbf{  Adj. R-squared:    } &    0.181  \\
+\textbf{Method:}           &      Least Squares      & \textbf{  F-statistic:       } &    37.25  \\
+\textbf{Date:}             &     Tue, 26 Apr 2022    & \textbf{  Prob (F-statistic):} & 6.60e-41  \\
+\textbf{Time:}             &         01:52:50        & \textbf{  Log-Likelihood:    } &  -3318.7  \\
+\textbf{No. Observations:} &            1008         & \textbf{  AIC:               } &    6651.  \\
+\textbf{Df Residuals:}     &            1001         & \textbf{  BIC:               } &    6686.  \\
 \textbf{Df Model:}         &               6         & \textbf{                     } &           \\
-\textbf{Covariance Type:}  &        nonrobust        & \textbf{                     } &           \\
+\textbf{Covariance Type:}  &           HC1           & \textbf{                     } &           \\
 \bottomrule
 \end{tabular}
 %\caption{OLS Regression Results}
 \end{center}\begin{center}
 \begin{tabular}{lcccccc}
 \toprule
-                                & \textbf{coef} & \textbf{std err} & \textbf{t} & \textbf{P$> |$t$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
+                         & \textbf{coef} & \textbf{std err} & \textbf{t} & \textbf{P$> |$t$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
 \midrule
-\textbf{humidity}               &      -0.0903  &        0.042     &    -2.138  &         0.033        &       -0.173    &       -0.007     \\
-\textbf{cloudcover}             &       0.0082  &        0.033     &     0.247  &         0.805        &       -0.057    &        0.073     \\
-\textbf{precip}                 &      -0.0492  &        0.303     &    -0.162  &         0.871        &       -0.644    &        0.546     \\
-\textbf{Varroa Mites (Percent)} &       0.1101  &        0.022     &     5.055  &         0.000        &        0.067    &        0.153     \\
-\textbf{constant}               &      16.8590  &        2.610     &     6.459  &         0.000        &       11.737    &       21.981     \\
-\textbf{quarter\_1}             &       5.0299  &        0.993     &     5.063  &         0.000        &        3.081    &        6.979     \\
-\textbf{quarter\_3}             &      -3.1243  &        0.998     &    -3.131  &         0.002        &       -5.082    &       -1.166     \\
+\textbf{latitude}        &      -0.1774  &        0.044     &    -4.042  &         0.000        &       -0.263    &       -0.091     \\
+\textbf{quarter\_1}      &       2.8776  &        0.599     &     4.800  &         0.000        &        1.701    &        4.054     \\
+\textbf{quarter\_2}      &      -3.0475  &        0.445     &    -6.845  &         0.000        &       -3.921    &       -2.174     \\
+\textbf{abn\_var\_mites} &       0.1099  &        0.012     &     9.433  &         0.000        &        0.087    &        0.133     \\
+\textbf{precipcover}     &       0.1464  &        0.045     &     3.219  &         0.001        &        0.057    &        0.236     \\
+\textbf{abn\_temp}       &      -0.6125  &        0.220     &    -2.780  &         0.006        &       -1.045    &       -0.180     \\
+\textbf{constant}        &      16.9851  &        1.830     &     9.282  &         0.000        &       13.394    &       20.576     \\
 \bottomrule
 \end{tabular}
 \end{center}\begin{center}
 \begin{tabular}{lclc}
 \toprule
-\textbf{Omnibus:}       & 1117.924 & \textbf{  Durbin-Watson:     } &     2.030   \\
-\textbf{Prob(Omnibus):} &   0.000  & \textbf{  Jarque-Bera (JB):  } & 104856.224  \\
-\textbf{Skew:}          &   5.313  & \textbf{  Prob(JB):          } &      0.00   \\
-\textbf{Kurtosis:}      &  51.823  & \textbf{  Cond. No.          } &      571.   \\
+\textbf{Omnibus:}       & 367.826 & \textbf{  Durbin-Watson:     } &    1.580  \\
+\textbf{Prob(Omnibus):} &   0.000 & \textbf{  Jarque-Bera (JB):  } & 2079.801  \\
+\textbf{Skew:}          &   1.572 & \textbf{  Prob(JB):          } &     0.00  \\
+\textbf{Kurtosis:}      &   9.296 & \textbf{  Cond. No.          } &     386.  \\
 \bottomrule
 \end{tabular}
 \end{center}
