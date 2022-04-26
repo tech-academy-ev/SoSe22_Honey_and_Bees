@@ -55,7 +55,7 @@ Our cross-section of states is characterized by heterogeneous geography and clim
 Naturally, this also implies seasonality in our quarterly data set.
 However, Hawaii's seasons are less pronounced than they are in North Dakota (if you do not believe us, check the max temperature differential ...).
 
-To Visualize this, you want to compute statewise correlations for either "Lost Colonies", "log Lost Colonies" or "percent lost colonies" and sort them by latitude. 
+To Visualize this, you want to compute statewise correlations for either "Lost Colonies", "log Lost Colonies" or "percent Lost Colonies" and sort them by latitude. 
 
 Below are some examples:
 
@@ -126,7 +126,7 @@ A classic package for inference is [statsmodels](https://www.statsmodels.org/sta
 
 ### Adding Geographic Aspects
 Extend your specification from above with at least one variable that reflects each states "unique" geography. 
-Whenever you add more variables be careful to avoid (multi-) collinearity (== your regressors are highly correlated among themselves).
+Whenever you add more variables be careful to avoid (multi-) collinearity (= your regressors are highly correlated among themselves).
 
 ### Adding indicators for weather and parasite infestation
 Last but not least add variables (maybe some of the ones created above) that can explain even more, considering for example weather extrema and parasite infestation.
