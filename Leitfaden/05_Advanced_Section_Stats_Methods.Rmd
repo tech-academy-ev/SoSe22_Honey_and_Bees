@@ -4,10 +4,6 @@ editor_options:
     wrap: sentence
 ---
 
-```{r, setup}
-library(texPreview)
-```
-
 \newpage
 
 # Seasonality and Geographic Differences -- Application of Statistical Methods
@@ -23,19 +19,20 @@ It might not be clever to replace period-specific max/min values with a mean.
 
 If you get lost, you might want to compare your approach to your solution of [4.4.1](#Merging).
 
+Please note that there is no weather data for **Florida** and **New Mexico**, you should exclude these states.
+
 ## Correlations
 
 ### Naive Approach
 
 Do a simple correlations plot between variables of your interest.
 This could be lost colonies, different parasites, and weather indicators for example.
-You could also create your own indication such as a temperature differential, extreme deviations from the mean of a series or interaction effects (temperature and parasites, etc. ...).
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
 knitr::include_graphics("plot/Correlations using Pearson Method.jpg")
 ```
 
--   We have a question for you: Why is a naive correlation matrix across states a terrible idea? Think for example about omitted variables and how information is lost when you aggregate fundamentally different groups.
+-   We have a question for you: Why is a naive correlation matrix across states likely a bad idea? Think for example about omitted variables and how information is lost when you aggregate fundamentally different groups.
 
 ::: {.tips .r data-latex="r"}
 Add tip
@@ -58,20 +55,16 @@ Our cross-section of states is characterized by heterogeneous geography and clim
 Naturally, this also implies seasonality in our quarterly data set.
 However, Hawaii's seasons are less pronounced than they are in North Dakota (if you do not believe us, check the max temperature differential ...).
 
-To Visualize this, you want to compute correlations statewise for either "Lost Colonies", "log Lost Colonies" or "percent lost colonies" and sort them by latitude. 
+To Visualize this, you want to compute statewise correlations for either "Lost Colonies", "log Lost Colonies" or "percent lost colonies" and sort them by latitude. 
 
 Below are some examples:
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
-knitr::include_graphics("plot/State Correlations sorted by Latitude - Lost Colonies and Temperature ex Hawaii.jpg")
-```
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
 knitr::include_graphics("plot/State Correlations sorted by Latitude - Lost Colonies and Quarter Dummies ex Hawaii.jpg")
 ```
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
-knitr::include_graphics("plot/State Correlations sorted by Latitude - Percent Lost Colonies and Quarter Dummies ex Hawaii.jpg")
+knitr::include_graphics("plot/State Correlations sorted by Latitude - Lost Colonies Percent and Quarter Dummies ex Hawaii.jpg")
 ```
 Note, that there might also be interaction effects, e.g. the season/climate influences the parasite population or the like.
 
@@ -87,140 +80,66 @@ Add tip
 You should be fairly familiar with `groupby` statements by now. To sort by an underlying property of the index values, it might be of help to calculate correlations in one data frame and get a list of ordered states from another using `.reset_index()`, `.drop_duplicates()`, and `.sort_values()`. Subsequently, you can easily use `.reindex()`.
 :::
 
-## Simple Linear Models for State Panel Data
-As we investigated correlation patterns above, we saw that panel data is not straightforward to analyze.
-In fact, a lot more caution is necessary. Even more so since we are only equipped with quarterly data of mere 6 years - That's not a lot. You would already lose a year if you controlled with quarterly averages in your regressions.
+### Demeaned Variables
+Create at least two own indications that you might want to use in the following regressions which can mitigate some of the issues:
 
-### Naive OLS
-It's instructive to look at OLS to have a reference point and to understand better why it is an inappropriate frame work. 
+* One Measure that subtracts a quarter aggregate (median, mean ...) over ALL states but by quarter (4 values in total) from each observation with that respective quarter
+
+* One Measure that subtracts a quarter aggregate by state AND quarter (values equal to the number of states * 4) from all observations with the respective state and quarter
+
+**Example for the 2nd**: You create a measure of "abnormal" temperature by subtracting the average temperature of a given state in each quarter from the state's quarter observation in all years (6 years in total) in the data set.
+
+Additionally, add quarter dummies to your data frame.
 
 ::: {.tips .r data-latex="r"}
 Add tip
 :::
 
 ::: {.tipsp .python data-latex="p"}
+You best work with a `Multiindex` and employ the `.dt.quarter` property of `Datetime` columns.
+After aggregating, you can merge the values back as an additional column and simply subtract as well as reassign the result.
+:::
+
+## Pooled OLS for State Panel Data
+As we investigated correlation patterns above, we saw that panel data is not straightforward to analyze. Especially since we are only equipped with quarterly data of mere 6 years - That's not a lot.
+But you have just added a few more "normalized" variables, so we can get started with our regressions in the hope to make some interesting findings.
+
+With panel data the basic extension of OLS (Ordinary Least Squares) regression is Pooled OLS.
+A basic Pooled OLS regression equation could look like this (a simple extension of classic OLS with state effects $\alpha_i$ and error term $\epsilon_{i,t}$:
+
+$$
+percent\_lost\_colonies_{i, t} = \mu + \beta_{1,i} \cdot varroa\_mites_{i, t} + \beta_2 \cdot quarter_1 + \dots + \alpha_i + \epsilon_{i,t}
+$$
+
+### Seasonality Specification
+Compute pooled OLS regression estimates that reflect only seasonal aspects.
+Subsequently, you will extend this model below. At the end of this section is a [#table] that may serve as an indication of what the end result could look like.
+
+::: {.tips .r data-latex="r"}
 Add tip
 :::
 
-### Random Effects
+::: {.tipsp .python data-latex="p"}
+A classic package for inference is [statsmodels](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html#statsmodels.regression.linear_model.OLS). Standard OLS is pretty straightforward but not needed here. 
+[linearmodels](https://pypi.org/project/linearmodels/) is an extension library that supports the analysis of panel data.
+:::
 
+### Adding Geographic Aspects
+Extend your specification from above with at least one variable that reflects each states "unique" geography. 
+Whenever you add more variables be careful to avoid (multi-) collinearity (== your regressors are highly correlated among themselves).
 
-### Pooled (Panel) OLS
+### Adding indicators for weather and parasite infestation
+Last but not least add variables (maybe some of the ones created above) that can explain even more, considering for example weather extrema and parasite infestation.
+
+When you compare all the $R^2$ of the different specifications with special attention to *within* and *between* $R^2$ what do you observe?
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
-knitr::include_graphics("plot/Regression_Table.PNG")
+knitr::include_graphics("plot/Regression_Table_POLS_only.PNG")
 ```
 
-```{texpreview, echo=FALSE}
-\begin{center}
-\begin{tabular}{lclc}
-\toprule
-\textbf{Dep. Variable:}         & log\_lost\_cols  & \textbf{  R-squared:         } &     0.166   \\
-\textbf{Model:}                 &       OLS        & \textbf{  Adj. R-squared:    } &     0.161   \\
-\textbf{Method:}                &  Least Squares   & \textbf{  F-statistic:       } &     33.12   \\
-\textbf{Date:}                  & Sun, 24 Apr 2022 & \textbf{  Prob (F-statistic):} &  1.55e-36   \\
-\textbf{Time:}                  &     15:07:10     & \textbf{  Log-Likelihood:    } &   -1729.4   \\
-\textbf{No. Observations:}      &        1008      & \textbf{  AIC:               } &     3473.   \\
-\textbf{Df Residuals:}          &        1001      & \textbf{  BIC:               } &     3507.   \\
-\textbf{Df Model:}              &           6      & \textbf{                     } &             \\
-\textbf{Covariance Type:}       &    nonrobust     & \textbf{                     } &             \\
-\bottomrule
-\end{tabular}
-\begin{tabular}{lcccccc}
-                                & \textbf{coef} & \textbf{std err} & \textbf{t} & \textbf{P$> |$t$|$} & \textbf{0.025} & \textbf{0.975}  \\
-\midrule
-\textbf{humidity}               &      -0.0240  &        0.005     &    -5.107  &         0.000        &       -0.033    &       -0.015     \\
-\textbf{cloudcover}             &       0.0044  &        0.004     &     1.194  &         0.233        &       -0.003    &        0.012     \\
-\textbf{precip}                 &      -0.1782  &        0.034     &    -5.288  &         0.000        &       -0.244    &       -0.112     \\
-\textbf{Varroa Mites (Percent)} &       0.0225  &        0.002     &     9.282  &         0.000        &        0.018    &        0.027     \\
-\textbf{constant}               &       8.9969  &        0.290     &    31.014  &         0.000        &        8.428    &        9.566     \\
-\textbf{quarter\_1}             &       0.0322  &        0.110     &     0.292  &         0.771        &       -0.184    &        0.249     \\
-\textbf{quarter\_3}             &       0.0067  &        0.111     &     0.061  &         0.952        &       -0.211    &        0.224     \\
-\bottomrule
-\end{tabular}
-\begin{tabular}{lclc}
-\textbf{Omnibus:}       &  8.176 & \textbf{  Durbin-Watson:     } &    0.662  \\
-\textbf{Prob(Omnibus):} &  0.017 & \textbf{  Jarque-Bera (JB):  } &    8.378  \\
-\textbf{Skew:}          &  0.181 & \textbf{  Prob(JB):          } &   0.0152  \\
-\textbf{Kurtosis:}      &  3.261 & \textbf{  Cond. No.          } &     571.  \\
-\bottomrule
-\end{tabular}
-%\caption{OLS Regression Results}
-\end{center}
-
-Notes: \newline
- [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-```
-
-```{texpreview, echo=FALSE}
-\usepackage{threeparttable}
-\usepackage{siunitx}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath,amsfonts,amssymb}
-
-\begin{table}[htb]
-  \centering
-  \sisetup{table-number-alignment = center, 
-           table-space-text-pre ={\(},
-           table-space-text-post={\textsuperscript{***}},
-           input-open-uncertainty={\[},
-           input-close-uncertainty={\]},
-           table-align-text-pre=false,
-           table-align-text-post=false}
-  \begin{threeparttable}
-  \caption{IV Analysis: Investment on Bribes table}
-  \label{tab1}
-  \begin{tabular}{r 
-                  S[table-format=-2.3]
-                  S[table-format=-1.4] 
-                  S[table-format=-1.5] 
-                 }
-  \toprule
-                      & \multicolumn{3}{c}{ln\_invest}                                \\
-  \cmidrule(lr){2-4}
-                      &   {(1)}           &   {(2)}           &  {(3)}                \\
-  \midrule
-  Bribe               &  -0.167           &  -0.0617          &   0.00939             \\
-                      & (-0.90)           & (-0.44)           &  (0.13)               \\
-  \addlinespace
-  medium (20-99)      &   0.339           &   0.298           &   1.024\tnote{***}    \\
-                      &  (0.90)           &  (0.73)           &  (8.74)               \\
-  \addlinespace
-  large (100 and over)&  2.426\tnote{***} &   1.578\tnote{**} &   2.654\tnote{***}    \\
-                      &  (4.31)           &  (2.79)           & (17.07)               \\
-  \addlinespace
-  Govt=1              &   0.764           &   0.735           &  -0.112               \\
-                      &  (1.31)           &  (1.42)           & (-0.63)               \\
-  \addlinespace
-  For=1               &  -0.341           &  -0.486           &   0.326\tnote{*}      \\
-                      & (-0.95)           & (-1.41)           &  (2.14)               \\
-  \addlinespace
-  Obstacle            &   0.111           &   0.0340          &   0.114               \\
-                      &  (0.64)           &  (0.20)           &  (1.13)               \\
-  \addlinespace
-  Agree               &  -0.123           &  -0.0445          &   0.0196              \\
-                      & (-0.66)           & (-0.25)           &  (0.18)               \\
-  \addlinespace
-  lnAge               &   0.155           &   0.734\tnote{**} &   0.122               \\
-                      &  (0.62)           &  (2.63)           &  (1.90)               \\
-  \addlinespace
-  Constant            &  10.13\tnote{***} &  8.684\tnote{***} &   8.062\tnote{***}    \\
-                      &  (12.78)          &  (9.98)           & (23.18)               \\
-  \midrule
-  Observations        & {6041}            & {4724}            & {1317}                \\
-  \bottomrule
-  \end{tabular}
-      \smallskip
-      \footnotesize
-  $t$ statistics in parentheses\par
-  \begin{tablenotes}[para]
-      \item[*]    $p < 0.10$,
-      \item[**]   $p < 0.05$,
-      \item[***]  $p < 0.01$
-  \end{tablenotes}\par
-  Note: Robust standard errors in parentheses
-  \end{threeparttable}
-\end{table}
-```
+## Alternative Model 
+You are completely free here. You want to check out a machine-learning approach and compare? This is your chance!
+All you have to do is estimate an alternative model (so not pooled OLS again) whose properties you can compare in a later stage.
 
 ## Model Evaluation
 Model evaluation is always important, even more so when using different frameworks that you would like to compare.
@@ -228,5 +147,25 @@ At the end of the day, we are interested in the model that reflects our empirica
 
 ### Residuals Distribution (in-sample)
 When computing regression estimates the residuals as unexplained fraction of your model are the most important aspect to look at. Especially since each model assumes a certain distribution (normal most of the time). We must check whether these assumptions hold.
-Typical related questions are whether they are auto-correlated and whether the standard errors are computed robust. 
+Typical related questions are whether they are auto-correlated and whether the standard errors are computed robust (e.g. test for the presence of heteroscedasticity etc.). 
 
+Plot the residuals of one of your pooled OLS specifications and the ones of your alternative model. Do they differ fundamentally?
+
+::: {.tips .r data-latex="r"}
+Add tip
+:::
+
+::: {.tipsp .python data-latex="p"}
+Your fitted models will have something like a `.predict()` method which also yields the in-sample fitted values. Moreover, the fitted model will automatically compute the residuals, for example the `.resids` attribute that you can work with. 
+Of course you could also use the regression estimates to compute both values yourself!
+:::
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", out.width = "100%"}
+knitr::include_graphics("plot/Pooled OLS Aggregate Residuals.jpg")
+```
+
+### Model Selection
+As a wrap-up, by considering the different specifications as well as your alternative model, write a few sentences about which specification/model you believe to be best-suited for the underlying data.
+
+**Congratulations!** You’ve made it to the end of your TechAcademy Data Science project. After visualizing the data in the first part, you’ve also set up a statistical analysis in this section. If you stuck around until this part and managed to code the better part of the exercises, you’ve definitely earned your certificate! We hope you had fun learning Data Science with this combination of data sets and enjoyed it – at least the parts where you didn’t get stuck forever because of some unexplainable coding error. Don’t forget to send your project results to our project submission email address before the deadline (**03.07.2022, 23:59**).
+Thanks for being a part of TechAcademy!
