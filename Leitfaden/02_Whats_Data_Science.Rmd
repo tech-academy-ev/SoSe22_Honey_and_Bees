@@ -89,7 +89,7 @@ After completing the curriculum and the project's (minimal) requirements, you wi
 **Data Science in R (Advanced Track) -- Exchange Pool**
 
 -   [Interactive Maps with leaflet in R (4h)](https://www.datacamp.com/courses/interactive-maps-with-leaflet-in-r)
--   [Interactive Data Visualization with plotly in R (4h)](https://app.datacamp.com/learn/courses/interactive-data-visualization-with-plotly-in-r)7
+-   [Interactive Data Visualization with plotly in R (4h)](https://app.datacamp.com/learn/courses/interactive-data-visualization-with-plotly-in-r)
 -   [Multiple and Logistic Regression in R (4h)](https://www.datacamp.com/courses/multiple-and-logistic-regression)
 -   [Supervised Learning in R: Regression (4h)](https://www.datacamp.com/courses/supervised-learning-in-r-regression)
 -   [Unsupervised Learning in R (4h)](https://www.datacamp.com/courses/unsupervised-learning-in-r)
