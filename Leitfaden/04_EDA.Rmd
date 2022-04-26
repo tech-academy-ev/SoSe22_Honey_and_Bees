@@ -378,4 +378,4 @@ Here is the right place to put down anything you did and would like to do with t
 
 **Congratulations**! Based on your work with fundamental data transformations and many visualizations, you now have a solid understanding of the honey and bees data sets!
 With this, you have completed the *EDA* part of the project! 
-For a TechAcademy certificate as a beginner you should complete 2/3 of the above. If you are advanced all of the above should be included in your output.
+For a TechAcademy certificate you should complete *two-thirds* of the above.
