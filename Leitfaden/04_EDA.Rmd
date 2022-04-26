@@ -366,7 +366,9 @@ knitr::include_graphics("plot/States_map_bee_starting_pop.gif")
 ```
 
 ::: {.tips .r data-latex="r"}
-Add tip
+Now that you have familiarized yourself with the leaflet package, let's switch things up! For this map we will be using the `plotly` package, specifically, a choropleth map. If you would like to have some further information, have a look [here](https://plotly.com/r/choropleth-maps/). However, be careful what kind of map we are asking you to plot!
+
+To add a dynamic slider representing years to your map, you would need to specify `add_trace(frame = )` correctly. 
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -377,7 +379,7 @@ For animation, the `choropleth` function takes an *animation_frame* and *animati
 :::
 
 ## Surprise Us! 
-You discovered anything cool and / or want to experiment with a new visualization technique to the deliver the message?
+You discovered anything cool and / or want to experiment with a new visualization technique to the deliver a message?
 Here is the right place to put down anything you did and would like to do with the project that did not quite fit in the other exercise sections. If you are looking for some visualization inspiration, check out [this page](https://r-graph-gallery.com/).
 
 **Congratulations**! Based on your work with fundamental data transformations and many visualizations, you now have a solid understanding of the honey and bees data sets!
