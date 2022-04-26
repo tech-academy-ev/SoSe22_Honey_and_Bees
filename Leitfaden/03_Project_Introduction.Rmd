@@ -17,15 +17,14 @@ At the end of the project guide (6. Exercise Checklist) you will find an overvie
 
 ## What is this Project About?
 As mentioned in the beginning and as per our project title, our data deals with honey production and bee colonies, specifically in the United States. This data was collected by the USDA National Agricultural Statistics Service, and compiled on [kaggle](https://www.kaggle.com/datasets/kyleahmurphy/nass-honey-bee-20152021?select=NASS_Bee-Stressors_2015-2021.csv). If you have any doubts about the meaning of the variables, you can have a look at the data documentation provided on kaggle. In addition, we have included weather data since both bee colonies and honey production are closely related to climate conditions.
-In the analogy of the typical data science workflow, we have split this project into two parts. First, you are going to learn how to perform an Exploratory Data Analysis (EDA). You will have a closer look at the data, transform it and then get to know the different variables and how they look in various visualisations.
-Beginners will complete the project after this first part. Still, it would be beneficial for beginners to try and work on the second part too. In the next part of the project, advanced programmers 
+In the analogy of the typical data science workflow, we have split this project into two parts.
 
 
 ## Exploratory Data Analysis -- Getting to Know the Data Set
-As a first step, you will get to know the data set. This step means you will describe the data and answer questions. For this purpose, you often use graphical tools like box plots or histograms. You can also use tables to look at your data and show your readers what you have been doing.
+As a first step, you will get to know the data set and learn how to perform an Exploratory Data Analysis (EDA). This step means you will describe the data, get to know its different variables, transform it,  and answer related questions. For this purpose, you often use graphical tools and various visualisations like box plots or histograms. You can also use tables to look at your data and show your readers what you have been doing.
 We structured the first part of the project to let you know the data thoroughly by completing the given tasks **one after the other**. As a beginner, you can stop after this part because you will have fulfilled the necessary coding requirements for your TechAcademy certificate. However, if this first part inspires you to step up your analytic skills or your coding language has you in a spell, we encourage you to work on the second part!
 Once more: If you get stuck, **Google** and [StackOverflow](https://stackoverflow.com/) are amazing problem solver (besides the Mentors of course).
 
 
 ## Seasonality and Geographic Differences -- Application of Statistical Methods
-As a second step the more advanced of you will dive into deeper depth. For this purpose you will analyse the given data with several statistical approaches and draw insightful conclusions from them.
+As a second step the more advanced of you will dive into deeper depth. For this purpose you will analyse the given data with several (advanced) statistical approaches and draw insightful conclusions from them.
