@@ -187,7 +187,7 @@ There is no absolute answer to these questions since your approach most likely d
 
 
 ::: {.tips .r data-latex="r"}
-An approach with dyplr is the cleanest in this case. Use mutate, group_by, select and summarize. In the summarize call you can add multiple functions together. 
+An approach with `dyplr` is the cleanest in this case. Use `mutate`, `group_by`, `select` and `summarize`. In the `summarize` call you can add multiple functions together. 
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -202,7 +202,7 @@ When preparing to data sets, it is wise to check the naming of columns again.
 Please give your bees data columns appropriate names (we recommend names where empty spaces are replaced with an underscore "_"), if you have not done so for the honey data set please do the same.
 
 ::: {.tips .r data-latex="r"}
-Column names can be adjusted with tidyselect's "rename" function.
+Column names can be adjusted with tidyselect's `rename` function.
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -238,7 +238,7 @@ knitr::include_graphics("plot/Starting Colonies in 2020.jpg")
 ```
 
 ::: {.tips .r data-latex="r"}
-The key commands that you can use for this within ggplot() are geom_bar() and coord_flip(). Check back on the [ggplot2 cheat sheet](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf) if you are feeling unsure! Also, you might want to store the median and mean  seperatly and refer to them in your ggplot call. 
+The key commands that you can use for this within `ggplot()` are `geom_bar()` and `coord_flip()`. Check back on the [ggplot2 cheat sheet](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf) if you are feeling unsure! Also, you might want to store the median and mean  seperatly and refer to them in your ggplot call. 
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -260,7 +260,7 @@ For further resources the course [Introduction to Data Visualization with Matplo
 Let's do some individual work, that can be compared wihtin in your group in the end. To do so, split a subset for data between the your team members. You should have 40 States in your merged dataset, so in a group with 4 team members, each of you would be looking at 10 states.
 
 ::: {.tips .r data-latex="r"}
-the code: dataset$Group <- c(rep(1,60),rep(2,60), rep(3,60), rep(4, 60)) could help if you are 4 team members. If not, this code might be easy to adjust.
+the code: `dataset$Group <- c(rep(1,60),rep(2,60), rep(3,60), rep(4, 60))` could help if you are 4 team members. If not, this code might be easy to adjust.
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -290,7 +290,7 @@ knitr::include_graphics("plot/Average Precipitation.jpg")
 
 
 ::: {.tips .r data-latex="r"}
-Again, ggplot() and this time geom_boxplot() will help you visualizing.
+Again, `ggplot()` and this time `geom_boxplot()` will help you visualizing.
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -316,11 +316,11 @@ This time, we created the plot using the leaflet package. Why don’t you try to
 
 You can create a basic map with leaflet and add additional layers by following these simple steps:
 
-m <- leaflet() %>%
+`m <- leaflet() %>%
   addTiles() %>% 
   addMarkers(lng= , 
              lat= , 
-             popup= )
+             popup= )`
            
 Do lng and lat look familiar to you from a previous plot?
 
