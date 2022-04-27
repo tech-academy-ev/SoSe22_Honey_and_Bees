@@ -235,12 +235,12 @@ In addition, you should complete two-thirds (6/9 courses) of the respective curr
 
 ### Coding Meetups
 To give you a little overview on the dates of our Meetups, you can find all the dates in one go here!
-- **27.04.2022**, Kick-Off Event
-- **04.05.2022**, Coding Introduction
-- **18.05.2022**, Coding MeetUp 1 
-- **01.06.2022**, Coding MeetUp 2 
-- **15.06.2022**, Coding MeetUp 3
-- **29.06.2022**, Coding MeetUp 4
+-   **27.04.2022**, Kick-Off Event
+-   **04.05.2022**, Coding Introduction
+-   **18.05.2022**, Coding MeetUp 1 
+-   **01.06.2022**, Coding MeetUp 2 
+-   **15.06.2022**, Coding MeetUp 3
+-   **29.06.2022**, Coding MeetUp 4
 
 ### Deadline 
 For both your DataCamp courses and the project files hand-in the deadline is **03.07.2022, 23:59** 
