@@ -34,9 +34,9 @@ knitr::include_graphics("plot/Correlations using Pearson Method.jpg")
 -   We have a question for you: Why is a naive correlation matrix across states likely a bad idea? Think for example about omitted variables and how information is lost when you aggregate fundamentally different groups.
 
 ::: {.tips .r data-latex="r"}
-Use the cor() function from the `base` R to create a correlation matrix. Select all numerical variables in your data set with the help of sapply() or `dplyr`’s select() and create a correlation matrix.
+Use the `cor()` function from the `base` R to create a correlation matrix. Select all numerical variables in your data set with the help of `sapply()` or`dplyr’s `select()` and create a correlation matrix.
 
-Alternatively, use the ggcorrplot() from the same-name [{ggcorrplot}](https://cran.r-project.org/web/packages/ggcorrplot/index.html) package.
+Alternatively, use the `ggcorrplot()` from the same-name [{ggcorrplot}](https://cran.r-project.org/web/packages/ggcorrplot/index.html) package.
 
 :::
 
