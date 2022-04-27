@@ -10,7 +10,7 @@ editor_options:
 
 This checklist should help you keep track of your exercises. Remember that you have to hand in satisfactory solutions to at least *two-thirds* of the exercises. If you're part of the beginner track, this refers to two-thirds of section 4 (EDA) only. If you're part of the advanced track, you have to hand in at least two-thirds of  section 4 and 5. Hence, you'll need at least 66% in each of the two sections for a certificate.
 
-## **Part 1: Exploratory Data Analysis (Beginner + Advanced Tracks)**
+## Part 1: Exploratory Data Analysis (Beginner + Advanced Tracks)
 
 ### &check;  You completed at least 6 courses on Datacamp. {.unlisted .unnumbered}
 ### &check;  You completed at least two-third of section 4. {.unlisted .unnumbered}
@@ -19,7 +19,7 @@ This checklist should help you keep track of your exercises. Remember that you h
 ### &check;  You compared your output with your group. {.unlisted .unnumbered}
 ### &check;  Finally, you can hand in your final work in time *(Remeber: Each team member has to hand in their final work individually, in any case it can be the same  within the group)* {.unlisted .unnumbered}
 
-## **Part 2: Seasonality and Geographic Differences – Application of Statistical Methods (motivated Beginner + Advanced Tracks)**
+## Part 2: Seasonality and Geographic Differences – Application of Statistical Methods (motivated Beginner + Advanced Tracks)
 
 ## &check;  Everything of the above stated. {.unlisted .unnumbered}
 ## &check;  **In addition** you also completed at least two-third of section 5. {.unlisted .unnumbered}
