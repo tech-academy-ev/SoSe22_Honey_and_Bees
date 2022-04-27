@@ -17,8 +17,8 @@ This checklist should help you keep track of your exercises. Remember that you h
     &check;  You checked that you included everything you coded in the right order and added explanatory comments. 
     &check;  You have all your output in the desired format.
     &check;  You compared your output with your group.
-    &check;  You sent your final work to **projekt@tech-academy.io** *(Remeber: Each team member has to hand in their final work individually, in any case it can be the 
-             same  within the group)*
+    &check;  You sent your final work to **projekt@tech-academy.io** (Remeber: Each team member has to hand in their final work individually, in any case it can be the 
+             same  within the group)
 
 ## Part 2: Seasonality and Geographic Differences – Application of Statistical Methods (motivated Beginner + Advanced Tracks)
 
