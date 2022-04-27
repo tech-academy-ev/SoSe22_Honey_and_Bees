@@ -67,10 +67,10 @@ knitr::write_bib(c(
 
 # Welcome!
 
-If you are a beginner, the first few chapters will introduce the basics of the R and Python tracks respectively and you will find helpful explanations to questions you might have in the beginning of your coding journey. If you are already advaced, it might be still worth a read. 
+Let us start with an overview of what is waiting for you in the next weeks and in this project guide! If you are a beginner, the first few chapters will introduce the basics of the R and Python tracks respectively and you will find helpful explanations to questions you might have in the beginning of your coding journey. If you are already advaced, it might be still worth a read. 
 There will be a quick introduction to the Data Science track for you to get started with the project quickly. 
 
-Let’s start with the basics!
+Let’s begin with the basics!
 In all tracks you will work on your project in small groups with your peers. Not only will this help you to get the project done faster, but we also want you to compare your results and discuss your findings – remember, coding is just half the effort, understanding what the data and the output shows is even more important! Our experience shows: The different backgrounds of the members and discussing different opinions and ideas will produce the best results. Besides, it is way more fun to work on a project together than to code alone!
 
 Your group should consist of approximately four team members. You can choose your teammates independently; we will not interfere with your arrangements. However, we can assist you to find your team members. It is important that all group members complete the same level of difficulty (beginner or advanced), since the tasks are different in scope for each level. We explicitly encourage you to collaborate with students from different university faculties. This not only allows you to get to know people from other faculties, but may also give you a whole new perspective on the project and tasks. When submitting your project please note: for a certificate, each person must submit the project individually. However, hand-ins may be similar within your group. You can get more information at our first Coding Meetup on **May 18, 2022.**
