@@ -230,7 +230,7 @@ Participant's Section:
 Now that you have learned the theoretical foundation of Data Science in the DataCamp courses, you can put your skills into practice. We have put together a project for you based on real data sets. You can read about the details of this project in the following chapters of this project guide.
 If you still feel a little unsure about how to start off, there will be a **Coding Introduction**  on **May 4, 2022**, where we will give you a general sense on how to start off with `Python` or `R`. 
 Of course, we will also describe the project. We will discuss everything you need to know during the first **Coding Meetup**, which will take place on **May 18, 2022**. After that, your work on the project will officially begin. You can find the exact project tasks together with further explanations and hints in the following chapters.
-To receive your TechAcademy certificate, you must solve at least two-thirds of the “Exploratory Data Analysis” part of your Data Science project if you are a beginner. We added a "Seasonality and Geographic Differences – Application of Statistical Methods" for our advanced participants.
+To receive your TechAcademy certificate, you must solve at least two-thirds of the “Exploratory Data Analysis” section of your Data Science project if you are a beginner. We added the "Seasonality and Geographic Differences – Application of Statistical Methods" section for our advanced participants.
 In addition, you should complete two-thirds (6/9 courses) of the respective curriculum on DataCamp, as mentioned. You can find more detailed information about the curriculum in the “Curriculum” section of the different programming languages above.
 
 ### Coding Meetups
