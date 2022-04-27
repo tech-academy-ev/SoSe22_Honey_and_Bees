@@ -187,7 +187,7 @@ Do not fret if you are unsure, there is no absolute answer to these questions si
 
 
 ::: {.tips .r data-latex="r"}
-Following the tidyverse approach with `dyplr` is the cleanest in this case. Use `mutate`, `group_by`, `select` and `summarize`. In the `summarize` call you can add multiple functions together. If you are unsure, check back with the dplyr cheat-sheet.
+Following the tidyverse approach with dyplr is the cleanest in this case. Use `mutate`, `group_by`, `select` and `summarize`. In the `summarize` call you can add multiple functions together. If you are unsure, check back with the dplyr cheat-sheet.
 :::
 
 ::: {.tipsp .python data-latex="p"}
