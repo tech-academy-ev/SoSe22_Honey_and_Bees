@@ -121,7 +121,14 @@ Compute pooled OLS regression estimates that reflect only seasonal aspects.
 Subsequently, you will extend this model below. At the end of this section is a [#table] that may serve as an indication of what the end result could look like.
 
 ::: {.tips .r data-latex="r"}
-Add tip
+Though you have learned to use `lm` in your DataCamp courses, you will be using the package `lfe` here, as we want to extend the model from a simple OLS model to a pooled OLS model for panel data. But do not worry, the syntax is kept close to the one of `lm`!
+
+In order to extend your OLS model, you will have to cluster your data for season (what variable do you have that can be compared to seasons?). To do so, have a look at the [documentation](https://rdrr.io/cran/lfe/man/felm.html). To help you out and eliminate unnecessary specifications for you, the `felm` command should look a little bit like this:
+
+   felm(formula | 0 | 0 | clustervar= , data= )
+   
+However, feel free to specify the model differently after having read the documentation, and let us know what you have done!
+To create a table with which you can compare your different regression models, use the `stargazer` package and specify `type="html"`.
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -157,7 +164,12 @@ Typical related questions are whether they are auto-correlated and whether the s
 Plot the residuals of one of your pooled OLS specifications and the ones of your alternative model. Do they differ fundamentally?
 
 ::: {.tips .r data-latex="r"}
-Add tip
+As you are working with the `lfe` package, specifically the `felm` command, all your model outputs are in a `felm`-object. Therefore, unlike using `lm`, you do not need to estimate your model after you have created it as this is done automatically. To get a brief overview, click on the model in the environment. If you are not sure what you are looking for the plot, check back with the `felm`-documentation. 
+To help you out, you can extract the parts you need from the `felm`-object with the following command:
+
+x <- model[["x"]]
+
+After extracting everything you need, create a data frame and plot using `ggplot`.
 :::
 
 ::: {.tipsp .python data-latex="p"}
