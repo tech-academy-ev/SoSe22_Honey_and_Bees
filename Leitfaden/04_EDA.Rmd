@@ -263,7 +263,7 @@ Let's do some individual work! We ask you to please compare the compare to work 
 
 ::: {.tips .r data-latex="r"}
 The code for your 4 team member split is: `dataset$Group <- c(rep(1,60),rep(2,60), rep(3,60), rep(4, 60))`.
-If your group does not contain 4 members, this code can be easily to adjusted. 
+If your group does not contain 4 members, this code can be easily adjusted. 
 :::
 
 ::: {.tipsp .python data-latex="p"}
