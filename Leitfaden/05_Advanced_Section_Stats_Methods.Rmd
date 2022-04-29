@@ -55,7 +55,7 @@ Alternatively/Additionally, you may want to plot a heatmap with `sns.heatmap(...
 
 Having checked a very simplistic correlation, we need to do some thinking. Our cross-section of states is characterized by heterogeneous geography and climate.
 Naturally, this also implies seasonality in our quarterly data set.
-However, due to the large szie of the United States, we must not forget that for some southern states, in our data Hawaii's, seasons are less pronounced than they are in North Dakota (if you do not believe us, check the max temperature differential ...).
+However, due to the large size of the United States, we must not forget that for some southern states, in our data Hawaii's, seasons are less pronounced than they are in North Dakota (if you do not believe us, check the max temperature differential ...).
 
 To visualize this, you want to compute statewise correlations for either "Lost Colonies", "log Lost Colonies" or "percent Lost Colonies" and sort them by latitude. 
 As always, do not forget to label the graphs in a meaningful way, and please explain how the results of your plot can be interpreted to your audience!
