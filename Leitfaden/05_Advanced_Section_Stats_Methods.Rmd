@@ -86,15 +86,19 @@ You should be fairly familiar with `groupby` statements by now. To sort by an un
 :::
 
 ### Demeaned Variables
-Create at least two own indications that you might want to use in the following regressions which can mitigate some of the issues:
+Create at least two variables that you want to use in the following regressions which can mitigate some of the issues touched above:
 
-* One measure that subtracts a quarter aggregate (median, mean ...) over ALL states but by quarter (4 values in total) from each observation with that respective quarter
+* One variable that subtracts a quarter aggregate (median, mean ...) over ALL states (4 values in total) from each observation in that respective quarter
+
+**Example:** You calculate the average percentage of Varroa Mites infestation in each quarter for all states together. Subsequently, you subtract the average quarter 1 value from all states' quarter 1 values for Varroa Mites, the average quarter 2 value from all states' quarter 2 values, and so on ...
+
 
 * One measure that subtracts a quarter aggregate by state AND quarter (values equal to the number of states * 4) from all observations with the respective state and quarter
 
-**Example for the 2nd**: You create a measure of "abnormal" temperature by subtracting the average temperature of a given state in each quarter from the state's quarter observation in all years (6 years in total) in the data set.
+**Example:** You create a measure of "abnormal" temperature. First, average the temperature grouping by state and quarter. Subsequently subtract this state- and quarter-dependent measure from each matching quarter and state.
+There are 6 years, so you will average over 6 first quarters for a given state and subsequently subtract that average from each of these 6 observations. 
 
-Additionally, add quarter dummies to your data frame.
+Additionally, add quarter dummies to your data frame. E.g. 4 columns where in each row only a single column is 1.
 
 ::: {.tips .r data-latex="r"}
 Add tip
@@ -102,7 +106,7 @@ Add tip
 
 ::: {.tipsp .python data-latex="p"}
 You best work with a `Multiindex` and employ the `.dt.quarter` property of `Datetime` columns.
-After aggregating, you can merge the values back as an additional column and simply subtract as well as reassign the result.
+After grouping and aggregating, you can merge the values back as an additional column and simply subtract as well as reassign the result.
 :::
 
 ## Pooled OLS for State Panel Data
