@@ -248,19 +248,23 @@ If you unsure, check back with the dplyr cheat sheet.</p>
 </div>
 <div id="demeaned-variables" class="section level3 hasAnchor" number="5.2.3">
 <h3><span class="header-section-number">5.2.3</span> Demeaned Variables<a href="seasonality-and-geographic-differences-application-of-statistical-methods-1.html#demeaned-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Create at least two own indications that you might want to use in the following regressions which can mitigate some of the issues:</p>
+<p>Create at least two variables that you want to use in the following regressions which can mitigate some of the issues touched above:</p>
 <ul>
-<li><p>One measure that subtracts a quarter aggregate (median, mean …) over ALL states but by quarter (4 values in total) from each observation with that respective quarter</p></li>
-<li><p>One measure that subtracts a quarter aggregate by state AND quarter (values equal to the number of states * 4) from all observations with the respective state and quarter</p></li>
+<li>One variable that subtracts a quarter aggregate (median, mean …) over ALL states (4 values in total) from each observation in that respective quarter</li>
 </ul>
-<p><strong>Example for the 2nd</strong>: You create a measure of “abnormal” temperature by subtracting the average temperature of a given state in each quarter from the state’s quarter observation in all years (6 years in total) in the data set.</p>
-<p>Additionally, add quarter dummies to your data frame.</p>
+<p><strong>Example:</strong> You calculate the average percentage of Varroa Mites infestation in each quarter for all states together. Subsequently, you subtract the average quarter 1 value from all states’ quarter 1 values for Varroa Mites, the average quarter 2 value from all states’ quarter 2 values, and so on …</p>
+<ul>
+<li>One measure that subtracts a quarter aggregate by state AND quarter (values equal to the number of states * 4) from all observations with the respective state and quarter</li>
+</ul>
+<p><strong>Example:</strong> You create a measure of “abnormal” temperature. First, average the temperature grouping by state and quarter. Subsequently subtract this state- and quarter-dependent measure from each matching quarter and state.
+There are 6 years, so you will average over 6 first quarters for a given state and subsequently subtract that average from each of these 6 observations.</p>
+<p>Additionally, add quarter dummies to your data frame. E.g. 4 columns where in each row only a single column is 1.</p>
 <div class="tips r">
 <p>Add tip</p>
 </div>
 <div class="tipsp python">
 <p>You best work with a <code>Multiindex</code> and employ the <code>.dt.quarter</code> property of <code>Datetime</code> columns.
-After aggregating, you can merge the values back as an additional column and simply subtract as well as reassign the result.</p>
+After grouping and aggregating, you can merge the values back as an additional column and simply subtract as well as reassign the result.</p>
 </div>
 </div>
 </div>
