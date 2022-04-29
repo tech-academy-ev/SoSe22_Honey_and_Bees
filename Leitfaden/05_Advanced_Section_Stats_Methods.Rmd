@@ -78,7 +78,7 @@ knitr::include_graphics("plot/Seasonal (temperature-related) Parasite Infestatio
 ::: {.tips .r data-latex="r"}
 We recommend you using the tidyverse approach. From previous exercises you should be well versed in using `dplyr` commands. 
 A combination of `group_by()`, `filter()`, `select()`,  and `arrange()` should do the job nicely!
-If you unsure, check back with the dplyr cheat sheet.
+If you are unsure, check back with the dplyr cheat sheet.
 :::
 
 ::: {.tipsp .python data-latex="p"}
@@ -101,7 +101,7 @@ There are 6 years, so you will average over 6 first quarters for a given state a
 Additionally, add quarter dummies to your data frame. E.g. 4 columns where in each row only a single column is 1.
 
 ::: {.tips .r data-latex="r"}
-Add tip
+As in the previous tasks, `dplyr`will be the most useful tool here. To handle date formats, check back with the `lubridate` [cheat sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf).
 :::
 
 ::: {.tipsp .python data-latex="p"}
