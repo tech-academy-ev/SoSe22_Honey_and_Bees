@@ -167,7 +167,7 @@ We highly recommend the [Datacamp course on missing values in Python](https://ww
 Calculate a new column holding the information of the percentage of lost colonies, in reference to the maximum colonies each quarter (it is as simple as it reads). Give the new column an appropriate name and decide whether you would like to keep this column in decimal numbers or percentage points.
 
 
-### Group Means
+### Yearly aggregate
 
 To make things easier, we want to merge the honey and bees data set to analyze them jointly. As you probably have seen, both data sets have different frequencies. Therefore, we need to aggregate the quarterly bee data set to a yearly frequency. In the end, data for just the year from 2015-2020 for each state should be left.
 Accordingly, you should group by state and quarter and replace the observations by a yearly aggregate.
@@ -303,7 +303,7 @@ Surprise, you are looking for the `.boxplot(...)` function!
 
 ## Visualization with Maps
 
-Last but not least, we want to plot a more appealing visualization.One that gets you excited!
+Last but not least, we want to plot a more appealing visualization of the whole data set (no individual datasets here).  One that gets you excited!
 The idea is to combine the geographic information on the states with the numeric data to provide a rich visual that reflects the two aspects.
 
 ### Geographic Map with State Pop-ups 
