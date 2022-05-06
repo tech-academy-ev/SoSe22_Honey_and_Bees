@@ -147,7 +147,7 @@ We will introduce this environment during our first Coding Meetup.
 Until then, focus on learning the "hard skills" of programming with your courses on DataCamp.
 This topic brings us to your curriculum in the next section!
 
-### Curriculum and DataCamp courses
+### DataCamp courses and Curriculum
 
 The following list shows the required DataCamp courses for the Data Science with `Python` Track at TechAcademy.
 As a beginner, please stick to the courses of the "beginner" program.
