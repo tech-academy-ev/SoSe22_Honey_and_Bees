@@ -43,7 +43,7 @@ We will introduce RStudio Cloud and unlock access to our workspace on our first 
 Until then, focus on learning the "hard skills" of programming with the courses on DataCamp.
 That brings us to your curriculum in the next section!
 
-### Curriculum and DataCamp courses
+### DataCamp courses and Curriculum
 
 The following list shows the required DataCamp courses for the Data Science with `R` Track at TechAcademy.
 As a beginner, please stick to the courses of the "beginner" program.
