@@ -170,7 +170,7 @@ Calculate a new column holding the information of the percentage of lost colonie
 ### Yearly aggregate
 
 To make things easier, we want to merge the honey and bees data set to analyze them jointly. As you probably have seen, both data sets have different frequencies. Therefore, we need to aggregate the quarterly bee data set to a yearly frequency. In the end, data for just the year from 2015-2020 for each state should be left.
-Accordingly, you should group by state and quarter and replace the observations by a yearly aggregate.
+Accordingly, you should group by state and year and replace the observations by a yearly aggregate.
 
 We have decided that it is best to aggregate the data (over the four quarters) by using the mean. While you are at it reproducing our steps, pay attention to how you are rounding your results. After you are done, please print the table of your aggregated data frame, and answer the following two questions:
 
