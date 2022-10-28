@@ -23,7 +23,6 @@ library(ggrepel)
 ```
 
 \newpage
-
 # Exploratory Data Analysis
 
 Before you can dive into the data, you need to do two things. 
